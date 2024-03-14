@@ -11,13 +11,9 @@ public class AccessTest {
 
     @Test
 
-    public void getClient() throws Exception{
-
-        String clientID = "8f422087aab84a9eb15f-be7e2547c4066";
-        String clientSecret= "bf46c158e-f9ce935f7c6972d52af";
-        Assertions.assertEquals("8f422087aab84a9eb15f-be7e2547c4066",clientID);
-        Assertions.assertEquals("bf46c158e-f9ce935f7c6972d52af",clientSecret);
-
+    public void getClient(){
+        String clientInfo = Access.createClientInfo();
+        Assertions.assertEquals("OGY0MjIwODdhYWI4NGE5ZWIxNWZiN2UyNTQ3YzQwNjY6YmY0NmMxNThlZjlmNDljZTkzNWY3YzY5NzJkNWQyYTU=",clientInfo);
     }
 
 
