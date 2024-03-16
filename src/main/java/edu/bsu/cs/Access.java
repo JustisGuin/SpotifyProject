@@ -36,7 +36,11 @@ public class Access {
             System.out.println(response.body());
             return response.body();
         } else {
-            //errorCatch();
+            ErrorCatcher errorcatch = new ErrorCatcher();
+            String responseToString = response.request().toString();
+            int responseToInt = Integer.parseInt(responseToString);
+            errorcatch.statusError(responseToInt);
+
         }
         return response.body();
     }

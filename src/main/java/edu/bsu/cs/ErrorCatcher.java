@@ -1,6 +1,9 @@
 package edu.bsu.cs;
 
+import java.net.http.HttpRequest;
+
 public class ErrorCatcher {
+
     public String statusError(int requestToken){
     if (requestToken >=200 && requestToken<300 ){
         return String.valueOf(requestToken);
