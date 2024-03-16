@@ -10,6 +10,11 @@ public class ErrorCatcher {
 
     }
 }
+    public void searchNotFound(int requestToken){
+        if(requestToken == 404) {
+            System.err.println("No spotify search found.");
+        }
+    }
 }
 
 
