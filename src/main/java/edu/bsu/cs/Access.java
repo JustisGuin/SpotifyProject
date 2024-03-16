@@ -1,7 +1,8 @@
 package edu.bsu.cs;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import java.io.IOException;
-import java.lang.reflect.GenericDeclaration;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.net.URI;
@@ -33,9 +34,13 @@ public class Access {
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
         if (response.statusCode() == 200) {
-            String responseBody = response.body();
-            return response.body();
-        } else {
+            Gson gson = new Gson();
+            JsonObject jsonResponse = gson.fromJson(response.body(), JsonObject.class);
+            String accessToken =  jsonResponse.get("access_token").getAsString();
+            return accessToken;
+        }
+
+        else {
             ErrorCatcher errorcatch = new ErrorCatcher();
             String responseToString = response.request().toString();
             int responseToInt = Integer.parseInt(responseToString);

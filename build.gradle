@@ -14,7 +14,15 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter'
     implementation 'se.michaelthelin.spotify:spotify-web-api-java:8.3.6'
     implementation("org.slf4j:slf4j-api:2.1.0-alpha1")
+    implementation 'com.jayway.jsonpath:json-path:2.9.0'
+    implementation 'net.minidev:json-smart:2.5.0'
+    implementation group: 'org.json', name: 'json', version: '20240303'
+    implementation("org.json:json:20240303")
+    implementation 'javax.json:javax.json-api:1.1.4'
+    implementation 'org.glassfish:javax.json:1.1.4'
+
 }
+
 
 test {
     useJUnitPlatform()
