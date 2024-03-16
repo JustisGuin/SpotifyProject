@@ -1,8 +1,16 @@
 package edu.bsu.cs;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Controller {
-    public static String spotifyInput(){
+    private static final Access access = new Access();
+    private final Scanner scanner;
+
+    public Controller() {
+        this.scanner = new Scanner(System.in);
+    }
+
+    public String spotifyInput() throws IOException, InterruptedException {
         String userInput;
         Scanner scanner = new Scanner(System.in);
 
@@ -17,11 +25,19 @@ public class Controller {
             } else {
                 // Perform the desired search operation here
                 System.out.println("Searching for: " + userInput);
+                String accessToken = access.getAccessToken();
+                System.out.println("Access Token");
+                System.out.println(access.getAccessToken());
+
             }
+
         } while (true);
+
         scanner.close();
 
         return userInput;
+
     }
+
 }
 
