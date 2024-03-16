@@ -1,6 +1,7 @@
 package edu.bsu.cs;
 
 import java.io.IOException;
+import java.lang.reflect.GenericDeclaration;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.net.URI;
@@ -20,7 +21,7 @@ public class Access {
         return Base64.getEncoder().encodeToString(bytes);
     }
 
-    public String connection() throws IOException, InterruptedException {
+    public String getAccessToken() throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://accounts.spotify.com/api/token"))
@@ -33,15 +34,13 @@ public class Access {
 
         if (response.statusCode() == 200) {
             String responseBody = response.body();
-            System.out.println(response.body());
             return response.body();
         } else {
             ErrorCatcher errorcatch = new ErrorCatcher();
             String responseToString = response.request().toString();
             int responseToInt = Integer.parseInt(responseToString);
             errorcatch.statusError(responseToInt);
-
         }
-        return response.body();
+        return null;
     }
 }

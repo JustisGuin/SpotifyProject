@@ -25,7 +25,7 @@ public class AccessTest {
 
     public void testStatusCode() throws IOException, InterruptedException {
         Access access = new Access();
-        String testConnection = access.connection();
+        String testConnection = access.getAccessToken();
         Assertions.assertNotNull(testConnection);
     }
 
