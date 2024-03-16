@@ -2,12 +2,12 @@ package edu.bsu.cs;
 import java.util.Scanner;
 
 public class Controller {
-    public static void spotifyInput(){
+    public static String spotifyInput(){
         String userInput;
         Scanner scanner = new Scanner(System.in);
 
         do {
-            System.out.println("Enter a Artist Name, Songs, and or an Album you which to search.\n");
+            System.out.println("Enter a Artist Name, Songs, and or an Album you which to search: \n");
             userInput = scanner.nextLine();
 
             if (userInput.isEmpty()) {
@@ -21,6 +21,7 @@ public class Controller {
         } while (true);
         scanner.close();
 
+        return userInput;
     }
 }
 

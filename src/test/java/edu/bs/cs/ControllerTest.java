@@ -6,20 +6,19 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import javax.naming.ldap.Control;
-
 import java.util.Scanner;
-
 import static edu.bsu.cs.Controller.spotifyInput;
 
 public class ControllerTest {
     @Test
     public void getControllerInput(){
-
         Controller controllerInput = new Controller();
 
-        String spotifyAPIOutPut = controllerInput.spotifyInput(new Scanner(System.in));
+        System.setIn(new java.io.ByteArrayInputStream("".getBytes()));
 
-        Assertions.assertEquals(result);
+        String spotifyOutput = controllerInput.spotifyInput();
+
+        Assertions.assertEquals("No entry was entered.\n", spotifyOutput);
     }
 
 
