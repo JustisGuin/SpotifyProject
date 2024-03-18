@@ -8,7 +8,7 @@ public class Main {
         //controller.spotifyInput();
         Test test = new Test();
         Access access = new Access();
-        System.out.println(test.searchForArtist(access.getAccessToken(), "Drake"));
+        System.out.println(test.searchForArtist(Access.getAccessToken(), "Juice_WRLD"));
 
     }
 
