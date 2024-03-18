@@ -34,5 +34,22 @@ public class Formatter {
         int popularity = artistObject.getInt("popularity");
         System.out.println("Artist popularity: " + popularity);
     }
+    public static String formatTrack(String responseBody){
+        JSONObject jsonObject = new JSONObject(responseBody);
+        JSONObject tracksObject = jsonObject.getJSONObject("tracks");
+        if (tracksObject.has("tracks")) {
+            org.json.JSONArray itemsArray = tracksObject.getJSONArray("tracks");
+            for (int i = 0; i < itemsArray.length(); i++) {
+                JSONObject trackObject = itemsArray.getJSONObject(i);
+                formatTrackName(trackObject);
+            }
+        }
+        return responseBody;
+    }
+    public static void formatTrackName(JSONObject trackObject){
+        String trackName = trackObject.getString("name");
+        System.out.println("Track name: " + trackName);
+    }
+
 
 }
