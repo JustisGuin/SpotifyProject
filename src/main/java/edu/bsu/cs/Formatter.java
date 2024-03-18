@@ -1,23 +1,38 @@
 package edu.bsu.cs;
 
-import com.jayway.jsonpath.JsonPath;
-import net.minidev.json.JSONArray;
+import org.json.JSONObject;
 
 public class Formatter {
-    public static String formatFollowers(String jsonData){
-        JSONArray followers = (JSONArray) JsonPath.read(jsonData, "followers");
-        System.out.println("Artist Followers: ");
-        return jsonData;
+    public static String format(String responseBody){
+        JSONObject jsonObject = new JSONObject(responseBody);
+        JSONObject artistsObject = jsonObject.getJSONObject("artists");
+        if (artistsObject.has("items")) {
+            org.json.JSONArray itemsArray = artistsObject.getJSONArray("items");
+            for (int i = 0; i < itemsArray.length(); i++) {
+                JSONObject artistObject = itemsArray.getJSONObject(i);
+                formatID(artistObject);
+                formatGenres(artistObject);
+                formatPopularity(artistObject);
     }
-    public static String formatGenres(String jsonData){
-        JSONArray genres = (JSONArray) JsonPath.read(jsonData,"genres");
-        System.out.println("Artist's Genres: ");
-        return jsonData;
+        }
+        return responseBody;
     }
-    public static String formatPopularity(String jsonData){
-        JSONArray popularity = (JSONArray) JsonPath.read(jsonData, "popularity");
-        System.out.println("Artists Popularity Rank: ");
-        return jsonData;
+    public static void formatID(JSONObject artistObject){
+        String artistId = artistObject.getString("id");
+        System.out.println("Artist ID: " + artistId);
+    }
+    public static void formatGenres(JSONObject artistObject){
+        org.json.JSONArray genresArray = artistObject.getJSONArray("genres");
+        System.out.println("Artist genres:");
+        for (int j = 0; j < genresArray.length(); j++) {
+            String genre = genresArray.getString(j);
+            System.out.println("- " + genre);
+        }
+
+    }
+    public static void formatPopularity(JSONObject artistObject){
+        int popularity = artistObject.getInt("popularity");
+        System.out.println("Artist popularity: " + popularity);
     }
 
 }
