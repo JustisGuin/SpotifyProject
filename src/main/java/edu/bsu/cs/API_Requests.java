@@ -30,10 +30,10 @@ public class API_Requests {
         return null;
     }
 
-    public String searchForSong(String token, String songName) throws IOException, InterruptedException {
+    public String searchForTrack(String token, String trackName) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://api.spotify.com/v1/search?q=" + URLEncoder.encode(songName, "utf-8") + "&type=track" + "&limit=5"))
+                .uri(URI.create("https://api.spotify.com/v1/search?q=" + URLEncoder.encode(trackName, "utf-8") + "&type=track" + "&limit=5"))
                 .header("Authorization", "Bearer " + token)
                 .GET()
                 .build();
