@@ -1,9 +1,17 @@
 package edu.bsu.cs;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.util.Scanner;
 
+import static edu.bsu.cs.Formatter.access;
+
 public class Controller {
-    private static final Access access = new Access();
+
+
+
     private final Scanner scanner;
 
     public Controller() {
@@ -11,33 +19,39 @@ public class Controller {
     }
 
     public String spotifyInput() throws IOException, InterruptedException {
+        System.out.println("Enter a Artist Name, Songs, and or an Album you which to search: \n");
+        String userInput = scanner.nextLine();
+
+        if (userInput.isEmpty()) {
+            System.err.println("No entry was entered.\n");
+            userInput = spotifyInput();
+        } else if (userInput.equalsIgnoreCase("quit")) {
+            return null;
+        } else {
+            System.out.println("Searching for: " + userInput);
+            String accessToken = access.getAccessToken();
+            System.out.println("Access Token: " + accessToken);
+        }
+
+        return userInput;
+    }
+
+
+
+    public void run() throws IOException, InterruptedException {
         String userInput;
-        Scanner scanner = new Scanner(System.in);
 
         do {
-            System.out.println("Enter a Artist Name, Songs, and or an Album you which to search: \n");
-            userInput = scanner.nextLine();
+            userInput = spotifyInput();
 
-            if (userInput.isEmpty()) {
-                System.err.println("No entry was entered.\n");
-            } else if (userInput.equalsIgnoreCase("Quit")) {
-                break;
-            } else {
-                // Perform the desired search operation here
-                System.out.println("Searching for: " + userInput);
-                String accessToken = access.getAccessToken();
-                System.out.println("Access Token");
-                System.out.println(access.getAccessToken());
+            if (userInput != null) {
+                Formatter.printArtist(userInput);
 
             }
 
-        } while (true);
+        } while (userInput != null);
 
         scanner.close();
-
-        return userInput;
-
     }
 
 }
-

@@ -3,9 +3,8 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
-        Controller controller =  new Controller();
-        //controller.spotifyInput();
-
+        Controller controller = new Controller();
+        controller.run();
         //tests for sam
         API_Requests APIRequests = new API_Requests();
         Access access = new Access();
