@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class Formatter {
     static final Access access = new Access();
-    public static String format(String responseBody,){
+    public static String format(String responseBody){
         JSONObject jsonObject = new JSONObject(responseBody);
         JSONObject artistsObject = jsonObject.getJSONObject("artists");
         if (artistsObject.has("items")) {
@@ -39,33 +39,24 @@ public class Formatter {
         System.out.println("Artist popularity: " + popularity);
     }
 
-    public static void printArtist(String artistName) throws IOException, InterruptedException {
-        API_Requests apiRequests = new API_Requests();
-        String jsonObjectString = apiRequests.searchForArtist(access.getAccessToken(), artistName);
-        if (jsonObjectString != null) {
-            JSONObject jsonObject = new JSONObject(jsonObjectString);
-            if (jsonObject.has("artists")) {
-                JSONObject artists = jsonObject.getJSONObject("artists");
-                if (artists.has("items")) {
-                    JSONArray items = artists.getJSONArray("items");
-                    if (items.length() > 0) {
-                        JSONObject firstArtist = items.getJSONObject(0);
-                        System.out.println("Artist Name: " + firstArtist.getString("name"));
-                        System.out.println("Followers: " + firstArtist.getJSONObject("followers").getInt("total"));
-                        System.out.println("Genres: " + firstArtist.getJSONArray("genres").toString());
-                    } else {
-                        System.out.println("No artists found.");
-                    }
-                } else {
-                    System.out.println("No artists found.");
-                }
-            } else {
-                System.out.println("No artists found.");
+
+    public static String formatTrack(String responseBody){
+        JSONObject jsonObject = new JSONObject(responseBody);
+        JSONObject tracksObject = jsonObject.getJSONObject("tracks");
+        if (tracksObject.has("tracks")) {
+            org.json.JSONArray itemsArray = tracksObject.getJSONArray("tracks");
+            for (int i = 0; i < itemsArray.length(); i++) {
+                JSONObject trackObject = itemsArray.getJSONObject(i);
+                formatTrackName(trackObject);
             }
-        } else {
-            System.out.println("Artist not found. Please try again.");
         }
+        return responseBody;
     }
+    public static void formatTrackName(JSONObject trackObject){
+        String trackName = trackObject.getString("name");
+        System.out.println("Track name: " + trackName);
+    }
+
 
 
 }
