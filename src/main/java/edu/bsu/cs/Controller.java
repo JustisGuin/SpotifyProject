@@ -36,19 +36,15 @@ public class Controller {
         return userInput;
     }
 
-
-
     public void run() throws IOException, InterruptedException {
         String userInput;
-
         do {
             userInput = spotifyInput();
 
             if (userInput != null) {
-                Formatter.printArtist(userInput);
+                Formatter.format(userInput);
 
             }
-
         } while (userInput != null);
 
         scanner.close();
