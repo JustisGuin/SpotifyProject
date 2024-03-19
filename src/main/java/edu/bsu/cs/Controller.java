@@ -29,21 +29,16 @@ public class Controller {
             System.err.println("Exiting program.\n");
             return null;
         } else if (userInput.equalsIgnoreCase("1")) {
-            apiRequests.searchForArtist(Access.getAccessToken(),getUserInput("Enter name of Artist\n"));
+            formatter.formatArtist(apiRequests.searchForArtist(Access.getAccessToken(),getUserInput("Enter name of Artist\n")));
         }
         else if (userInput.equalsIgnoreCase("2")) {
             formatter.formatTrack(apiRequests.searchForTrack(Access.getAccessToken(),getUserInput("Enter name of Track\n")));
         }
         else if (userInput.equalsIgnoreCase("3")) {
-            apiRequests.searchForAlbum(Access.getAccessToken(),getUserInput("Enter name of Album\n"));
+            //formatter.formatAlbum(apiRequests.searchForAlbum(Access.getAccessToken(),getUserInput("Enter name of Album\n")));
         }
 
         return userInput;
-    }
-
-    public void run() throws IOException, InterruptedException {
-        //WILL CALL FORMATTER EVENTUALLY
-        spotifyInput();
     }
 
     public String getUserInput(String question){
