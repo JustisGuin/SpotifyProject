@@ -2,6 +2,7 @@ package edu.bsu.cs;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
@@ -9,11 +10,17 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.Properties;
 
 public class Access {
 
-    public static String createClientInfo() {
-        String auth_string = "8f422087aab84a9eb15fb7e2547c4066" + ":" + "bf46c158ef9f49ce935f7c6972d5d2a5";
+    public static String createClientInfo() throws IOException {
+        Properties properties = new Properties();
+        FileInputStream inputStream = new FileInputStream("configuration.properties");
+        properties.load(inputStream);
+        String clientID = properties.getProperty("client_id");
+        String clientSecret = properties.getProperty("client_secret");
+        String auth_string = clientID + ":" + clientSecret;
         return encode(auth_string);
     }
 
