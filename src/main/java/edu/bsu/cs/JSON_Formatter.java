@@ -30,6 +30,9 @@ public class JSON_Formatter {
                 formatPopularity(artistObject);
                 System.out.println();
             }
+            if (itemsArray.isEmpty()){
+                System.out.println("No results found!");
+            }
         }
         return null;
     }
@@ -82,6 +85,9 @@ public class JSON_Formatter {
                 formattedSearch.add(combiner);
 
             }
+            if (itemsArray.isEmpty()){
+                System.out.println("No results found!");
+            }
 
 
         }return formattedSearch;
@@ -124,6 +130,9 @@ public class JSON_Formatter {
                 formatAlbumName(albumObject);
 
 
+            }
+            if (itemsArray.isEmpty()){
+                System.out.println("No results found!");
             }
         }
         return responseBody;
