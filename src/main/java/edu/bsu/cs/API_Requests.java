@@ -2,19 +2,21 @@ package edu.bsu.cs;
 
 import org.json.JSONObject;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URLEncoder;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
 
 public class API_Requests {
 
-    public String searchForArtist(String token, String artistName) throws IOException, InterruptedException {
+    public String searchForArtist(String accessToken, String artistName) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://api.spotify.com/v1/search?q=" + URLEncoder.encode(artistName, "utf-8") + "&type=artist" + "&limit=5"))
-                .header("Authorization", "Bearer " + token)
+                .uri(URI.create("https://api.spotify.com/v1/search?q=" + URLEncoder.encode(artistName, StandardCharsets.UTF_8) + "&type=artist" + "&limit=5"))
+                .header("Authorization", "Bearer " + accessToken)
                 .GET()
                 .build();
 
@@ -33,11 +35,11 @@ public class API_Requests {
         return null;
     }
 
-    public String searchForTrack(String token, String trackName) throws IOException, InterruptedException {
+    public String searchForTrack(String accessToken, String trackName) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://api.spotify.com/v1/search?q=" + URLEncoder.encode(trackName, "utf-8") + "&type=track" + "&limit=5"))
-                .header("Authorization", "Bearer " + token)
+                .uri(URI.create("https://api.spotify.com/v1/search?q=" + URLEncoder.encode(trackName, StandardCharsets.UTF_8) + "&type=track" + "&limit=5"))
+                .header("Authorization", "Bearer " + accessToken)
                 .GET()
                 .build();
 
@@ -47,9 +49,30 @@ public class API_Requests {
         if (statusCode == 200) {
             String responseBody = response.body();
             JSONObject jsonObject = new JSONObject(responseBody);
-            //System.out.println(responseBody);
+            JSON_Formatter.formatTrack(responseBody);
+            return responseBody;
+        }
+        return null;
+    }
+
+    public String searchForAlbum(String accessToken, String albumName) throws IOException, InterruptedException {
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://api.spotify.com/v1/search?q=" + URLEncoder.encode(albumName, StandardCharsets.UTF_8) + "&type=album" + "&limit=3"))
+                .header("Authorization", "Bearer " + accessToken)
+                .GET()
+                .build();
+
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        int statusCode = response.statusCode();
+
+        if (statusCode == 200) {
+            String responseBody = response.body();
+            JSONObject jsonObject = new JSONObject(responseBody);
             JSON_Formatter JSONFormatter = new JSON_Formatter();
-            JSONFormatter.formatTrack(responseBody);
+            JSONFormatter.formatArtist(responseBody);
+
+            System.out.println(responseBody);
             return responseBody;
         }
         return null;
@@ -97,6 +120,5 @@ public class API_Requests {
         return null;
     }
 
-    public void searchForAlbum(String accessToken, String userInput) {
-    }
+
 }
