@@ -24,8 +24,8 @@ public class API_Requests {
         if (statusCode == 200) {
             String responseBody = response.body();
             JSONObject jsonObject = new JSONObject(responseBody);
-            Formatter formatter = new Formatter();
-            formatter.formatArtist(responseBody);
+            JSON_Formatter JSONFormatter = new JSON_Formatter();
+            JSONFormatter.formatArtist(responseBody);
 
             System.out.println(responseBody);
             return responseBody;
@@ -48,8 +48,8 @@ public class API_Requests {
             String responseBody = response.body();
             JSONObject jsonObject = new JSONObject(responseBody);
             //System.out.println(responseBody);
-            Formatter formatter = new Formatter();
-            formatter.formatTrack(responseBody);
+            JSON_Formatter JSONFormatter = new JSON_Formatter();
+            JSONFormatter.formatTrack(responseBody);
             return responseBody;
         }
         return null;
@@ -95,5 +95,8 @@ public class API_Requests {
             return responseBody;
         }
         return null;
+    }
+
+    public void searchForAlbum(String accessToken, String userInput) {
     }
 }

@@ -1,11 +1,8 @@
 package edu.bsu.cs;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.io.IOException;
-
-public class Formatter {
+public class JSON_Formatter {
     static final Access access = new Access();
 
     //FORMAT ARTISTS
