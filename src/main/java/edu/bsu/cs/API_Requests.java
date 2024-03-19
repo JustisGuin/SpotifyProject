@@ -15,7 +15,7 @@ public class API_Requests {
     public String searchForArtist(String accessToken, String artistName) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://api.spotify.com/v1/search?q=" + URLEncoder.encode(artistName, StandardCharsets.UTF_8) + "&type=artist" + "&limit=5"))
+                .uri(URI.create("https://api.spotify.com/v1/search?q=" + URLEncoder.encode(artistName, StandardCharsets.UTF_8) + "&type=artist" + "&limit=3"))
                 .header("Authorization", "Bearer " + accessToken)
                 .GET()
                 .build();
@@ -41,10 +41,7 @@ public class API_Requests {
         int statusCode = response.statusCode();
 
         if (statusCode == 200) {
-            String responseBody = response.body();
-            JSONObject jsonObject = new JSONObject(responseBody);
-            JSON_Formatter.formatTrack(responseBody);
-            return responseBody;
+            return response.body();
         }
         return null;
     }
@@ -61,12 +58,7 @@ public class API_Requests {
         int statusCode = response.statusCode();
 
         if (statusCode == 200) {
-            String responseBody = response.body();
-            JSONObject jsonObject = new JSONObject(responseBody);
-            //JSON_Formatter JSONFormatter = new JSON_Formatter();
-            //JSONFormatter.formatArtist(responseBody);
-
-            return responseBody;
+            return response.body();
         }
         return null;
     }

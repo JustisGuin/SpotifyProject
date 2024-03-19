@@ -32,7 +32,7 @@ public class Controller {
             formatter.formatTrack(apiRequests.searchForTrack(Access.getAccessToken(),getUserInput("Enter name of Track\n")));
         }
         else if (userInput.equalsIgnoreCase("3")) {
-            //formatter.formatAlbum(apiRequests.searchForAlbum(Access.getAccessToken(),getUserInput("Enter name of Album\n")));
+            formatter.formatAlbum(apiRequests.searchForAlbum(Access.getAccessToken(),getUserInput("Enter name of Album\n")));
         }
 
         return null;

@@ -13,6 +13,9 @@ public class JSON_Formatter {
     public static String formatArtist(String responseBody) {
         JSONObject jsonObject = new JSONObject(responseBody);
         JSONObject artistsObject = jsonObject.getJSONObject("artists");
+        System.out.println();
+        System.out.println("Showing the top 3 responses of your query:");
+        System.out.println();
         if (artistsObject.has("items")) {
             org.json.JSONArray itemsArray = artistsObject.getJSONArray("items");
             for (int i = 0; i < itemsArray.length(); i++) {
@@ -107,8 +110,6 @@ public class JSON_Formatter {
                 JSONObject albumObject = itemsArray.getJSONObject(i);
 
             }
-
-
         }
         return responseBody;
     }
