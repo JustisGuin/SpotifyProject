@@ -57,10 +57,10 @@ public class JSON_Formatter {
             org.json.JSONArray itemsArray = tracksObject.getJSONArray("items");
             for (int i = 0; i < itemsArray.length(); i++) {
                 JSONObject trackObject = itemsArray.getJSONObject(i);
-                System.out.print(trackObject);
                 formatTrackName(trackObject);
                 //formatTrackAlbum(trackObject);
-                //formatTrackArtists(trackObject);
+                formatTrackArtists(trackObject);
+                System.out.println(" ");
             }
 
         }return responseBody;
@@ -68,7 +68,7 @@ public class JSON_Formatter {
 
     public static String formatTrackName(JSONObject trackObject) {
         String trackName = trackObject.getString("name");
-        String label =("Track name: " + trackName);
+        String label =("\nTrack name: " + trackName);
         System.out.print(label);
         return label;
 
@@ -83,11 +83,13 @@ public class JSON_Formatter {
 
     public static void formatTrackArtists(JSONObject trackObject) {
         org.json.JSONArray trackArtistsArray = trackObject.getJSONArray("artists");
-        System.out.println("Artists on track: ");
-        for (int j = 0; j < trackArtistsArray.length(); j++) {
+        JSONObject trackArtist = trackArtistsArray.getJSONObject(0);
+        String artistName = trackArtist.getString("name");
+        System.out.printf("\nArtist Name: %s",artistName);
+        /*for (int j = 0; j < trackArtistsArray.length(); j++) {
             String artist = trackArtistsArray.getString(j);
             System.out.println("- " + artist);
-        }
+        }*/
     }
 
     //FORMAT ALBUMS
