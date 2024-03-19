@@ -6,6 +6,10 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.List;
+
 public class JSON_Formatter {
     static final Access access = new Access();
 
@@ -59,25 +63,33 @@ public class JSON_Formatter {
 
 
     public static String formatTrack(String responseBody) {
+        List<String> formattedSearch = new ArrayList<>();
+        List<String> trackNames = new ArrayList<>();
+        List<String> trackArtists = new ArrayList<>();
         JSONObject jsonObject = new JSONObject(responseBody);
         JSONObject tracksObject = jsonObject.getJSONObject("tracks");
         if (tracksObject.has("items")) {
             org.json.JSONArray itemsArray = tracksObject.getJSONArray("items");
             for (int i = 0; i < itemsArray.length(); i++) {
                 JSONObject trackObject = itemsArray.getJSONObject(i);
-                formatTrackName(trackObject);
+                trackNames.add(formatTrackName(trackObject));
                 //formatTrackAlbum(trackObject);
-                formatTrackArtists(trackObject);
+                trackArtists.add(formatTrackArtists(trackObject));
                 System.out.println(" ");
             }
+            for(int i = 0; i< trackNames.size(); i++) {
+                String combiner = (trackNames.get(i)+" "+trackArtists.get(i));
+                formattedSearch.add(combiner);
+
+            }
+
 
         }return responseBody;
     }
 
     public static String formatTrackName(JSONObject trackObject) {
         String trackName = trackObject.getString("name");
-        String label =("\nTrack name: " + trackName);
-        System.out.print(label);
+        String label =("Track name: " + trackName);
         return label;
 
     }
@@ -89,15 +101,15 @@ public class JSON_Formatter {
         return label;
     }
 
-    public static void formatTrackArtists(JSONObject trackObject) {
+    public static String formatTrackArtists(JSONObject trackObject) {
         org.json.JSONArray trackArtistsArray = trackObject.getJSONArray("artists");
         JSONObject trackArtist = trackArtistsArray.getJSONObject(0);
         String artistName = trackArtist.getString("name");
-        System.out.printf("\nArtist Name: %s",artistName);
         /*for (int j = 0; j < trackArtistsArray.length(); j++) {
             String artist = trackArtistsArray.getString(j);
             System.out.println("- " + artist);
         }*/
+        return ("Artist Name:"+artistName);
     }
 
     //FORMAT ALBUMS
