@@ -2,7 +2,9 @@ package edu.bsu.cs;
 
 import java.io.IOException;
 import java.text.Format;
+import java.util.ArrayList;
 import java.util.Formatter;
+import java.util.List;
 import java.util.Scanner;
 public class Controller {
 
@@ -29,7 +31,11 @@ public class Controller {
             formatter.formatArtist(apiRequests.searchForArtist(Access.getAccessToken(),getUserInput("Enter name of Artist\n")));
         }
         else if (userInput.equalsIgnoreCase("2")) {
-            formatter.formatTrack(apiRequests.searchForTrack(Access.getAccessToken(),getUserInput("Enter name of Track\n")));
+            List<String> trackData = new ArrayList<>();
+            trackData = (JSON_Formatter.formatTrack(apiRequests.searchForTrack(Access.getAccessToken(),getUserInput("Enter name of Track\n"))));
+           for (int i=0; i<trackData.size(); i++)
+            System.out.printf("\n\nTrack %d\n %s",i+1,trackData.get(i));
+
         }
         else if (userInput.equalsIgnoreCase("3")) {
             formatter.formatAlbum(apiRequests.searchForAlbum(Access.getAccessToken(),getUserInput("Enter name of Album\n")));

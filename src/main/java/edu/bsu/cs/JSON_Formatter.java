@@ -75,10 +75,10 @@ public class JSON_Formatter {
                 trackNames.add(formatTrackName(trackObject));
                 //formatTrackAlbum(trackObject);
                 trackArtists.add(formatTrackArtists(trackObject));
-                System.out.println(" ");
+
             }
             for(int i = 0; i< trackNames.size(); i++) {
-                String combiner = (trackNames.get(i)+" "+trackArtists.get(i));
+                String combiner = (trackNames.get(i)+"\n"+trackArtists.get(i));
                 formattedSearch.add(combiner);
 
             }
@@ -109,7 +109,7 @@ public class JSON_Formatter {
             String artist = trackArtistsArray.getString(j);
             System.out.println("- " + artist);
         }*/
-        return ("Artist Name:"+artistName);
+        return ("Artist Name: "+artistName);
     }
 
     //FORMAT ALBUMS
