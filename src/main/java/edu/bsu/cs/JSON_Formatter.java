@@ -65,14 +65,19 @@ public class JSON_Formatter {
         }return responseBody;
     }
 
-    public static void formatTrackName(JSONObject trackObject) {
+    public static String formatTrackName(JSONObject trackObject) {
         String trackName = trackObject.getString("name");
-        System.out.println("Track name: " + trackName);
+        String label =("Track name: " + trackName);
+        System.out.print(label);
+        return label;
+
     }
 
-    public static void formatTrackAlbum(JSONObject trackObject) {
+    public static String formatTrackAlbum(JSONObject trackObject) {
         String trackAlbum = trackObject.getString("album");
-        System.out.println("Track album: " + trackAlbum);
+        String label =("Track album: " + trackAlbum);
+        System.out.print(label);
+        return label;
     }
 
     public static void formatTrackArtists(JSONObject trackObject) {
