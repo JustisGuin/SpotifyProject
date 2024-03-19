@@ -13,6 +13,7 @@ public class JSON_Formatter {
             org.json.JSONArray itemsArray = artistsObject.getJSONArray("items");
             for (int i = 0; i < itemsArray.length(); i++) {
                 JSONObject artistObject = itemsArray.getJSONObject(i);
+                formatName(artistObject);
                 formatID(artistObject);
                 formatGenres(artistObject);
                 formatPopularity(artistObject);
@@ -20,6 +21,10 @@ public class JSON_Formatter {
             }
         }
         return responseBody;
+    }
+    public static void formatName(JSONObject artistObject){
+        String artistName = artistObject.getString("name");
+        System.out.println("Artist Name: " + artistName);
     }
 
     public static void formatID(JSONObject artistObject) {
@@ -48,16 +53,16 @@ public class JSON_Formatter {
     public static String formatTrack(String responseBody) {
         JSONObject jsonObject = new JSONObject(responseBody);
         JSONObject tracksObject = jsonObject.getJSONObject("tracks");
-        if (tracksObject.has("tracks")) {
-            org.json.JSONArray itemsArray = tracksObject.getJSONArray("tracks");
+        if (tracksObject.has("album")) {
+            org.json.JSONArray itemsArray = tracksObject.getJSONArray("album");
             for (int i = 0; i < itemsArray.length(); i++) {
                 JSONObject trackObject = itemsArray.getJSONObject(i);
                 formatTrackName(trackObject);
                 formatTrackAlbum(trackObject);
                 formatTrackArtists(trackObject);
             }
-        }
-        return responseBody;
+
+        }return responseBody;
     }
 
     public static void formatTrackName(JSONObject trackObject) {
@@ -71,8 +76,12 @@ public class JSON_Formatter {
     }
 
     public static void formatTrackArtists(JSONObject trackObject) {
-        String trackArtists = trackObject.getString("artists");
-        System.out.println("Artists on track: " + trackArtists);
+        org.json.JSONArray trackArtistsArray = trackObject.getJSONArray("artists");
+        System.out.println("Artists on track: ");
+        for (int j = 0; j < trackArtistsArray.length(); j++) {
+            String artist = trackArtistsArray.getString(j);
+            System.out.println("- " + artist);
+        }
     }
 
     //FORMAT ALBUMS
