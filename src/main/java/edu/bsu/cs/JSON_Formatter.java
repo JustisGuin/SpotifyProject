@@ -62,7 +62,7 @@ public class JSON_Formatter {
     //FORMAT TRACKS
 
 
-    public static String formatTrack(String responseBody) {
+    public static List<String> formatTrack(String responseBody) {
         List<String> formattedSearch = new ArrayList<>();
         List<String> trackNames = new ArrayList<>();
         List<String> trackArtists = new ArrayList<>();
@@ -84,7 +84,7 @@ public class JSON_Formatter {
             }
 
 
-        }return responseBody;
+        }return formattedSearch;
     }
 
     public static String formatTrackName(JSONObject trackObject) {
