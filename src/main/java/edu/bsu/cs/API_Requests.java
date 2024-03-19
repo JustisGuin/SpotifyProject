@@ -25,7 +25,7 @@ public class API_Requests {
             String responseBody = response.body();
             JSONObject jsonObject = new JSONObject(responseBody);
             Formatter formatter = new Formatter();
-            formatter.format(responseBody);
+            formatter.formatArtist(responseBody);
 
             System.out.println(responseBody);
             return responseBody;

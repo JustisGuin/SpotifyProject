@@ -9,7 +9,7 @@ public class Formatter {
     static final Access access = new Access();
 
     //FORMAT ARTISTS
-    public static String format(String responseBody) {
+    public static String formatArtist(String responseBody) {
         JSONObject jsonObject = new JSONObject(responseBody);
         JSONObject artistsObject = jsonObject.getJSONObject("artists");
         if (artistsObject.has("items")) {
