@@ -93,5 +93,15 @@ public class Formatter {
         }
         return responseBody;
     }
+    public static void formatAlbumTracklist(JSONObject albumObject){
+        org.json.JSONArray genresArray = albumObject.getJSONArray("tracks");
+        System.out.println("Album Tracklist:");
+        for (int j = 0; j < genresArray.length(); j++) {
+            String genre = genresArray.getString(j);
+            System.out.println("- " + genre);
+        }
+
+
+    }
 
 }
