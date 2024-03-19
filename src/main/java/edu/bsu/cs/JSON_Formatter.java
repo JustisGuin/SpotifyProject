@@ -1,12 +1,7 @@
 package edu.bsu.cs;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -76,7 +71,6 @@ public class JSON_Formatter {
             for (int i = 0; i < itemsArray.length(); i++) {
                 JSONObject trackObject = itemsArray.getJSONObject(i);
                 trackNames.add(formatTrackName(trackObject));
-                //formatTrackAlbum(trackObject);
                 trackArtists.add(formatTrackArtists(trackObject));
 
             }
@@ -111,10 +105,6 @@ public class JSON_Formatter {
         org.json.JSONArray trackArtistsArray = trackObject.getJSONArray("artists");
         JSONObject trackArtist = trackArtistsArray.getJSONObject(0);
         String artistName = trackArtist.getString("name");
-        /*for (int j = 0; j < trackArtistsArray.length(); j++) {
-            String artist = trackArtistsArray.getString(j);
-            System.out.println("- " + artist);
-        }*/
         return ("Artist Name: "+artistName);
     }
 
@@ -137,16 +127,7 @@ public class JSON_Formatter {
         }
         return responseBody;
     }
-    public static void formatAlbumTracklist(JSONObject albumObject){
-        org.json.JSONArray genresArray = albumObject.getJSONArray("tracks");
-        System.out.println("Album Tracklist:");
-        for (int j = 0; j < genresArray.length(); j++) {
-            String genre = genresArray.getString(j);
-            System.out.println("- " + genre);
-        }
 
-
-    }
     public static String formatAlbumName(JSONObject albumObject){
         org.json.JSONArray trackArtistsArray = albumObject.getJSONArray("artists");
         JSONObject trackArtist = trackArtistsArray.getJSONObject(0);
