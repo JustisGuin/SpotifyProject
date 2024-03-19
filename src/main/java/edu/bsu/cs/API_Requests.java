@@ -27,6 +27,7 @@ public class API_Requests {
             Formatter formatter = new Formatter();
             formatter.format(responseBody);
 
+            System.out.println(responseBody);
             return responseBody;
         }
         return null;

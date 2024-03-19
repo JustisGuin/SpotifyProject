@@ -1,16 +1,9 @@
 package edu.bsu.cs;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import java.io.IOException;
 import java.util.Scanner;
 
-import static edu.bsu.cs.Formatter.access;
-
 public class Controller {
-
-
 
     private final Scanner scanner;
 
@@ -19,35 +12,33 @@ public class Controller {
     }
 
     public String spotifyInput() throws IOException, InterruptedException {
-        System.out.println("Enter a Artist Name, Songs, and or an Album you which to search: \n");
+        API_Requests apiRequests = new API_Requests();
+        Access access = new Access();
+        System.out.println("Would you like to search for a Artist (1), Track (2), or Album (3)? \nPlease type the number associated with your choice.\n");
         String userInput = scanner.nextLine();
 
         if (userInput.isEmpty()) {
-            System.err.println("No entry was entered.\n");
+            System.err.println("No entry was entered. Please enter a valid choice.\n");
             userInput = spotifyInput();
         } else if (userInput.equalsIgnoreCase("quit")) {
+            System.err.println("Exiting program.\n");
             return null;
-        } else {
-            System.out.println("Searching for: " + userInput);
-            String accessToken = access.getAccessToken();
-            System.out.println("Access Token: " + accessToken);
+        } else if (userInput.equalsIgnoreCase("1")) {
+
+            apiRequests.searchForArtist(Access.getAccessToken(),getUserInput("Enter name of Artist\n"));
         }
 
         return userInput;
     }
 
     public void run() throws IOException, InterruptedException {
-        String userInput;
-        do {
-            userInput = spotifyInput();
+        spotifyInput();
+    }
 
-            if (userInput != null) {
-                Formatter.format(userInput);
-
-            }
-        } while (userInput != null);
-
-        scanner.close();
+    public String getUserInput(String question){
+        System.out.println(question);
+        String userInput = scanner.nextLine();
+        return userInput;
     }
 
 }
