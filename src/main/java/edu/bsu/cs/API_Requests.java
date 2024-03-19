@@ -105,5 +105,26 @@ public class API_Requests {
         return null;
     }
 
+    public String getAlbumFromID(String token, String albumID) throws IOException, InterruptedException {
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://api.spotify.com/v1/albums/" + albumID))
+                .header("Authorization", "Bearer " + token)
+                .GET()
+                .build();
+
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        int statusCode = response.statusCode();
+        System.out.println(statusCode);
+
+        if (statusCode == 200) {
+            String responseBody = response.body();
+            JSONObject jsonObject = new JSONObject(responseBody);
+            System.out.println(responseBody);
+            return responseBody;
+        }
+        return null;
+    }
+
 
 }
