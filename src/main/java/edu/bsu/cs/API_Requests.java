@@ -1,5 +1,6 @@
 package edu.bsu.cs;
 
+import net.minidev.json.JSONUtil;
 import org.json.JSONObject;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -59,6 +60,8 @@ public class API_Requests {
 
         if (statusCode == 200) {
             return response.body();
+
+
         }
         return null;
     }
@@ -99,7 +102,7 @@ public class API_Requests {
         if (statusCode == 200) {
             String responseBody = response.body();
             JSONObject jsonObject = new JSONObject(responseBody);
-            System.out.println(responseBody);
+            //System.out.println(responseBody);
             return responseBody;
         }
         return null;
