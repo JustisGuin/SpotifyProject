@@ -24,13 +24,7 @@ public class API_Requests {
         int statusCode = response.statusCode();
 
         if (statusCode == 200) {
-            String responseBody = response.body();
-            JSONObject jsonObject = new JSONObject(responseBody);
-            JSON_Formatter JSONFormatter = new JSON_Formatter();
-            JSONFormatter.formatArtist(responseBody);
-
-            System.out.println(responseBody);
-            return responseBody;
+            return response.body();
         }
         return null;
     }
@@ -69,10 +63,9 @@ public class API_Requests {
         if (statusCode == 200) {
             String responseBody = response.body();
             JSONObject jsonObject = new JSONObject(responseBody);
-            JSON_Formatter JSONFormatter = new JSON_Formatter();
-            JSONFormatter.formatArtist(responseBody);
+            //JSON_Formatter JSONFormatter = new JSON_Formatter();
+            //JSONFormatter.formatArtist(responseBody);
 
-            System.out.println(responseBody);
             return responseBody;
         }
         return null;

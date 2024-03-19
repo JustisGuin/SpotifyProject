@@ -4,9 +4,6 @@ import java.io.IOException;
 import java.text.Format;
 import java.util.Formatter;
 import java.util.Scanner;
-
-//import static jdk.vm.ci.riscv64.RISCV64.CPUFeature.F;
-
 public class Controller {
 
     private final Scanner scanner;
@@ -38,7 +35,7 @@ public class Controller {
             //formatter.formatAlbum(apiRequests.searchForAlbum(Access.getAccessToken(),getUserInput("Enter name of Album\n")));
         }
 
-        return userInput;
+        return null;
     }
 
     public String getUserInput(String question){

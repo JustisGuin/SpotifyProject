@@ -1,6 +1,10 @@
 package edu.bsu.cs;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class JSON_Formatter {
     static final Access access = new Access();
@@ -20,8 +24,9 @@ public class JSON_Formatter {
                 System.out.println();
             }
         }
-        return responseBody;
+        return null;
     }
+
     public static void formatName(JSONObject artistObject){
         String artistName = artistObject.getString("name");
         System.out.println("Artist Name: " + artistName);
