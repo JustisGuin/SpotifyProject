@@ -53,13 +53,14 @@ public class JSON_Formatter {
     public static String formatTrack(String responseBody) {
         JSONObject jsonObject = new JSONObject(responseBody);
         JSONObject tracksObject = jsonObject.getJSONObject("tracks");
-        if (tracksObject.has("album")) {
-            org.json.JSONArray itemsArray = tracksObject.getJSONArray("album");
+        if (tracksObject.has("items")) {
+            org.json.JSONArray itemsArray = tracksObject.getJSONArray("items");
             for (int i = 0; i < itemsArray.length(); i++) {
                 JSONObject trackObject = itemsArray.getJSONObject(i);
+                System.out.print(trackObject);
                 formatTrackName(trackObject);
-                formatTrackAlbum(trackObject);
-                formatTrackArtists(trackObject);
+                //formatTrackAlbum(trackObject);
+                //formatTrackArtists(trackObject);
             }
 
         }return responseBody;
