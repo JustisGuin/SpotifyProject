@@ -60,8 +60,6 @@ public class API_Requests {
 
         if (statusCode == 200) {
             return response.body();
-
-
         }
         return null;
     }
@@ -127,8 +125,28 @@ public class API_Requests {
             return responseBody;
 
         }
+        return null;
+    }
 
+    public String getAlbumTracks(String token, String albumID)throws IOException, InterruptedException {
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://api.spotify.com/v1/albums/tracks" + albumID))
+                .header("Authorization", "Bearer " + token)
+                .GET()
+                .build();
 
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        int statusCode = response.statusCode();
+        System.out.println(statusCode);
+
+        if (statusCode == 200) {
+            String responseBody = response.body();
+            JSONObject jsonObject = new JSONObject(responseBody);
+            System.out.println(responseBody);
+            return responseBody;
+
+        }
         return null;
     }
 

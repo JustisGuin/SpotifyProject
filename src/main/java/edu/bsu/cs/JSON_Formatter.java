@@ -82,8 +82,6 @@ public class JSON_Formatter {
             if (itemsArray.isEmpty()){
                 System.out.println("No results found!");
             }
-
-
         }return formattedSearch;
     }
 
