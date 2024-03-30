@@ -143,7 +143,7 @@ public class API_Requests {
         if (statusCode == 200) {
             String responseBody = response.body();
             JSONObject jsonObject = new JSONObject(responseBody);
-            System.out.println(responseBody);
+            //System.out.println(responseBody);
             return responseBody;
 
         }
