@@ -32,23 +32,26 @@ public class JSON_Formatter {
         return null;
     }
 
-    public static void formatName(JSONObject artistObject){
+    public static String formatName(JSONObject artistObject){
         String artistName = artistObject.getString("name");
         System.out.println("Artist Name: " + artistName);
+        return artistName;
     }
 
-    public static void formatID(JSONObject artistObject) {
+    public static String formatID(JSONObject artistObject) {
         String artistId = artistObject.getString("id");
         System.out.println("Artist ID: " + artistId);
+        return artistId;
     }
 
-    public static void formatGenres(JSONObject artistObject) {
+    public static String formatGenres(JSONObject artistObject) {
         org.json.JSONArray genresArray = artistObject.getJSONArray("genres");
         System.out.println("Artist genres:");
         for (int j = 0; j < genresArray.length(); j++) {
             String genre = genresArray.getString(j);
             System.out.println("- " + genre);
         }
+        return String.valueOf(genresArray);
 
     }
 
