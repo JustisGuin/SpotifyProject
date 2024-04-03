@@ -28,7 +28,7 @@ public class FormatterTest {
     }
     @Test
     public void testArtistName(){
-        JSONObject jsonObject = readJSONObjectFromFile("C:\\Users\\ethan\\OneDrive\\Desktop\\CS121\\cs222.1\\SpotifyProjectt-GroupA\\src\\test\\resources\\testArtistSample.json");
+        JSONObject jsonObject = readJSONObjectFromFile("src/test/resources/testArtistSample.json");
         jsonObject.put("name", "Polo G");
         String formattedName = JSON_Formatter.formatName(jsonObject);
         assertEquals("Polo G", formattedName);
@@ -36,7 +36,7 @@ public class FormatterTest {
     }
     @Test
     public void testArtistID(){
-        JSONObject jsonObject = readJSONObjectFromFile("C:\\Users\\ethan\\OneDrive\\Desktop\\CS121\\cs222.1\\SpotifyProjectt-GroupA\\src\\test\\resources\\testArtistSample.json");
+        JSONObject jsonObject = readJSONObjectFromFile("src/test/resources/testArtistSample.json");
         jsonObject.put("id", "6AgTAQt8XS6jRWi4sX7w49");
         String formattedID = JSON_Formatter.formatID(jsonObject);
         assertEquals("6AgTAQt8XS6jRWi4sX7w49", formattedID);
@@ -44,7 +44,7 @@ public class FormatterTest {
     }
     @Test
     public void testArtistGenre(){
-        JSONObject jsonObject = readJSONObjectFromFile("C:\\Users\\ethan\\OneDrive\\Desktop\\CS121\\cs222.1\\SpotifyProjectt-GroupA\\src\\test\\resources\\testArtistSample.json");
+        JSONObject jsonObject = readJSONObjectFromFile("src/test/resources/testArtistSample.json");
         jsonObject.put("genres", "chicago rap");
         String formattedGenre = JSON_Formatter.formatGenres(jsonObject);
         assertEquals("chicago rap", formattedGenre);
