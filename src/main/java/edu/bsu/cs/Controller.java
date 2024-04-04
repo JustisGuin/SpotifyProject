@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
 public class Controller {
 
     private final Scanner scanner;
@@ -32,6 +33,7 @@ public class Controller {
             userPickAlbum();
         }
     }
+
     public String getUserInput(String question){
         System.out.println(question);
         String userInput = scanner.nextLine();
@@ -58,25 +60,17 @@ public class Controller {
 
     private void userPickArtist(){
         try {
-            JSON_Formatter.formatArtist(apiRequests.searchForArtist(Access.getAccessToken(), getUserInput("Enter name of Artist\n")));
-            String artistName = "";
-            while (artistName.isEmpty()) {
-                artistName = getUserInput("");
-                if (artistName.isEmpty()) {
-                    System.out.println("No artist name was provided. Please enter a valid artist name.\n");
-                }
-                JSON_Formatter.formatArtist(apiRequests.searchForArtist(Access.getAccessToken(), artistName));
-            }} catch (IOException | InterruptedException e) {
+            String responseBody = apiRequests.searchForArtist(Access.getAccessToken(), getUserInput("Enter name of Artist\n"));
+            View.displayArtist(responseBody);
+        } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
 
     private void userPickTrack(){
-        List<String> trackData = new ArrayList<>();
         try {
-            trackData = (JSON_Formatter.formatTrack(apiRequests.searchForTrack(Access.getAccessToken(), getUserInput("Enter name of Track\n"))));
-            for (int i = 0; i < trackData.size(); i++)
-                System.out.printf("\n\nTrack %d\n %s", i + 1, trackData.get(i));
+            String responseBody = apiRequests.searchForTrack(Access.getAccessToken(), getUserInput("Enter name of Track\n"));
+            View.displayTrack(responseBody);
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -84,16 +78,9 @@ public class Controller {
 
     private void userPickAlbum(){
         try {
-            JSON_Formatter.formatAlbum(apiRequests.searchForAlbum(Access.getAccessToken(), getUserInput("Enter name of Album\n")));
-            String albumName = "";
-            while (albumName.isEmpty()) {
-                albumName = getUserInput("");
-                if (albumName.isEmpty()) {
-                    System.out.println("No artist name was provided. Please enter a valid artist name.\n");
-                }
-                JSON_Formatter.formatArtist(apiRequests.searchForArtist(Access.getAccessToken(), albumName));
-            } }
-        catch (IOException | InterruptedException e) {
+            String responseBody = apiRequests.searchForAlbum(Access.getAccessToken(), getUserInput("Enter name of Album\n"));
+            View.displayAlbum(responseBody);
+        } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
