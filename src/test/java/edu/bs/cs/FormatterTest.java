@@ -31,7 +31,7 @@ public class FormatterTest {
         JSONObject jsonObject = readJSONObjectFromFile("src/test/resources/testArtistSample.json");
         jsonObject.put("name", "Polo G");
         String formattedName = JSON_Formatter.formatName(jsonObject);
-        assertEquals("Polo G", formattedName);
+        assertEquals("Artist Name: Polo G", formattedName);
 
     }
     @Test
@@ -39,25 +39,23 @@ public class FormatterTest {
         JSONObject jsonObject = readJSONObjectFromFile("src/test/resources/testArtistSample.json");
         jsonObject.put("id", "6AgTAQt8XS6jRWi4sX7w49");
         String formattedID = JSON_Formatter.formatID(jsonObject);
-        assertEquals("6AgTAQt8XS6jRWi4sX7w49", formattedID);
+        assertEquals("Artist ID: 6AgTAQt8XS6jRWi4sX7w49", formattedID);
 
     }
     @Test
     public void testArtistPopularity(){
         JSONObject jsonObject = readJSONObjectFromFile("src/test/resources/testArtistSample.json");
         jsonObject.put("popularity", 81);
-        //int formattedPopularity = JSON_Formatter.formatPopularity(jsonObject);
-        //assertEquals(81, formattedPopularity);
+        String formattedPopularity = JSON_Formatter.formatPopularity(jsonObject);
+        assertEquals("Artist popularity: 81", formattedPopularity);
     }
     @Test
-    public void testTrackName(){
-        JSONObject jsonObject = readJSONObjectFromFile("src/test/resources/getTrackSample2.json");
-        jsonObject.put("name", "Happy Birthday Songs");
-        String formattedTrackName = JSON_Formatter.formatTrackName(jsonObject);
-        assertEquals("Track name: Happy Birthday Songs", formattedTrackName);
-    }
-    @Test
-    public void testTrackAlbum(){
+    public void testAlbumID(){
+        JSONObject jsonObject = readJSONObjectFromFile("src/test/resources/getAlbumSample2.json");
+        jsonObject.put("id", "18NOKLkZETa4sWwLMIm0UZ");
+        String formattedID = JSON_Formatter.formatAlbumID(jsonObject);
+        assertEquals("Album ID: 18NOKLkZETa4sWwLMIm0UZ", formattedID);
+
 
     }
 }
