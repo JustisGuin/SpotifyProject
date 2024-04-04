@@ -46,9 +46,6 @@ public class JSON_Formatter {
         return genresOutput.toString();
     }
 
-    public static String formatPopularity(JSONObject artistObject) {
-        return "Artist popularity: " + artistObject.getInt("popularity");
-    }
 
     public static List<String> formatTrack(String responseBody) {
         List<String> formattedTracks = new ArrayList<>();
