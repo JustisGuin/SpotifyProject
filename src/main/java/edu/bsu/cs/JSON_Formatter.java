@@ -1,12 +1,12 @@
 package edu.bsu.cs;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class JSON_Formatter {
-    static final Access access = new Access();
 
     public static String formatArtist(String responseBody) {
         JSONObject jsonObject = new JSONObject(responseBody);
@@ -14,8 +14,8 @@ public class JSON_Formatter {
         StringBuilder formattedOutput = new StringBuilder();
         formattedOutput.append("\nShowing the top 3 responses of your query:\n\n");
         if (artistsObject.has("items")) {
-            org.json.JSONArray itemsArray = artistsObject.getJSONArray("items");
-            for (int i = 0; i < itemsArray.length(); i++) {
+            JSONArray itemsArray = artistsObject.getJSONArray("items");
+            for (int i = 0; i < Math.min(3, itemsArray.length()); i++) {
                 JSONObject artistObject = itemsArray.getJSONObject(i);
                 formattedOutput.append(formatName(artistObject)).append("\n");
                 formattedOutput.append(formatID(artistObject)).append("\n");
@@ -39,7 +39,7 @@ public class JSON_Formatter {
 
     public static String formatGenres(JSONObject artistObject) {
         StringBuilder genresOutput = new StringBuilder("Artist genres:\n");
-        org.json.JSONArray genresArray = artistObject.getJSONArray("genres");
+        JSONArray genresArray = artistObject.getJSONArray("genres");
         for (int j = 0; j < genresArray.length(); j++) {
             genresOutput.append("- ").append(genresArray.getString(j)).append("\n");
         }
@@ -51,26 +51,27 @@ public class JSON_Formatter {
     }
 
     public static List<String> formatTrack(String responseBody) {
-        List<String> formattedSearch = new ArrayList<>();
+        List<String> formattedTracks = new ArrayList<>();
         JSONObject jsonObject = new JSONObject(responseBody);
         JSONObject tracksObject = jsonObject.getJSONObject("tracks");
         if (tracksObject.has("items")) {
-            org.json.JSONArray itemsArray = tracksObject.getJSONArray("items");
-            for (int i = 0; i < itemsArray.length(); i++) {
+            JSONArray itemsArray = tracksObject.getJSONArray("items");
+            for (int i = 0; i < Math.min(5, itemsArray.length()); i++) {
                 JSONObject trackObject = itemsArray.getJSONObject(i);
-                formattedSearch.add(formatTrackInfo(trackObject));
+                formattedTracks.add(formatTrackInfo(trackObject, i + 1));
             }
             if (itemsArray.isEmpty()) {
-                formattedSearch.add("No results found!");
+                formattedTracks.add("No results found!");
             }
         }
-        return formattedSearch;
+        return formattedTracks;
     }
 
-    public static String formatTrackInfo(JSONObject trackObject) {
-        String trackName = "Track name: " + trackObject.getString("name");
-        String artistName = "Artist Name: " + trackObject.getJSONArray("artists").getJSONObject(0).getString("name");
-        return trackName + "\n" + artistName;
+    public static String formatTrackInfo(JSONObject trackObject, int index) {
+        String trackName = trackObject.getString("name");
+        JSONArray artistsArray = trackObject.getJSONArray("artists");
+        String artistName = artistsArray.getJSONObject(0).getString("name");
+        return index + ":\nTrack name: " + trackName + "\nArtist Name: " + artistName;
     }
 
     public static String formatAlbum(String responseBody) {
@@ -78,7 +79,7 @@ public class JSON_Formatter {
         JSONObject jsonObject = new JSONObject(responseBody);
         JSONObject albumsObject = jsonObject.getJSONObject("albums");
         if (albumsObject.has("items")) {
-            org.json.JSONArray itemsArray = albumsObject.getJSONArray("items");
+            JSONArray itemsArray = albumsObject.getJSONArray("items");
             for (int i = 0; i < itemsArray.length(); i++) {
                 JSONObject albumObject = itemsArray.getJSONObject(i);
                 formattedOutput.append(formatAlbumID(albumObject)).append("\n");

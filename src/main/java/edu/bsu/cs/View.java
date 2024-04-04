@@ -23,7 +23,7 @@ public class View {
         }
         System.out.println("Tracks:");
         for (int i = 0; i < trackData.size(); i++) {
-            System.out.printf("\n%d. %s%n", i + 1, trackData.get(i));
+            System.out.printf("%d:%n%s%n%n", i + 1, trackData.get(i));
         }
     }
 
