@@ -21,7 +21,7 @@ public class JSON_Formatter {
                 formatName(artistObject);
                 formatID(artistObject);
                 formatGenres(artistObject);
-                formatPopularity(artistObject);
+                //formatPopularity(artistObject);
                 System.out.println();
             }
             if (itemsArray.isEmpty()){
@@ -54,11 +54,7 @@ public class JSON_Formatter {
 
     }
 
-    public static int formatPopularity(JSONObject artistObject) {
-        int popularity = artistObject.getInt("popularity");
-        System.out.println("Artist popularity: " + popularity);
-        return popularity;
-    }
+
 
     //FORMAT TRACKS
 
