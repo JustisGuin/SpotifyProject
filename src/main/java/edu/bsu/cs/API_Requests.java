@@ -1,9 +1,7 @@
 package edu.bsu.cs;
 
-import net.minidev.json.JSONUtil;
 import org.json.JSONObject;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URLEncoder;
 import java.net.http.HttpClient;
@@ -149,6 +147,4 @@ public class API_Requests {
         }
         return null;
     }
-
-
 }
