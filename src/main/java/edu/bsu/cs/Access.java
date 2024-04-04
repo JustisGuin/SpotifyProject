@@ -47,13 +47,12 @@ public class Access {
             return accessToken;
         }
 
-        /*else {
+        else {
             ErrorCatcher errorcatch = new ErrorCatcher();
             String responseToString = response.request().toString();
             int responseToInt = Integer.parseInt(responseToString);
             errorcatch.statusError(responseToInt);
         }
-         */
         return null;
     }
 }
