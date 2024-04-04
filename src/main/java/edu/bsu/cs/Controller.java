@@ -22,7 +22,7 @@ public class Controller {
 
         if (userInput.isEmpty()) {
             emptyInput();
-        } else if (userInput.equalsIgnoreCase("quit")) {
+        } else if (userInput.equalsIgnoreCase("QUIT")) {
             userQuit();
         } else if (userInput.equalsIgnoreCase("1")) {
             userPickArtist();
@@ -42,8 +42,8 @@ public class Controller {
         return userInput;
     }
 
-    private String emptyInput(){
-        return "No entry was entered. Please enter a valid choice.";
+    private void emptyInput(){
+        System.out.println("No entry was entered. Please enter a valid choice.");;
     }
 
     private String askForTypeOfSearch(){
