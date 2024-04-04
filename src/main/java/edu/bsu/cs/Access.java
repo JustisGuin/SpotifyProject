@@ -43,8 +43,7 @@ public class Access {
         if (response.statusCode() == 200) {
             Gson gson = new Gson();
             JsonObject jsonResponse = gson.fromJson(response.body(), JsonObject.class);
-            String accessToken =  jsonResponse.get("access_token").getAsString();
-            return accessToken;
+            return jsonResponse.get("access_token").getAsString();
         }
 
         else {

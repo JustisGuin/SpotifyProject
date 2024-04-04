@@ -1,17 +1,12 @@
 package edu.bsu.cs;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Controller {
 
     private final Scanner scanner;
 
-    ErrorCatcher errorCatcher = new ErrorCatcher();
-    Access access = new Access();
-    JSON_Formatter formatter = new JSON_Formatter();
     API_Requests apiRequests = new API_Requests();
 
     public Controller() {
@@ -45,7 +40,7 @@ public class Controller {
     }
 
     private void emptyInput(){
-        System.out.println("No entry was entered. Please enter a valid choice.");;
+        System.out.println("No entry was entered. Please enter a valid choice.");
     }
 
     private String askForTypeOfSearch(){
@@ -54,8 +49,8 @@ public class Controller {
         return scanner.nextLine();
     }
 
-    private String userQuit(){
-        return "Exiting program, thank you!";
+    private void userQuit(){
+        System.out.println("Exiting program, thank you!");
     }
 
     private void userPickArtist(){
