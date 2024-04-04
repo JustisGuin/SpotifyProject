@@ -55,9 +55,10 @@ public class JSON_Formatter {
 
     }
 
-    public static void formatPopularity(JSONObject artistObject) {
+    public static int formatPopularity(JSONObject artistObject) {
         int popularity = artistObject.getInt("popularity");
         System.out.println("Artist popularity: " + popularity);
+        return popularity;
     }
 
     //FORMAT TRACKS

@@ -43,10 +43,21 @@ public class FormatterTest {
 
     }
     @Test
-    public void testArtistGenre(){
+    public void testArtistPopularity(){
         JSONObject jsonObject = readJSONObjectFromFile("src/test/resources/testArtistSample.json");
-        jsonObject.put("genres", "chicago rap");
-        String formattedGenre = JSON_Formatter.formatGenres(jsonObject);
-        assertEquals("chicago rap", formattedGenre);
+        jsonObject.put("popularity", 81);
+        int formattedPopularity = JSON_Formatter.formatPopularity(jsonObject);
+        assertEquals(81, formattedPopularity);
+    }
+    @Test
+    public void testTrackName(){
+        JSONObject jsonObject = readJSONObjectFromFile("src/test/resources/getTrackSample2.json");
+        jsonObject.put("name", "Happy Birthday Songs");
+        String formattedTrackName = JSON_Formatter.formatTrackName(jsonObject);
+        assertEquals("Track name: Happy Birthday Songs", formattedTrackName);
+    }
+    @Test
+    public void testTrackAlbum(){
+
     }
 }
