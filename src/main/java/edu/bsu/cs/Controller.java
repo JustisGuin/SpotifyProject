@@ -1,9 +1,7 @@
 package edu.bsu.cs;
 
 import java.io.IOException;
-import java.text.Format;
 import java.util.ArrayList;
-import java.util.Formatter;
 import java.util.List;
 import java.util.Scanner;
 public class Controller {
