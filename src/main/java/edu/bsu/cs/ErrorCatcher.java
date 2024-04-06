@@ -2,6 +2,22 @@ package edu.bsu.cs;
 
 public class ErrorCatcher {
 
+    public static void configPropertiesError(NumberFormatException e) {
+        System.out.println();
+        System.err.println("'NumberFormatException' Error!!! -- This is usually caused by your configuration.properties file containing a mistyped or invalid token.");
+    }
+
+    public static void configFileNotFound() {
+        System.out.println();
+        System.err.println("'FileNotFound' Error!!! -- Please verify that you have the 'configuration.properties' file in your project.");
+    }
+
+    public static void nullPointerException() {
+        System.out.println();
+        System.err.println("'NullPointerException' Error!!! -- Please verify that the 'configuration.properties' file has been added to your project.");
+    }
+
+
     public String statusError(int requestToken) {
         switch (requestToken) {
             case 200 -> {

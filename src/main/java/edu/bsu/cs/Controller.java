@@ -1,5 +1,6 @@
 package edu.bsu.cs;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -8,6 +9,7 @@ public class Controller {
     private final Scanner scanner;
 
     API_Requests apiRequests = new API_Requests();
+    ErrorCatcher errorCatcher = new ErrorCatcher();
 
     public Controller() {
         this.scanner = new Scanner(System.in);
@@ -57,8 +59,11 @@ public class Controller {
         try {
             String responseBody = apiRequests.searchForArtist(Access.getAccessToken(), getUserInput("Enter name of Artist\n"));
             View.displayArtist(responseBody);
-        } catch (IOException | InterruptedException e) {
-            throw new RuntimeException(e);
+        } catch (NumberFormatException e) {
+            ErrorCatcher.configPropertiesError(e);
+        }
+        catch (Exception e){
+            e.printStackTrace();
         }
     }
 
@@ -66,8 +71,11 @@ public class Controller {
         try {
             String responseBody = apiRequests.searchForTrack(Access.getAccessToken(), getUserInput("Enter name of Track\n"));
             View.displayTrack(responseBody);
-        } catch (IOException | InterruptedException e) {
-            throw new RuntimeException(e);
+        } catch (NumberFormatException e) {
+            ErrorCatcher.configPropertiesError(e);
+        }
+        catch (Exception e){
+            e.printStackTrace();
         }
     }
 
@@ -75,8 +83,11 @@ public class Controller {
         try {
             String responseBody = apiRequests.searchForAlbum(Access.getAccessToken(), getUserInput("Enter name of Album\n"));
             View.displayAlbum(responseBody);
-        } catch (IOException | InterruptedException e) {
-            throw new RuntimeException(e);
+        } catch (NumberFormatException e) {
+            ErrorCatcher.configPropertiesError(e);
+        }
+        catch (Exception e){
+            e.printStackTrace();
         }
     }
 }
