@@ -29,7 +29,24 @@ public class Controller {
         }
     }
 
-    public String getUserInput(String question){
+    //FOR USER CHOOSING AN ALBUM
+    public void userAlbumInput() {
+        String userInput = askForAlbumSelection();
+
+        if (userInput.isEmpty()) {
+            emptyInput();
+        } else if (userInput.equalsIgnoreCase("QUIT")) {
+            userQuit();
+        } else if (userInput.equalsIgnoreCase("1")) {
+            userPickArtist();
+        } else if (userInput.equalsIgnoreCase("2")) {
+            userPickTrack();
+        } else if (userInput.equalsIgnoreCase("3")) {
+            userPickAlbum();
+        }
+    }
+
+    public String getUserInput(String question) {
         System.out.println(question);
         String userInput = scanner.nextLine();
         while (userInput.isEmpty()) {
@@ -39,21 +56,27 @@ public class Controller {
         return userInput;
     }
 
-    private void emptyInput(){
+    private void emptyInput() {
         System.out.println("No entry was entered. Please enter a valid choice.");
     }
 
-    private String askForTypeOfSearch(){
+    private String askForTypeOfSearch() {
         System.out.println("\"Would you like to search for a Artist (1), Track (2), or Album (3)? " +
                 "\\nPlease type the number associated with your choice.\\nType B to go back\\n\"");
         return scanner.nextLine();
     }
 
-    private void userQuit(){
+    private String askForAlbumSelection() {
+        System.out.println("\"Would you like the tracklist for albums 1, 2, or 3? " +
+                "\nPLease type the number associated with your choice.\nType B to go back\n\"");
+        return scanner.nextLine();
+    }
+
+    private void userQuit() {
         System.out.println("Exiting program, thank you!");
     }
 
-    private void userPickArtist(){
+    private void userPickArtist() {
         try {
             String responseBody = apiRequests.searchForArtist(Access.getAccessToken(), getUserInput("Enter name of Artist\n"));
             View.displayArtist(responseBody);
@@ -62,7 +85,7 @@ public class Controller {
         }
     }
 
-    private void userPickTrack(){
+    private void userPickTrack() {
         try {
             String responseBody = apiRequests.searchForTrack(Access.getAccessToken(), getUserInput("Enter name of Track\n"));
             View.displayTrack(responseBody);
@@ -71,7 +94,7 @@ public class Controller {
         }
     }
 
-    private void userPickAlbum(){
+    private void userPickAlbum() {
         try {
             String responseBody = apiRequests.searchForAlbum(Access.getAccessToken(), getUserInput("Enter name of Album\n"));
             View.displayAlbum(responseBody);

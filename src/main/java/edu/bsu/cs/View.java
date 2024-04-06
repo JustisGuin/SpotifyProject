@@ -25,6 +25,11 @@ public class View {
         System.out.println(formattedData);
     }
 
+    public static void displayAlbumTracks(String responseBody){
+        String formattedData = JSON_Formatter.formatAlbumTracks(responseBody);
+        System.out.println(formattedData);
+    }
+
     public static void displayNoResults() {
         System.out.println("No results found!");
     }
