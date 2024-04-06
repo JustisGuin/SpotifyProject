@@ -12,7 +12,6 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller=" ">
    <children>
       <Label alignment="CENTER" layoutY="-2.0" prefHeight="60.0" prefWidth="108.0" style="-fx-background-color: #1DB954;" text="M U S I C" textFill="WHITE">
@@ -90,7 +89,7 @@
       </Pane>
       <ImageView fitHeight="67.0" fitWidth="400.0" layoutX="104.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../Pictures/spotifySearchBare.png" />
+            <Image url="@imgs/spotifySearchBare.png" />
          </image>
       </ImageView>
       <Label layoutX="116.0" layoutY="26.0" prefHeight="25.0" prefWidth="157.0" text="R A P  M U S I C">
@@ -129,19 +128,19 @@
                   <Button contentDisplay="GRAPHIC_ONLY" layoutX="18.0" layoutY="12.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="110.0" />
                   <ImageView fitHeight="100.0" fitWidth="110.0" layoutX="18.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../../../../Pictures/AstroWorld.jpg" />
+                        <Image url="@imgs/AstroWorld.jpg" />
                      </image>
                   </ImageView>
                   <Button contentDisplay="GRAPHIC_ONLY" layoutX="142.0" layoutY="14.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="95.0" text="Button" />
                   <ImageView fitHeight="107.0" fitWidth="94.0" layoutX="143.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../../../../Pictures/Carter.jpg" />
+                        <Image url="@imgs/Carter.jpg" />
                      </image>
                   </ImageView>
                   <Button contentDisplay="GRAPHIC_ONLY" layoutX="266.0" layoutY="13.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="97.0" text="Button" />
                   <ImageView fitHeight="111.0" fitWidth="157.0" layoutX="265.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../../../../Pictures/Whole%20lotta%20red.jpg" />
+                        <Image url="@imgs/Whole%20lotta%20red.jpg" />
                      </image>
                   </ImageView>
                </children>
