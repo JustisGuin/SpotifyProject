@@ -35,5 +35,5 @@ test {
 }
 
 application {
-    mainClass.set('Main.java')
+    mainClass.set('edu.bsu.cs.view.GUI')
 }
