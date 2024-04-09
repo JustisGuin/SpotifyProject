@@ -33,7 +33,7 @@ public class Controller {
 
     //FOR USER CHOOSING AN ALBUM
     public void userAlbumInput() {
-        String userInput = askForAlbumSelection();
+        String userInput = askForTypeOfSearch();
 
         if (userInput.isEmpty()) {
             emptyInput();
@@ -64,7 +64,7 @@ public class Controller {
 
     private String askForTypeOfSearch() {
         System.out.println("\"Would you like to search for a Artist (1), Track (2), or Album (3)? " +
-                "\\nPlease type the number associated with your choice.\\nType B to go back\\n\"");
+                "\nPlease type the number associated with your choice.\nType B to go back, or QUIT to quit.\n");
         return scanner.nextLine();
     }
 
