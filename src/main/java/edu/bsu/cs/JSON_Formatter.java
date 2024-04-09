@@ -84,7 +84,7 @@ public class JSON_Formatter {
                 JSONObject albumObject = itemsArray.getJSONObject(i);
                 formattedOutput.append(formatAlbumID(albumObject)).append("\n");
                 formattedOutput.append(formatAlbumName(albumObject)).append("\n");
-                formattedOutput.append(formatAlbumAtistName(albumObject)).append("\n");
+                formattedOutput.append(formatAlbumArtistName(albumObject)).append("\n");
             }
             if (itemsArray.isEmpty()) {
                 formattedOutput.append("No results found!\n");
@@ -104,12 +104,11 @@ public class JSON_Formatter {
 
     }
 
-    public static String formatAlbumAtistName(JSONObject albumObject) {
+    public static String formatAlbumArtistName(JSONObject albumObject) {
         org.json.JSONArray trackArtistsArray = albumObject.getJSONArray("artists");
         JSONObject trackArtist = trackArtistsArray.getJSONObject(0);
         String albumName = trackArtist.getString("name");
-        System.out.println(trackArtist);
-        return ("Album Name:" + albumName);
+        return ("Artist Name:" + albumName);
     }
 
     public static String formatAlbumTracks(String responseBody){
