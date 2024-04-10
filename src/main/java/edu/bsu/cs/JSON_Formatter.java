@@ -82,6 +82,7 @@ public class JSON_Formatter {
             JSONArray itemsArray = albumsObject.getJSONArray("items");
             for (int i = 0; i < itemsArray.length(); i++) {
                 JSONObject albumObject = itemsArray.getJSONObject(i);
+                formattedOutput.append("\nAlbum ").append(i + 1).append(":\n");
                 formattedOutput.append(formatAlbumID(albumObject)).append("\n");
                 formattedOutput.append(formatAlbumName(albumObject)).append("\n");
                 formattedOutput.append(formatAlbumArtistName(albumObject)).append("\n");
