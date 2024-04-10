@@ -16,11 +16,10 @@ public class ErrorCatcherTest {
 
     @Test
     public void testSearchNotFound(){
-        int notFound = 400;
         ErrorCatcher ec = new ErrorCatcher();
-        //String response = String.valueOf(ec.searchNotFound(notFound));
+        String response = String.valueOf(ec.statusError(400));
 
-        //Assertions.assertEquals("400", response);
+        Assertions.assertEquals("Bad Request - The request could not be understood by the server due to malformed syntax. The message body will contain more information; see Response Schema.", response);
     }
 }
 
