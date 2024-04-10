@@ -2,8 +2,8 @@ package edu.bsu.cs;
 
 public class ErrorCatcher {
 
-    public static void configPropertiesError(NumberFormatException e) {
-        System.out.println();
+    public static void configPropertiesError() {
+        System.err.println();
         System.err.println("'NumberFormatException' Error!!! -- This is usually caused by your configuration.properties file containing a mistyped or invalid token.");
     }
 
@@ -15,6 +15,10 @@ public class ErrorCatcher {
     public static void nullPointerException() {
         System.out.println();
         System.err.println("'NullPointerException' Error!!! -- Please verify that the 'configuration.properties' file has been added to your project.");
+    }
+
+    public static void PrintUnknownError() {
+        System.err.println("Unknown error detected");
     }
 
 

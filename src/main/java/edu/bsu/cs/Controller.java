@@ -1,7 +1,5 @@
 package edu.bsu.cs;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Controller {
@@ -9,30 +7,11 @@ public class Controller {
     private final Scanner scanner;
 
     API_Requests apiRequests = new API_Requests();
-    ErrorCatcher errorCatcher = new ErrorCatcher();
-
     public Controller() {
         this.scanner = new Scanner(System.in);
     }
 
     public void spotifyInput() {
-        String userInput = askForTypeOfSearch();
-
-        if (userInput.isEmpty()) {
-            emptyInput();
-        } else if (userInput.equalsIgnoreCase("QUIT")) {
-            userQuit();
-        } else if (userInput.equalsIgnoreCase("1")) {
-            userPickArtist();
-        } else if (userInput.equalsIgnoreCase("2")) {
-            userPickTrack();
-        } else if (userInput.equalsIgnoreCase("3")) {
-            userPickAlbum();
-        }
-    }
-
-    //FOR USER CHOOSING AN ALBUM
-    public void userAlbumInput() {
         String userInput = askForTypeOfSearch();
 
         if (userInput.isEmpty()) {
@@ -63,14 +42,12 @@ public class Controller {
     }
 
     private String askForTypeOfSearch() {
-        System.out.println("\"Would you like to search for a Artist (1), Track (2), or Album (3)? " +
-                "\nPlease type the number associated with your choice.\nType B to go back, or QUIT to quit.\n");
-        return scanner.nextLine();
-    }
+        System.out.println("""
+                "Would you like to search for a Artist (1), Track (2), or Album (3)? \
 
-    private String askForAlbumSelection() {
-        System.out.println("\"Would you like the tracklist for albums 1, 2, or 3? " +
-                "\nPLease type the number associated with your choice.\nType B to go back\n\"");
+                Please type the number associated with your choice.
+                Type B to go back, or QUIT to quit.
+                """);
         return scanner.nextLine();
     }
 
@@ -83,10 +60,10 @@ public class Controller {
             String responseBody = apiRequests.searchForArtist(Access.getAccessToken(), getUserInput("Enter name of Artist\n"));
             View.displayArtist(responseBody);
         } catch (NumberFormatException e) {
-            ErrorCatcher.configPropertiesError(e);
+            ErrorCatcher.configPropertiesError();
         }
         catch (Exception e){
-            e.printStackTrace();
+            ErrorCatcher.PrintUnknownError();
         }
     }
 
@@ -95,10 +72,10 @@ public class Controller {
             String responseBody = apiRequests.searchForTrack(Access.getAccessToken(), getUserInput("Enter name of Track\n"));
             View.displayTrack(responseBody);
         } catch (NumberFormatException e) {
-            ErrorCatcher.configPropertiesError(e);
+            ErrorCatcher.configPropertiesError();
         }
         catch (Exception e){
-            e.printStackTrace();
+            ErrorCatcher.PrintUnknownError();
         }
     }
 
@@ -107,10 +84,10 @@ public class Controller {
             String responseBody = apiRequests.searchForAlbum(Access.getAccessToken(), getUserInput("Enter name of Album\n"));
             View.displayAlbum(responseBody);
         } catch (NumberFormatException e) {
-            ErrorCatcher.configPropertiesError(e);
+            ErrorCatcher.configPropertiesError();
         }
         catch (Exception e){
-            e.printStackTrace();
+            ErrorCatcher.PrintUnknownError();
         }
     }
 }

@@ -11,6 +11,7 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.Objects;
 import java.util.Properties;
 
 public class Access {
@@ -61,7 +62,7 @@ public class Access {
             System.err.println("InterruptedException – if the operation is interrupted");
         }
 
-        if (response.statusCode() == 200) {
+        if (Objects.requireNonNull(response).statusCode() == 200) {
             Gson gson = new Gson();
             JsonObject jsonResponse = gson.fromJson(response.body(), JsonObject.class);
             return jsonResponse.get("access_token").getAsString();

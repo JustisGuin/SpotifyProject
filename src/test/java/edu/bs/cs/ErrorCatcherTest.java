@@ -10,7 +10,7 @@ public class ErrorCatcherTest {
         int statusCode = 450;
         ErrorCatcher ec = new ErrorCatcher();
         String response = ec.statusError(statusCode);
-        Assertions.assertEquals("error", response);
+        Assertions.assertEquals("Unknown status code: 450", response);
 
     }
 
