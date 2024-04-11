@@ -33,13 +33,15 @@ public class GUI extends Application {
 
 
     @Override
-    public void start(Stage primaryStage) throws IOException {
+    public void start(Stage stage) throws IOException {
 
         outputField.setMinHeight(600);
         outputField.setMinWidth(600);
-        configure(primaryStage);
+        configure(stage);
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("GUI.fxml")));
         Scene scene = new Scene(root, WINDOW_SIZE[0], WINDOW_SIZE[1]);
+        stage.setScene(scene);
+        stage.show();
 
         scene.getStylesheets().add("view/gui.css");
 
