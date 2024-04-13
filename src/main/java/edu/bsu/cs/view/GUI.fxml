@@ -12,181 +12,144 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="edu.bsu.cs.view.SceneController">
-    <children>
-        <Label alignment="CENTER" layoutY="-2.0" prefHeight="60.0" prefWidth="108.0"
-               style="-fx-background-color: #1DB954;" text="M U S I C" textFill="WHITE">
-            <font>
-                <Font name="Comic Sans MS" size="17.0"/>
-            </font>
-        </Label>
-        <Separator layoutY="55.0" prefHeight="6.0" prefWidth="600.0"/>
-        <Separator layoutX="100.0" layoutY="-3.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="16.0"/>
-        <Separator layoutX="503.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="6.0"/>
-        <Pane layoutY="55.0" prefHeight="345.0" prefWidth="106.0" style="-fx-background-color: #b3b3b3;">
-            <children>
-                <Label alignment="CENTER_RIGHT" layoutX="8.0" layoutY="14.0" text="Nagivation" textFill="#fffbfb">
-                    <font>
-                        <Font name="Comic Sans MS Bold" size="15.0"/>
-                    </font>
-                </Label>
-                <ComboBox layoutX="19.0" layoutY="42.0" prefHeight="25.0" prefWidth="88.0" promptText="PROFILE"
-                          style="-fx-background-color: #b3b3b3;"/>
-                <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="80.0"
-                        mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0"
-                        style="-fx-background-color: #b3b3b3;" text="MY MUSIC"/>
-                <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="9.0" layoutY="46.0" pickOnBounds="true"
-                           preserveRatio="true">
-                    <image>
-                        <Image url="@imgs/profile%20icon.png"/>
-                    </image>
-                </ImageView>
-                <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="9.0" layoutY="84.0" pickOnBounds="true"
-                           preserveRatio="true">
-                    <image>
-                        <Image url="@imgs/music%20icon.png"/>
-                    </image>
-                </ImageView>
-                <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="105.0"
-                        mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0"
-                        style="-fx-background-color: #b3b3b3;" text="Geners">
-                    <font>
-                        <Font size="10.0"/>
-                    </font>
-                </Button>
-                <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="200.0"
-                        mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0"
-                        style="-fx-background-color: #b3b3b3;" text="Recent">
-                    <font>
-                        <Font size="10.0"/>
-                    </font>
-                </Button>
-                <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="138.0"
-                        mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0"
-                        style="-fx-background-color: #b3b3b3;" text="Collection">
-                    <font>
-                        <Font size="10.0"/>
-                    </font>
-                </Button>
-                <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="168.0"
-                        mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0"
-                        style="-fx-background-color: #b3b3b3;" text="By Date">
-                    <font>
-                        <Font size="10.0"/>
-                    </font>
-                </Button>
-                <Separator orientation="VERTICAL" prefHeight="200.0"/>
-                <Separator layoutX="39.0" layoutY="119.0" orientation="VERTICAL" prefHeight="98.0" prefWidth="6.0"/>
-                <Separator layoutX="39.0" layoutY="110.0" prefHeight="17.0" prefWidth="7.0"/>
-                <Separator layoutX="39.0" layoutY="209.0" prefHeight="17.0" prefWidth="6.0"/>
-                <Separator layoutX="41.0" layoutY="142.0" prefHeight="17.0" prefWidth="6.0"/>
-                <Separator layoutX="41.0" layoutY="172.0" prefHeight="17.0" prefWidth="6.0"/>
-                <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="234.0"
-                        mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0"
-                        style="-fx-background-color: #b3b3b3;" text="COLLECTION"/>
-                <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="259.0"
-                        mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0"
-                        style="-fx-background-color: #b3b3b3;" text="FAVORITE"/>
-                <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="290.0"
-                        mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0"
-                        style="-fx-background-color: #b3b3b3;" text="RANDOM"/>
-                <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="9.0" layoutY="238.0" pickOnBounds="true"
-                           preserveRatio="true">
-                    <image>
-                        <Image url="@imgs/music%20icon.png"/>
-                    </image>
-                </ImageView>
-                <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="11.0" layoutY="263.0" pickOnBounds="true"
-                           preserveRatio="true">
-                    <image>
-                        <Image url="@imgs/music%20icon.png"/>
-                    </image>
-                </ImageView>
-                <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="11.0" layoutY="294.0" pickOnBounds="true"
-                           preserveRatio="true">
-                    <image>
-                        <Image url="@imgs/music%20icon.png"/>
-                    </image>
-                </ImageView>
-            </children>
-        </Pane>
-        <ImageView fitHeight="67.0" fitWidth="400.0" layoutX="104.0" layoutY="58.0" pickOnBounds="true"
-                   preserveRatio="true">
-            <image>
-                <Image url="@imgs/spotifySearchBare.png"/>
-            </image>
-        </ImageView>
-        <Label layoutX="116.0" layoutY="26.0" prefHeight="25.0" prefWidth="157.0" text="R A P  M U S I C">
-            <font>
-                <Font name="Comic Sans MS" size="16.0"/>
-            </font>
-        </Label>
-        <Button layoutX="108.0" layoutY="197.0" mnemonicParsing="false" text="0"/>
-        <Button layoutX="141.0" layoutY="197.0" mnemonicParsing="false" text="9"/>
-        <Button layoutX="171.0" layoutY="197.0" mnemonicParsing="false" style="-fx-background-color: #aee4c1;" text="A"
-                textFill="#1db954"/>
-        <Button layoutX="202.0" layoutY="197.0" mnemonicParsing="false" text="B"/>
-        <Button layoutX="235.0" layoutY="197.0" mnemonicParsing="false" text="C"/>
-        <Button layoutX="273.0" layoutY="197.0" mnemonicParsing="false" text="D"/>
-        <Button layoutX="306.0" layoutY="197.0" mnemonicParsing="false" text="E"/>
-        <Button layoutX="341.0" layoutY="197.0" mnemonicParsing="false" text="F"/>
-        <Button layoutX="374.0" layoutY="197.0" mnemonicParsing="false" text="G"/>
-        <Button layoutX="408.0" layoutY="197.0" mnemonicParsing="false" text="H"/>
-        <Button layoutX="444.0" layoutY="197.0" mnemonicParsing="false" text="I"/>
-        <Button layoutX="475.0" layoutY="197.0" mnemonicParsing="false" text="J"/>
-        <Button layoutX="109.0" layoutY="241.0" mnemonicParsing="false" text="L"/>
-        <Button layoutX="139.0" layoutY="241.0" mnemonicParsing="false" text="M"/>
-        <Button layoutX="170.0" layoutY="241.0" mnemonicParsing="false" text="N"/>
-        <Button layoutX="200.0" layoutY="241.0" mnemonicParsing="false" text="O"/>
-        <Button layoutX="234.0" layoutY="241.0" mnemonicParsing="false" text="P"/>
-        <Button layoutX="271.0" layoutY="241.0" mnemonicParsing="false" text="Q"/>
-        <Button layoutX="304.0" layoutY="241.0" mnemonicParsing="false" text="R"/>
-        <Button layoutX="339.0" layoutY="241.0" mnemonicParsing="false" text="S"/>
-        <Button layoutX="375.0" layoutY="241.0" mnemonicParsing="false" text="T"/>
-        <Button layoutX="409.0" layoutY="241.0" mnemonicParsing="false" text="U"/>
-        <Button layoutX="443.0" layoutY="241.0" mnemonicParsing="false" text="V"/>
-        <Line endX="-82.0" layoutX="274.0" layoutY="227.0" startX="-100.0" stroke="#1db954"/>
-        <ScrollPane layoutX="104.0" layoutY="266.0" prefHeight="134.0" prefWidth="400.0">
-            <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="134.0" prefWidth="387.0">
-                    <children>
-                        <Button contentDisplay="GRAPHIC_ONLY" layoutX="18.0" layoutY="12.0" mnemonicParsing="false"
-                                prefHeight="100.0" prefWidth="110.0"/>
-                        <ImageView fitHeight="100.0" fitWidth="110.0" layoutX="18.0" layoutY="13.0" pickOnBounds="true"
-                                   preserveRatio="true">
-                            <image>
-                                <Image url="@imgs/AstroWorld.jpg"/>
-                            </image>
-                        </ImageView>
-                        <Button contentDisplay="GRAPHIC_ONLY" layoutX="142.0" layoutY="14.0" mnemonicParsing="false"
-                                prefHeight="98.0" prefWidth="95.0" text="Button"/>
-                        <ImageView fitHeight="107.0" fitWidth="94.0" layoutX="143.0" layoutY="14.0" pickOnBounds="true"
-                                   preserveRatio="true">
-                            <image>
-                                <Image url="@imgs/Carter.jpg"/>
-                            </image>
-                        </ImageView>
-                        <Button contentDisplay="GRAPHIC_ONLY" layoutX="266.0" layoutY="13.0" mnemonicParsing="false"
-                                prefHeight="98.0" prefWidth="97.0" text="Button"/>
-                        <ImageView fitHeight="111.0" fitWidth="157.0" layoutX="265.0" layoutY="8.0" pickOnBounds="true"
-                                   preserveRatio="true">
-                            <image>
-                                <Image url="@imgs/Whole%20lotta%20red.jpg"/>
-                            </image>
-                        </ImageView>
-                    </children>
-                </AnchorPane>
-            </content>
-        </ScrollPane>
-        <Button layoutX="123.0" layoutY="135.0" mnemonicParsing="false" onAction="#switchToArtistScene"
-                prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #aee4c1;" text="Artist"
-                textFill="#1db954"/>
-        <Button layoutX="204.0" layoutY="135.0" mnemonicParsing="false" onAction="#switchToAlbumScene" prefHeight="25.0"
-                prefWidth="60.0" style="-fx-background-color: #aee4c1;" text="Album" textFill="#1db954"/>
-        <Button layoutX="274.0" layoutY="135.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0"
-                style="-fx-background-color: #aee4c1;" text="Track" textFill="#1db954"/>
-        <Button layoutX="348.0" layoutY="135.0" mnemonicParsing="false" style="-fx-background-color: #aee4c1;"
-                text="Something else?" textFill="#1db954"/>
-    </children>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller=" ">
+   <children>
+      <Label alignment="CENTER" layoutY="-2.0" prefHeight="60.0" prefWidth="108.0" style="-fx-background-color: #1DB954;" text="M U S I C" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="17.0" />
+         </font>
+      </Label>
+      <Separator layoutY="55.0" prefHeight="6.0" prefWidth="600.0" />
+      <Separator layoutX="100.0" layoutY="-3.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="16.0" />
+      <Separator layoutX="503.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="6.0" />
+      <Pane layoutY="55.0" prefHeight="345.0" prefWidth="106.0" style="-fx-background-color: #b3b3b3;">
+         <children>
+            <Label alignment="CENTER_RIGHT" layoutX="8.0" layoutY="14.0" text="Nagivation" textFill="#fffbfb">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="19.0" layoutY="42.0" prefHeight="25.0" prefWidth="88.0" promptText="PROFILE" style="-fx-background-color: #b3b3b3;" />
+            <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="80.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #b3b3b3;" text="MY MUSIC" />
+            <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="9.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imgs/profile%20icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="9.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imgs/music%20icon.png" />
+               </image>
+            </ImageView>
+            <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="105.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #b3b3b3;" text="Geners">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="200.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #b3b3b3;" text="Recent">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="138.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #b3b3b3;" text="Collection">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="168.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #b3b3b3;" text="By Date">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Separator layoutX="39.0" layoutY="119.0" orientation="VERTICAL" prefHeight="98.0" prefWidth="6.0" />
+            <Separator layoutX="39.0" layoutY="110.0" prefHeight="17.0" prefWidth="7.0" />
+            <Separator layoutX="39.0" layoutY="209.0" prefHeight="17.0" prefWidth="6.0" />
+            <Separator layoutX="41.0" layoutY="142.0" prefHeight="17.0" prefWidth="6.0" />
+            <Separator layoutX="41.0" layoutY="172.0" prefHeight="17.0" prefWidth="6.0" />
+            <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="234.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #b3b3b3;" text="COLLECTION" />
+            <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="259.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #b3b3b3;" text="FAVORITE" />
+            <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="290.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #b3b3b3;" text="RANDOM" />
+            <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="9.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imgs/music%20icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="11.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imgs/music%20icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="11.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imgs/music%20icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fitHeight="67.0" fitWidth="400.0" layoutX="104.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/spotifySearchBare.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="116.0" layoutY="26.0" prefHeight="25.0" prefWidth="157.0" text="R A P  M U S I C">
+         <font>
+            <Font name="Comic Sans MS" size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="108.0" layoutY="197.0" mnemonicParsing="false" text="0" />
+      <Button layoutX="141.0" layoutY="197.0" mnemonicParsing="false" text="9" />
+      <Button layoutX="171.0" layoutY="197.0" mnemonicParsing="false" style="-fx-background-color: #aee4c1;" text="A" textFill="#1db954" />
+      <Button layoutX="202.0" layoutY="197.0" mnemonicParsing="false" text="B" />
+      <Button layoutX="235.0" layoutY="197.0" mnemonicParsing="false" text="C" />
+      <Button layoutX="273.0" layoutY="197.0" mnemonicParsing="false" text="D" />
+      <Button layoutX="306.0" layoutY="197.0" mnemonicParsing="false" text="E" />
+      <Button layoutX="341.0" layoutY="197.0" mnemonicParsing="false" text="F" />
+      <Button layoutX="374.0" layoutY="197.0" mnemonicParsing="false" text="G" />
+      <Button layoutX="408.0" layoutY="197.0" mnemonicParsing="false" text="H" />
+      <Button layoutX="444.0" layoutY="197.0" mnemonicParsing="false" text="I" />
+      <Button layoutX="475.0" layoutY="197.0" mnemonicParsing="false" text="J" />
+      <Button layoutX="109.0" layoutY="241.0" mnemonicParsing="false" text="L" />
+      <Button layoutX="139.0" layoutY="241.0" mnemonicParsing="false" text="M" />
+      <Button layoutX="170.0" layoutY="241.0" mnemonicParsing="false" text="N" />
+      <Button layoutX="200.0" layoutY="241.0" mnemonicParsing="false" text="O" />
+      <Button layoutX="234.0" layoutY="241.0" mnemonicParsing="false" text="P" />
+      <Button layoutX="271.0" layoutY="241.0" mnemonicParsing="false" text="Q" />
+      <Button layoutX="304.0" layoutY="241.0" mnemonicParsing="false" text="R" />
+      <Button layoutX="339.0" layoutY="241.0" mnemonicParsing="false" text="S" />
+      <Button layoutX="375.0" layoutY="241.0" mnemonicParsing="false" text="T" />
+      <Button layoutX="409.0" layoutY="241.0" mnemonicParsing="false" text="U" />
+      <Button layoutX="443.0" layoutY="241.0" mnemonicParsing="false" text="V" />
+      <Line endX="-82.0" layoutX="274.0" layoutY="227.0" startX="-100.0" stroke="#1db954" />
+      <ScrollPane layoutX="104.0" layoutY="266.0" prefHeight="134.0" prefWidth="400.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="134.0" prefWidth="387.0">
+               <children>
+                  <Button contentDisplay="GRAPHIC_ONLY" layoutX="18.0" layoutY="12.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="110.0" />
+                  <ImageView fitHeight="100.0" fitWidth="110.0" layoutX="18.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/AstroWorld.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button contentDisplay="GRAPHIC_ONLY" layoutX="142.0" layoutY="14.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="95.0" text="Button" />
+                  <ImageView fitHeight="107.0" fitWidth="94.0" layoutX="143.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/Carter.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button contentDisplay="GRAPHIC_ONLY" layoutX="266.0" layoutY="13.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="97.0" text="Button" />
+                  <ImageView fitHeight="111.0" fitWidth="157.0" layoutX="265.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/Whole%20lotta%20red.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Button layoutX="109.0" layoutY="135.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #aee4c1;" text="Artist" textFill="#1db954" />
+      <Button layoutX="184.0" layoutY="135.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #aee4c1;" text="Album" textFill="#1db954" />
+      <Button layoutX="256.0" layoutY="135.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #aee4c1;" text="Track" textFill="#1db954" />
+      <Button layoutX="348.0" layoutY="135.0" mnemonicParsing="false" style="-fx-background-color: #aee4c1;" text="Something else?" textFill="#1db954" />
+   </children>
 </AnchorPane>
