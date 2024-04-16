@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.bs.cs.FormatterTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-04T14:17:26" hostname="LAPTOP-680RG0E2" time="0.083">
+  <properties/>
+  <testcase name="testArtistName()" classname="edu.bs.cs.FormatterTest" time="0.083"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

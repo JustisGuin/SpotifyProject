@@ -1,0 +1,5 @@
+SpotifyApi spotifyApi = new SpotifyApi.Builder()
+  .setClientId("<your_client_id>")
+  .setClientSecret("<your_client_secret>")
+  .setRedirectUri("<your_redirect_uri>")
+  .build();
