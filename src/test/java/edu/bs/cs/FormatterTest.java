@@ -58,4 +58,15 @@ public class FormatterTest {
 
 
     }
+    @Test
+    public void testFormatGenres(){
+        JSONObject jsonObject = readJSONObjectFromFile("src/test/resources/testArtistSample.json");
+        jsonObject.put("Genre", "Polo G");
+        String formattedGenre = JSON_Formatter.formatGenres(jsonObject);
+        assertEquals("Artist genres:\n" +
+                "- chicago rap\n" +
+                "- rap\n", formattedGenre);
+
+
+    }
 }

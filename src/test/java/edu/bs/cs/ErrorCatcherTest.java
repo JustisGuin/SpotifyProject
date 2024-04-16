@@ -10,17 +10,16 @@ public class ErrorCatcherTest {
         int statusCode = 450;
         ErrorCatcher ec = new ErrorCatcher();
         String response = ec.statusError(statusCode);
-        Assertions.assertEquals("error", response);
+        Assertions.assertEquals("Unknown status code: 450", response);
 
     }
 
     @Test
     public void testSearchNotFound(){
-        int notFound = 400;
         ErrorCatcher ec = new ErrorCatcher();
-        //String response = String.valueOf(ec.searchNotFound(notFound));
+        String response = String.valueOf(ec.statusError(400));
 
-        //Assertions.assertEquals("400", response);
+        Assertions.assertEquals("Bad Request - The request could not be understood by the server due to malformed syntax. The message body will contain more information; see Response Schema.", response);
     }
 }
 

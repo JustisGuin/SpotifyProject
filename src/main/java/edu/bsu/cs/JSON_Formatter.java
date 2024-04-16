@@ -82,7 +82,10 @@ public class JSON_Formatter {
             JSONArray itemsArray = albumsObject.getJSONArray("items");
             for (int i = 0; i < itemsArray.length(); i++) {
                 JSONObject albumObject = itemsArray.getJSONObject(i);
+                formattedOutput.append("\nAlbum ").append(i + 1).append(":\n");
                 formattedOutput.append(formatAlbumID(albumObject)).append("\n");
+                formattedOutput.append(formatAlbumName(albumObject)).append("\n");
+                formattedOutput.append(formatAlbumArtistName(albumObject)).append("\n");
             }
             if (itemsArray.isEmpty()) {
                 formattedOutput.append("No results found!\n");
@@ -94,4 +97,47 @@ public class JSON_Formatter {
     public static String formatAlbumID(JSONObject albumObject) {
         return "Album ID: " + albumObject.getString("id");
     }
+
+
+    public static String formatAlbumName(JSONObject albumObject){
+    String albumName = albumObject.getString("name");
+    return ("Album Name:"+albumName);
+
+    }
+
+    public static String formatAlbumArtistName(JSONObject albumObject) {
+        org.json.JSONArray trackArtistsArray = albumObject.getJSONArray("artists");
+        JSONObject trackArtist = trackArtistsArray.getJSONObject(0);
+        String albumName = trackArtist.getString("name");
+        return ("Artist Name:" + albumName);
+    }
+
+    public static String formatAlbumTracks(String responseBody){
+        StringBuilder formattedOutput = new StringBuilder();
+        JSONObject jsonObject = new JSONObject(responseBody);
+        JSONObject albumTracksObject = jsonObject.getJSONObject("items");
+        if (albumTracksObject.has("artists")) {
+            JSONArray itemsArray = albumTracksObject.getJSONArray("artists");
+            for (int i = 0; i < itemsArray.length(); i++) {
+                JSONObject albumTracksObject2 = itemsArray.getJSONObject(i);
+                formattedOutput.append(formatAlbumTracksName(albumTracksObject2)).append("\n");
+            }
+            if (itemsArray.isEmpty()) {
+                formattedOutput.append("No results found!\n");
+            }
+        }
+        return formattedOutput.toString();
+    }
+
+    public static String formatAlbumTracksName(JSONObject albumTracksObject2){
+        return "Track name: " + albumTracksObject2.getString("name");
+
+
+
+
+    }
+
+
+
 }
+
