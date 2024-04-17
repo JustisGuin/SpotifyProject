@@ -1,0 +1,142 @@
+.root{
+    -fx-background-color: #535353;
+
+
+}
+.leftPane{
+    -fx-background-color: #333333;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-style: solid;
+}
+.innerLeftPane{
+
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-style: solid;
+}
+
+.mostInnerLeftPane{
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-style: solid;
+
+
+}
+
+.leftPaneBTNS {
+  -fx-background-color: #333333;
+  -fx-border-width: 2px 2px 2px 2px;
+  -fx-border-radius: 20px;
+  -fx-background-radius: 20px;
+  -fx-border-style: solid;
+  -fx-font-family: circular;
+  -fx-font-size: 20px;
+  -fx-text-fill: white;
+  -fx-padding: 10px;
+  -fx-alignment: center;
+  -fx-font-weight: bold;
+
+
+}
+
+.leftPaneBTNS:hover{
+  -fx-border-width: 2px 2px 2px 2px;
+  -fx-border-radius: 20px;
+  -fx-background-radius: 20px;
+  -fx-border-style: solid;
+  -fx-font-family: circular;
+  -fx-font-size: 20px;
+  -fx-text-fill:  #1DB954;
+  -fx-padding: 10px;
+  -fx-alignment: center;
+  -fx-font-weight: bold;
+
+
+
+}
+
+.leftPaneBTNS:pressed{
+    -fx-border-width: 2px 2px 2px 2px;
+  -fx-border-radius: 20px;
+  -fx-background-radius: 20px;
+  -fx-border-style: solid;
+  -fx-font-family: circular;
+  -fx-font-size: 20px;
+  -fx-text-fill:  #1DB954;
+  -fx-padding: 10px;
+  -fx-alignment: center;
+  -fx-font-weight: bold;
+  -fx-rotate: 5;
+
+}
+
+
+.searchBar{
+    -fx-font-weight: bold;
+    -fx-font-family: circular;
+    -fx-font-size: 20px;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-style: solid;
+
+
+}
+.homeBTN{
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-style: solid;
+    }
+
+.homeBTN:hover{
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-style: solid;
+    -fx-text-fill:  #1DB954;
+
+
+}
+
+.homeBTN:pressed{
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-style: solid;
+    -fx-text-fill:  #1DB954;
+
+
+}
+
+.outputField{
+
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-style: solid;
+}
+.rightSideAlbumLabel{
+
+    -fx-background-color: #333333;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-style: solid;
+    -fx-font-family: circular;
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+    -fx-padding-right: 10px;
+    -fx-alignment: center;
+    -fx-font-weight: bold;
+
+
+}
+
+
+
+}

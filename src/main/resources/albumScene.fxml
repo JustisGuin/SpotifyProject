@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="749.0" prefWidth="1077.0" styleClass="root" stylesheets="@styles/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs.view.GUI">
+   <children>
+      <VBox prefHeight="749.0" prefWidth="215.0">
+         <children>
+            <AnchorPane fx:id="leftAnkerPane" prefHeight="749.0" prefWidth="215.0" styleClass="leftPane" stylesheets="@styles/style.css">
+               <children>
+                  <Pane fx:id="innerLeftPane" layoutX="10.0" layoutY="14.0" prefHeight="79.0" prefWidth="196.0" style="-fx-background-color: #1DB954;" styleClass="innerLeftPane" stylesheets="@styles/style.css">
+                     <children>
+                        <Button fx:id="homeBTN" mnemonicParsing="false" prefHeight="79.0" prefWidth="196.0" style="-fx-background-color: #1DB954;" styleClass="homeBTN" stylesheets="@styles/style.css" />
+                        <Pane fx:id="mostInnerLeftPane" layoutX="120.0" layoutY="15.0" prefHeight="48.0" prefWidth="67.0" style="-fx-background-color: #333333;" styleClass="mostInnerLeftPane" stylesheets="@styles/style.css">
+                           <children>
+                              <ImageView fitHeight="33.0" fitWidth="59.0" layoutX="17.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../java/edu/bsu/cs/imgs/spotify-icons-logos/icons/01_RGB/02_PNG/Spotify_Icon_RGB_Green.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="33.0" fitWidth="104.0" layoutX="14.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../java/edu/bsu/cs/imgs/spotify-icons-logos/logos/01_RGB/02_PNG/Spotify_Logo_RGB_Black.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Button fx:id="albumBTN" layoutX="10.0" layoutY="114.0" mnemonicParsing="false" onAction="#handleAlbumButtonAction" prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Album" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="artistBTN" layoutX="10.0" layoutY="208.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Artist" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="304.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Track" textFill="WHITE">
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <Pane prefHeight="749.0" prefWidth="865.0">
+         <children>
+            <Pane fx:id="searchBar" layoutX="6.0" layoutY="14.0" prefHeight="79.0" prefWidth="864.0">
+               <children>
+                  <TextField layoutX="55.0" layoutY="16.0" prefHeight="48.0" prefWidth="377.0" promptText="What do you want to listen to?" styleClass="searchBar" stylesheets="@styles/style.css" />
+                  <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="14.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../java/edu/bsu/cs/imgs/searchIcon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="5.0" layoutY="93.0" prefHeight="650.0" prefWidth="851.0">
+               <children>
+                  <TextField layoutX="14.0" layoutY="14.0" prefHeight="215.0" prefWidth="555.0" />
+               </children></Pane>
+         </children>
+      </Pane>
+   </children>
+</HBox>
