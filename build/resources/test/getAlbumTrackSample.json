@@ -1,0 +1,751 @@
+{
+  "href": "https://api.spotify.com/v1/albums/18NOKLkZETa4sWwLMIm0UZ/tracks?offset=0&limit=20&locale=en-US%2Cen%3Bq%3D0.9",
+  "limit": 20,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total": 19,
+  "items": [
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          "href": "https://api.spotify.com/v1/artists/0Y5tJX1MQlPlqiwlOH1tJY",
+          "id": "0Y5tJX1MQlPlqiwlOH1tJY",
+          "name": "Travis Scott",
+          "type": "artist",
+          "uri": "spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 222085,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0hL9gOw6XBWsygEUcVjxEc"
+      },
+      "href": "https://api.spotify.com/v1/tracks/0hL9gOw6XBWsygEUcVjxEc",
+      "id": "0hL9gOw6XBWsygEUcVjxEc",
+      "is_playable": true,
+      "name": "HYAENA",
+      "preview_url": "https://p.scdn.co/mp3-preview/966e20875b66ea22371fa9383d31b1cdc445baf1?cid=c24b3689764349fda9d8d48d7125b3ad",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:0hL9gOw6XBWsygEUcVjxEc",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          "href": "https://api.spotify.com/v1/artists/0Y5tJX1MQlPlqiwlOH1tJY",
+          "id": "0Y5tJX1MQlPlqiwlOH1tJY",
+          "name": "Travis Scott",
+          "type": "artist",
+          "uri": "spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 184888,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1PH2MDbcBAU094DlgTIND1"
+      },
+      "href": "https://api.spotify.com/v1/tracks/1PH2MDbcBAU094DlgTIND1",
+      "id": "1PH2MDbcBAU094DlgTIND1",
+      "is_playable": true,
+      "name": "THANK GOD",
+      "preview_url": "https://p.scdn.co/mp3-preview/589000d0c2868bb1f70f1df7a5bcf02906b49d75?cid=c24b3689764349fda9d8d48d7125b3ad",
+      "track_number": 2,
+      "type": "track",
+      "uri": "spotify:track:1PH2MDbcBAU094DlgTIND1",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          "href": "https://api.spotify.com/v1/artists/0Y5tJX1MQlPlqiwlOH1tJY",
+          "id": "0Y5tJX1MQlPlqiwlOH1tJY",
+          "name": "Travis Scott",
+          "type": "artist",
+          "uri": "spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0fGcIStdT1OpFFhOC7Wp36"
+          },
+          "href": "https://api.spotify.com/v1/artists/0fGcIStdT1OpFFhOC7Wp36",
+          "id": "0fGcIStdT1OpFFhOC7Wp36",
+          "name": "Teezo Touchdown",
+          "type": "artist",
+          "uri": "spotify:artist:0fGcIStdT1OpFFhOC7Wp36"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 255412,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3KCNiDi9Pza6ZD8FggNoaw"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3KCNiDi9Pza6ZD8FggNoaw",
+      "id": "3KCNiDi9Pza6ZD8FggNoaw",
+      "is_playable": true,
+      "name": "MODERN JAM (feat. Teezo Touchdown)",
+      "preview_url": "https://p.scdn.co/mp3-preview/a34601f7a5eba338862fc7673467712e6f002ba5?cid=c24b3689764349fda9d8d48d7125b3ad",
+      "track_number": 3,
+      "type": "track",
+      "uri": "spotify:track:3KCNiDi9Pza6ZD8FggNoaw",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          "href": "https://api.spotify.com/v1/artists/0Y5tJX1MQlPlqiwlOH1tJY",
+          "id": "0Y5tJX1MQlPlqiwlOH1tJY",
+          "name": "Travis Scott",
+          "type": "artist",
+          "uri": "spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 251249,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4kjI1gwQZRKNDkw1nI475M"
+      },
+      "href": "https://api.spotify.com/v1/tracks/4kjI1gwQZRKNDkw1nI475M",
+      "id": "4kjI1gwQZRKNDkw1nI475M",
+      "is_playable": true,
+      "name": "MY EYES",
+      "preview_url": "https://p.scdn.co/mp3-preview/b52f66d1d36c1253c12a96b673fca7f69f62b4ab?cid=c24b3689764349fda9d8d48d7125b3ad",
+      "track_number": 4,
+      "type": "track",
+      "uri": "spotify:track:4kjI1gwQZRKNDkw1nI475M",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          "href": "https://api.spotify.com/v1/artists/0Y5tJX1MQlPlqiwlOH1tJY",
+          "id": "0Y5tJX1MQlPlqiwlOH1tJY",
+          "name": "Travis Scott",
+          "type": "artist",
+          "uri": "spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 127991,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/04WxWo7XeVyx22xEsrWRUb"
+      },
+      "href": "https://api.spotify.com/v1/tracks/04WxWo7XeVyx22xEsrWRUb",
+      "id": "04WxWo7XeVyx22xEsrWRUb",
+      "is_playable": true,
+      "name": "GOD'S COUNTRY",
+      "preview_url": "https://p.scdn.co/mp3-preview/255b02eba05a82976cf1f474f741f144f925c561?cid=c24b3689764349fda9d8d48d7125b3ad",
+      "track_number": 5,
+      "type": "track",
+      "uri": "spotify:track:04WxWo7XeVyx22xEsrWRUb",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          "href": "https://api.spotify.com/v1/artists/0Y5tJX1MQlPlqiwlOH1tJY",
+          "id": "0Y5tJX1MQlPlqiwlOH1tJY",
+          "name": "Travis Scott",
+          "type": "artist",
+          "uri": "spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 204447,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7LSpFCvRZZot2AlmkUzy9k"
+      },
+      "href": "https://api.spotify.com/v1/tracks/7LSpFCvRZZot2AlmkUzy9k",
+      "id": "7LSpFCvRZZot2AlmkUzy9k",
+      "is_playable": true,
+      "name": "SIRENS",
+      "preview_url": "https://p.scdn.co/mp3-preview/d84c2f840d50a58c4f6acef39394233a7ecbf16b?cid=c24b3689764349fda9d8d48d7125b3ad",
+      "track_number": 6,
+      "type": "track",
+      "uri": "spotify:track:7LSpFCvRZZot2AlmkUzy9k",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          "href": "https://api.spotify.com/v1/artists/0Y5tJX1MQlPlqiwlOH1tJY",
+          "id": "0Y5tJX1MQlPlqiwlOH1tJY",
+          "name": "Travis Scott",
+          "type": "artist",
+          "uri": "spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4"
+          },
+          "href": "https://api.spotify.com/v1/artists/3TVXtAsR1Inumwj472S9r4",
+          "id": "3TVXtAsR1Inumwj472S9r4",
+          "name": "Drake",
+          "type": "artist",
+          "uri": "spotify:artist:3TVXtAsR1Inumwj472S9r4"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 246133,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/67nepsnrcZkowTxMWigSbb"
+      },
+      "href": "https://api.spotify.com/v1/tracks/67nepsnrcZkowTxMWigSbb",
+      "id": "67nepsnrcZkowTxMWigSbb",
+      "is_playable": true,
+      "name": "MELTDOWN (feat. Drake)",
+      "preview_url": "https://p.scdn.co/mp3-preview/7c7e0e4419d101bcf73764f245639d7bc83b662a?cid=c24b3689764349fda9d8d48d7125b3ad",
+      "track_number": 7,
+      "type": "track",
+      "uri": "spotify:track:67nepsnrcZkowTxMWigSbb",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          "href": "https://api.spotify.com/v1/artists/0Y5tJX1MQlPlqiwlOH1tJY",
+          "id": "0Y5tJX1MQlPlqiwlOH1tJY",
+          "name": "Travis Scott",
+          "type": "artist",
+          "uri": "spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/699OTQXzgjhIYAHMy9RyPD"
+          },
+          "href": "https://api.spotify.com/v1/artists/699OTQXzgjhIYAHMy9RyPD",
+          "id": "699OTQXzgjhIYAHMy9RyPD",
+          "name": "Playboi Carti",
+          "type": "artist",
+          "uri": "spotify:artist:699OTQXzgjhIYAHMy9RyPD"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 191700,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/42VsgItocQwOQC3XWZ8JNA"
+      },
+      "href": "https://api.spotify.com/v1/tracks/42VsgItocQwOQC3XWZ8JNA",
+      "id": "42VsgItocQwOQC3XWZ8JNA",
+      "is_playable": true,
+      "name": "FE!N (feat. Playboi Carti)",
+      "preview_url": "https://p.scdn.co/mp3-preview/4b0178cf6991f59db18e12e2219ff11e27474b0a?cid=c24b3689764349fda9d8d48d7125b3ad",
+      "track_number": 8,
+      "type": "track",
+      "uri": "spotify:track:42VsgItocQwOQC3XWZ8JNA",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          "href": "https://api.spotify.com/v1/artists/0Y5tJX1MQlPlqiwlOH1tJY",
+          "id": "0Y5tJX1MQlPlqiwlOH1tJY",
+          "name": "Travis Scott",
+          "type": "artist",
+          "uri": "spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6vWDO969PvNqNYHIOW5v0m"
+          },
+          "href": "https://api.spotify.com/v1/artists/6vWDO969PvNqNYHIOW5v0m",
+          "id": "6vWDO969PvNqNYHIOW5v0m",
+          "name": "Beyoncé",
+          "type": "artist",
+          "uri": "spotify:artist:6vWDO969PvNqNYHIOW5v0m"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 274137,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0OEe83mMZ5kaNw5uZQ7ilG"
+      },
+      "href": "https://api.spotify.com/v1/tracks/0OEe83mMZ5kaNw5uZQ7ilG",
+      "id": "0OEe83mMZ5kaNw5uZQ7ilG",
+      "is_playable": true,
+      "name": "DELRESTO (ECHOES) (feat. Beyoncé)",
+      "preview_url": "https://p.scdn.co/mp3-preview/e57fd2c469041c158a449729ea76a5cab9c01e99?cid=c24b3689764349fda9d8d48d7125b3ad",
+      "track_number": 9,
+      "type": "track",
+      "uri": "spotify:track:0OEe83mMZ5kaNw5uZQ7ilG",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          "href": "https://api.spotify.com/v1/artists/0Y5tJX1MQlPlqiwlOH1tJY",
+          "id": "0Y5tJX1MQlPlqiwlOH1tJY",
+          "name": "Travis Scott",
+          "type": "artist",
+          "uri": "spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 211582,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6wsqVwoiVH2kde4k4KKAFU"
+      },
+      "href": "https://api.spotify.com/v1/tracks/6wsqVwoiVH2kde4k4KKAFU",
+      "id": "6wsqVwoiVH2kde4k4KKAFU",
+      "is_playable": true,
+      "name": "I KNOW ?",
+      "preview_url": "https://p.scdn.co/mp3-preview/71d86e04987feee653ae3087aa76e782bced382d?cid=c24b3689764349fda9d8d48d7125b3ad",
+      "track_number": 10,
+      "type": "track",
+      "uri": "spotify:track:6wsqVwoiVH2kde4k4KKAFU",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          "href": "https://api.spotify.com/v1/artists/0Y5tJX1MQlPlqiwlOH1tJY",
+          "id": "0Y5tJX1MQlPlqiwlOH1tJY",
+          "name": "Travis Scott",
+          "type": "artist",
+          "uri": "spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1jBoSSrbz9n4ehQWA4cZgB"
+          },
+          "href": "https://api.spotify.com/v1/artists/1jBoSSrbz9n4ehQWA4cZgB",
+          "id": "1jBoSSrbz9n4ehQWA4cZgB",
+          "name": "Rob49",
+          "type": "artist",
+          "uri": "spotify:artist:1jBoSSrbz9n4ehQWA4cZgB"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1URnnhqYAYcrqrcwql10ft"
+          },
+          "href": "https://api.spotify.com/v1/artists/1URnnhqYAYcrqrcwql10ft",
+          "id": "1URnnhqYAYcrqrcwql10ft",
+          "name": "21 Savage",
+          "type": "artist",
+          "uri": "spotify:artist:1URnnhqYAYcrqrcwql10ft"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 223173,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0lodMO0qK83vfPiiD7FMEt"
+      },
+      "href": "https://api.spotify.com/v1/tracks/0lodMO0qK83vfPiiD7FMEt",
+      "id": "0lodMO0qK83vfPiiD7FMEt",
+      "is_playable": true,
+      "name": "TOPIA TWINS (feat. Rob49 & 21 Savage)",
+      "preview_url": "https://p.scdn.co/mp3-preview/76d5c47412a36ad9982df6d2769bca0ceb6e1d9e?cid=c24b3689764349fda9d8d48d7125b3ad",
+      "track_number": 11,
+      "type": "track",
+      "uri": "spotify:track:0lodMO0qK83vfPiiD7FMEt",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          "href": "https://api.spotify.com/v1/artists/0Y5tJX1MQlPlqiwlOH1tJY",
+          "id": "0Y5tJX1MQlPlqiwlOH1tJY",
+          "name": "Travis Scott",
+          "type": "artist",
+          "uri": "spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ"
+          },
+          "href": "https://api.spotify.com/v1/artists/1Xyo4u8uXC1ZmMpatF05PJ",
+          "id": "1Xyo4u8uXC1ZmMpatF05PJ",
+          "name": "The Weeknd",
+          "type": "artist",
+          "uri": "spotify:artist:1Xyo4u8uXC1ZmMpatF05PJ"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1zNqQNIdeOUZHb8zbZRFMX"
+          },
+          "href": "https://api.spotify.com/v1/artists/1zNqQNIdeOUZHb8zbZRFMX",
+          "id": "1zNqQNIdeOUZHb8zbZRFMX",
+          "name": "Swae Lee",
+          "type": "artist",
+          "uri": "spotify:artist:1zNqQNIdeOUZHb8zbZRFMX"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 258842,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4GL9GMX9t7Qkprvf1YighZ"
+      },
+      "href": "https://api.spotify.com/v1/tracks/4GL9GMX9t7Qkprvf1YighZ",
+      "id": "4GL9GMX9t7Qkprvf1YighZ",
+      "is_playable": true,
+      "name": "CIRCUS MAXIMUS (feat. The Weeknd & Swae Lee)",
+      "preview_url": "https://p.scdn.co/mp3-preview/29d195c9a6fdc0ea788676cc9794230095e1343f?cid=c24b3689764349fda9d8d48d7125b3ad",
+      "track_number": 12,
+      "type": "track",
+      "uri": "spotify:track:4GL9GMX9t7Qkprvf1YighZ",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          "href": "https://api.spotify.com/v1/artists/0Y5tJX1MQlPlqiwlOH1tJY",
+          "id": "0Y5tJX1MQlPlqiwlOH1tJY",
+          "name": "Travis Scott",
+          "type": "artist",
+          "uri": "spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/67lytN32YpUxiSeWlKfHJ3"
+          },
+          "href": "https://api.spotify.com/v1/artists/67lytN32YpUxiSeWlKfHJ3",
+          "id": "67lytN32YpUxiSeWlKfHJ3",
+          "name": "Yung Lean",
+          "type": "artist",
+          "uri": "spotify:artist:67lytN32YpUxiSeWlKfHJ3"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/504DdVupqJJUEkzmHzJEfs"
+          },
+          "href": "https://api.spotify.com/v1/artists/504DdVupqJJUEkzmHzJEfs",
+          "id": "504DdVupqJJUEkzmHzJEfs",
+          "name": "Dave Chappelle",
+          "type": "artist",
+          "uri": "spotify:artist:504DdVupqJJUEkzmHzJEfs"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 154964,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2Q0aElTZQtEUsoiaQfizu6"
+      },
+      "href": "https://api.spotify.com/v1/tracks/2Q0aElTZQtEUsoiaQfizu6",
+      "id": "2Q0aElTZQtEUsoiaQfizu6",
+      "is_playable": true,
+      "name": "PARASAIL (feat. Yung Lean & Dave Chappelle)",
+      "preview_url": "https://p.scdn.co/mp3-preview/82f3c0d5844693c4c9b691112d698d5112124661?cid=c24b3689764349fda9d8d48d7125b3ad",
+      "track_number": 13,
+      "type": "track",
+      "uri": "spotify:track:2Q0aElTZQtEUsoiaQfizu6",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          "href": "https://api.spotify.com/v1/artists/0Y5tJX1MQlPlqiwlOH1tJY",
+          "id": "0Y5tJX1MQlPlqiwlOH1tJY",
+          "name": "Travis Scott",
+          "type": "artist",
+          "uri": "spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/50co4Is1HCEo8bhOyUWKpn"
+          },
+          "href": "https://api.spotify.com/v1/artists/50co4Is1HCEo8bhOyUWKpn",
+          "id": "50co4Is1HCEo8bhOyUWKpn",
+          "name": "Young Thug",
+          "type": "artist",
+          "uri": "spotify:artist:50co4Is1HCEo8bhOyUWKpn"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 366592,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0bkV1iQHSxBaksUqgEkcbc"
+      },
+      "href": "https://api.spotify.com/v1/tracks/0bkV1iQHSxBaksUqgEkcbc",
+      "id": "0bkV1iQHSxBaksUqgEkcbc",
+      "is_playable": true,
+      "name": "SKITZO (feat. Young Thug)",
+      "preview_url": "https://p.scdn.co/mp3-preview/cd30d69492cf560a098fd76378ed240c8f14985d?cid=c24b3689764349fda9d8d48d7125b3ad",
+      "track_number": 14,
+      "type": "track",
+      "uri": "spotify:track:0bkV1iQHSxBaksUqgEkcbc",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          "href": "https://api.spotify.com/v1/artists/0Y5tJX1MQlPlqiwlOH1tJY",
+          "id": "0Y5tJX1MQlPlqiwlOH1tJY",
+          "name": "Travis Scott",
+          "type": "artist",
+          "uri": "spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0ABk515kENDyATUdpCKVfW"
+          },
+          "href": "https://api.spotify.com/v1/artists/0ABk515kENDyATUdpCKVfW",
+          "id": "0ABk515kENDyATUdpCKVfW",
+          "name": "Westside Gunn",
+          "type": "artist",
+          "uri": "spotify:artist:0ABk515kENDyATUdpCKVfW"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 163071,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7EiUtdeoWcKqLi5ELZCjYf"
+      },
+      "href": "https://api.spotify.com/v1/tracks/7EiUtdeoWcKqLi5ELZCjYf",
+      "id": "7EiUtdeoWcKqLi5ELZCjYf",
+      "is_playable": true,
+      "name": "LOST FOREVER (feat. Westside Gunn)",
+      "preview_url": "https://p.scdn.co/mp3-preview/fe8ae73a293f680653d541bfb24fa7dbe681df66?cid=c24b3689764349fda9d8d48d7125b3ad",
+      "track_number": 15,
+      "type": "track",
+      "uri": "spotify:track:7EiUtdeoWcKqLi5ELZCjYf",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          "href": "https://api.spotify.com/v1/artists/0Y5tJX1MQlPlqiwlOH1tJY",
+          "id": "0Y5tJX1MQlPlqiwlOH1tJY",
+          "name": "Travis Scott",
+          "type": "artist",
+          "uri": "spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0fA0VVWsXO9YnASrzqfmYu"
+          },
+          "href": "https://api.spotify.com/v1/artists/0fA0VVWsXO9YnASrzqfmYu",
+          "id": "0fA0VVWsXO9YnASrzqfmYu",
+          "name": "Kid Cudi",
+          "type": "artist",
+          "uri": "spotify:artist:0fA0VVWsXO9YnASrzqfmYu"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 226715,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0a4SMs889NwP8oWI7Vemle"
+      },
+      "href": "https://api.spotify.com/v1/tracks/0a4SMs889NwP8oWI7Vemle",
+      "id": "0a4SMs889NwP8oWI7Vemle",
+      "is_playable": true,
+      "name": "LOOOVE (feat. Kid Cudi)",
+      "preview_url": "https://p.scdn.co/mp3-preview/27024f6d85aabf46ce51f9594e0870f044ef4e05?cid=c24b3689764349fda9d8d48d7125b3ad",
+      "track_number": 16,
+      "type": "track",
+      "uri": "spotify:track:0a4SMs889NwP8oWI7Vemle",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          "href": "https://api.spotify.com/v1/artists/0Y5tJX1MQlPlqiwlOH1tJY",
+          "id": "0Y5tJX1MQlPlqiwlOH1tJY",
+          "name": "Travis Scott",
+          "type": "artist",
+          "uri": "spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X"
+          },
+          "href": "https://api.spotify.com/v1/artists/4q3ewBCX7sLwd24euuV69X",
+          "id": "4q3ewBCX7sLwd24euuV69X",
+          "name": "Bad Bunny",
+          "type": "artist",
+          "uri": "spotify:artist:4q3ewBCX7sLwd24euuV69X"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ"
+          },
+          "href": "https://api.spotify.com/v1/artists/1Xyo4u8uXC1ZmMpatF05PJ",
+          "id": "1Xyo4u8uXC1ZmMpatF05PJ",
+          "name": "The Weeknd",
+          "type": "artist",
+          "uri": "spotify:artist:1Xyo4u8uXC1ZmMpatF05PJ"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 185220,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4o82J5zr4DFEs9yj5szCVX"
+      },
+      "href": "https://api.spotify.com/v1/tracks/4o82J5zr4DFEs9yj5szCVX",
+      "id": "4o82J5zr4DFEs9yj5szCVX",
+      "is_playable": true,
+      "name": "K-POP (feat. Bad Bunny & The Weeknd)",
+      "preview_url": "https://p.scdn.co/mp3-preview/e9990c0080ab8b90bc161dcc8f047445c11f2193?cid=c24b3689764349fda9d8d48d7125b3ad",
+      "track_number": 17,
+      "type": "track",
+      "uri": "spotify:track:4o82J5zr4DFEs9yj5szCVX",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          "href": "https://api.spotify.com/v1/artists/0Y5tJX1MQlPlqiwlOH1tJY",
+          "id": "0Y5tJX1MQlPlqiwlOH1tJY",
+          "name": "Travis Scott",
+          "type": "artist",
+          "uri": "spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/7tYKF4w9nC0nq9CsPZTHyP"
+          },
+          "href": "https://api.spotify.com/v1/artists/7tYKF4w9nC0nq9CsPZTHyP",
+          "id": "7tYKF4w9nC0nq9CsPZTHyP",
+          "name": "SZA",
+          "type": "artist",
+          "uri": "spotify:artist:7tYKF4w9nC0nq9CsPZTHyP"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1RyvyyTE3xzB2ZywiAwp0i"
+          },
+          "href": "https://api.spotify.com/v1/artists/1RyvyyTE3xzB2ZywiAwp0i",
+          "id": "1RyvyyTE3xzB2ZywiAwp0i",
+          "name": "Future",
+          "type": "artist",
+          "uri": "spotify:artist:1RyvyyTE3xzB2ZywiAwp0i"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 353754,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1i9lZvlaDdWDPyXEE95aiq"
+      },
+      "href": "https://api.spotify.com/v1/tracks/1i9lZvlaDdWDPyXEE95aiq",
+      "id": "1i9lZvlaDdWDPyXEE95aiq",
+      "is_playable": true,
+      "name": "TELEKINESIS (feat. SZA & Future)",
+      "preview_url": "https://p.scdn.co/mp3-preview/044ceba2a9451325fc9bf007447a2bdc333123b9?cid=c24b3689764349fda9d8d48d7125b3ad",
+      "track_number": 18,
+      "type": "track",
+      "uri": "spotify:track:1i9lZvlaDdWDPyXEE95aiq",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"
+          },
+          "href": "https://api.spotify.com/v1/artists/0Y5tJX1MQlPlqiwlOH1tJY",
+          "id": "0Y5tJX1MQlPlqiwlOH1tJY",
+          "name": "Travis Scott",
+          "type": "artist",
+          "uri": "spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/53KwLdlmrlCelAZMaLVZqU"
+          },
+          "href": "https://api.spotify.com/v1/artists/53KwLdlmrlCelAZMaLVZqU",
+          "id": "53KwLdlmrlCelAZMaLVZqU",
+          "name": "James Blake",
+          "type": "artist",
+          "uri": "spotify:artist:53KwLdlmrlCelAZMaLVZqU"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1URnnhqYAYcrqrcwql10ft"
+          },
+          "href": "https://api.spotify.com/v1/artists/1URnnhqYAYcrqrcwql10ft",
+          "id": "1URnnhqYAYcrqrcwql10ft",
+          "name": "21 Savage",
+          "type": "artist",
+          "uri": "spotify:artist:1URnnhqYAYcrqrcwql10ft"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 314836,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/76gcXhY3Zv6wW0BTe9nHJo"
+      },
+      "href": "https://api.spotify.com/v1/tracks/76gcXhY3Zv6wW0BTe9nHJo",
+      "id": "76gcXhY3Zv6wW0BTe9nHJo",
+      "is_playable": true,
+      "name": "TIL FURTHER NOTICE (feat. James Blake & 21 Savage)",
+      "preview_url": "https://p.scdn.co/mp3-preview/fb6ed2aac94b5f412d6e407317df02d2ede71534?cid=c24b3689764349fda9d8d48d7125b3ad",
+      "track_number": 19,
+      "type": "track",
+      "uri": "spotify:track:76gcXhY3Zv6wW0BTe9nHJo",
+      "is_local": false
+    }
+  ]
+}

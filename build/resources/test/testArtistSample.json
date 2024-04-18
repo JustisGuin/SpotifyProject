@@ -1,0 +1,33 @@
+{
+  "external_urls": {
+    "spotify": "https://open.spotify.com/artist/6AgTAQt8XS6jRWi4sX7w49"
+  },
+  "followers": {
+    "href": null,
+    "total": 11040457
+  },
+  "genres": ["chicago rap", "rap"],
+  "href": "https://api.spotify.com/v1/artists/6AgTAQt8XS6jRWi4sX7w49?locale=en-US%2Cen%3Bq%3D0.9",
+  "id": "6AgTAQt8XS6jRWi4sX7w49",
+  "images": [
+    {
+      "url": "https://i.scdn.co/image/ab6761610000e5ebbedf3bdf589da06d1567196c",
+      "height": 640,
+      "width": 640
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616100005174bedf3bdf589da06d1567196c",
+      "height": 320,
+      "width": 320
+    },
+    {
+      "url": "https://i.scdn.co/image/ab6761610000f178bedf3bdf589da06d1567196c",
+      "height": 160,
+      "width": 160
+    }
+  ],
+  "name": "Polo G",
+  "popularity": 81,
+  "type": "artist",
+  "uri": "spotify:artist:6AgTAQt8XS6jRWi4sX7w49"
+}

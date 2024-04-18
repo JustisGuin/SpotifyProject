@@ -56,4 +56,23 @@ public class FormatterTest {
 
 
     }
+    @Test
+    public void testFormatGenres(){
+        JSONObject jsonObject = readJSONObjectFromFile("src/test/resources/testArtistSample.json");
+        jsonObject.put("Genre", "Polo G");
+        String formattedGenre = JSON_Formatter.formatGenres(jsonObject);
+        assertEquals("Artist genres:\n" +
+                "- chicago rap\n" +
+                "- rap\n", formattedGenre);
+
+
+    }
+    @Test
+    public void testFormatTracks(){
+        JSONObject jsonObject = readJSONObjectFromFile("src/test/resources/getTrackSample2.json");
+        jsonObject.put("items", "Happy Birthday To You - Classic Version");
+        String formattedTrackInfo = JSON_Formatter.formatTrackInfo(jsonObject, 0);
+        assertEquals("Track Name: ", formattedTrackInfo);
+
+    }
 }

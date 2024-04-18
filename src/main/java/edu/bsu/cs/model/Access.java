@@ -23,13 +23,13 @@ public class Access {
         try {
             inputStream = new FileInputStream("configuration.properties");
         } catch (FileNotFoundException e) {
-            ErrorCatcher.configFileNotFound();
+            ErrorCatcher.configFileNotFoundError();
         }
         try {
             properties.load(inputStream);
         }
         catch (NullPointerException e){
-            ErrorCatcher.nullPointerException();
+            ErrorCatcher.nullPointerExceptionError();
         }
         catch (IOException e) {
             System.err.println("Unknown error occurring in createClientInfo");
