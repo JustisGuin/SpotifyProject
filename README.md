@@ -6,10 +6,7 @@ This project accesses Spotify’s API & the metadata it provides and displays a 
 
 This project will be split into 3 iterations, tagged and released as `0.0.1/2/3.x` - It hopes to implement an application-based GUI through JavaFX and CSS to make the end-user experience as pleasant as possible.
 
----
-#### Known Issues:
 
-`"Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0."`
 
 #### To Run:
 
