@@ -2,7 +2,6 @@ package edu.bsu.cs.model;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -74,42 +73,46 @@ public class JSON_Formatter {
         return index + ":\nTrack name: " + trackName + "\nArtist Name: " + artistName;
     }
 
-    public static String formatAlbum(String responseBody) {
-        StringBuilder formattedOutput = new StringBuilder();
+    public static List<StringBuilder> formatAlbum(String responseBody) {
+        List<StringBuilder> formattedAlbums = new ArrayList<>();
         JSONObject jsonObject = new JSONObject(responseBody);
         JSONObject albumsObject = jsonObject.getJSONObject("albums");
         if (albumsObject.has("items")) {
             JSONArray itemsArray = albumsObject.getJSONArray("items");
-            for (int i = 0; i < itemsArray.length(); i++) {
+            for (int i = 0; i < Math.min(5, itemsArray.length()); i++) {
                 JSONObject albumObject = itemsArray.getJSONObject(i);
-                formattedOutput.append("\nAlbum ").append(i + 1).append(":\n");
-                formattedOutput.append(formatAlbumID(albumObject)).append("\n");
-                formattedOutput.append(formatAlbumName(albumObject)).append("\n");
-                formattedOutput.append(formatAlbumArtistName(albumObject)).append("\n");
+                formattedAlbums.add(formatAlbumInfo(albumObject, i + 1));
             }
             if (itemsArray.isEmpty()) {
-                formattedOutput.append("No results found!\n");
+                formattedAlbums.add(new StringBuilder("No results found!"));
             }
         }
-        return formattedOutput.toString();
+        return formattedAlbums;
+    }
+
+    private static StringBuilder formatAlbumInfo(JSONObject albumObject, int index) {
+        StringBuilder albumStringBuilder = new StringBuilder();
+        albumStringBuilder.append(formatAlbumName(albumObject));
+        albumStringBuilder.append(formatAlbumArtistName(albumObject));
+        albumStringBuilder.append(formatAlbumID(albumObject));
+
+        return albumStringBuilder;
     }
 
     public static String formatAlbumID(JSONObject albumObject) {
-        return "Album ID: " + albumObject.getString("id");
+        return "\nAlbum ID: " + albumObject.getString("id");
+
     }
-
-
     public static String formatAlbumName(JSONObject albumObject){
     String albumName = albumObject.getString("name");
-    return ("Album Name:"+albumName);
+    return ("\nAlbum Name:"+albumName);
 
     }
-
     public static String formatAlbumArtistName(JSONObject albumObject) {
         org.json.JSONArray trackArtistsArray = albumObject.getJSONArray("artists");
         JSONObject trackArtist = trackArtistsArray.getJSONObject(0);
         String albumName = trackArtist.getString("name");
-        return ("Artist Name:" + albumName);
+        return ("\nArtist Name:" + albumName);
     }
 
     public static String formatAlbumTracks(String responseBody){
