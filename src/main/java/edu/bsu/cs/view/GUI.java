@@ -1,5 +1,6 @@
 package edu.bsu.cs.view;
 
+import edu.bsu.cs.model.API_Requests;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +12,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 
+import java.io.IOException;
 import java.util.Objects;
 
 public class GUI extends Application {
@@ -91,6 +93,7 @@ public class GUI extends Application {
             e.printStackTrace();
         }
     }
+
 
 
 }
