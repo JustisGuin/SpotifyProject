@@ -69,4 +69,12 @@ public class FormatterTest {
 
 
     }
+    @Test
+    public void testFormatTracks(){
+        JSONObject jsonObject = readJSONObjectFromFile("src/test/resources/getTrackSample2.json");
+        jsonObject.put("items", "Happy Birthday To You - Classic Version");
+        String formattedTrackInfo = JSON_Formatter.formatTrackInfo(jsonObject, 0);
+        assertEquals("Track Name: ", formattedTrackInfo);
+
+    }
 }
