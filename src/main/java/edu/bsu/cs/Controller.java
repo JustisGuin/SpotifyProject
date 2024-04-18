@@ -11,20 +11,49 @@ public class Controller {
         this.scanner = new Scanner(System.in);
     }
 
+    public void run(){
+        System.out.println(welcome());
+        sleeper(5000);
+        spotifyInput();
+    }
+
+    private void sleeper(int milliseconds){
+        try {
+            Thread.sleep(milliseconds);
+        } catch (InterruptedException e) {
+            ErrorCatcher.sleepError();
+        }
+    }
+
+    private String welcome() {
+        return """
+
+                Welcome to 'SpotifyProject', brought to you by Group A;
+                Justis Guin, Ethan Ramsell, Joe Mitchell, & Sam Brumley
+                We hope you enjoy!
+                """;
+    }
+
     public void spotifyInput() {
         String userInput = askForTypeOfSearch();
-
         if (userInput.isEmpty()) {
             emptyInput();
         } else if (userInput.equalsIgnoreCase("QUIT")) {
             userQuit();
-        } else if (userInput.equalsIgnoreCase("1")) {
+        } else if (userInput.equals("1")) {
             userPickArtist();
-        } else if (userInput.equalsIgnoreCase("2")) {
+        } else if (userInput.equals("2")) {
             userPickTrack();
-        } else if (userInput.equalsIgnoreCase("3")) {
+        } else if (userInput.equals("3")) {
             userPickAlbum();
+        } else{
+            System.out.println(invalidInput());
+            spotifyInput();
         }
+    }
+
+    private String invalidInput() {
+        return "Not a valid input! Please try again.\n";
     }
 
     public String getUserInput(String question) {
@@ -46,7 +75,7 @@ public class Controller {
                 "Would you like to search for a Artist (1), Track (2), or Album (3)? \
 
                 Please type the number associated with your choice.
-                Type B to go back, or QUIT to quit.
+                Type QUIT to exit.
                 """);
         return scanner.nextLine();
     }

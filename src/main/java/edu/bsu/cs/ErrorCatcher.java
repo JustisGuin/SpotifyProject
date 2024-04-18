@@ -7,20 +7,25 @@ public class ErrorCatcher {
         System.err.println("'NumberFormatException' Error!!! -- This is usually caused by your configuration.properties file containing a mistyped or invalid token.");
     }
 
-    public static void configFileNotFound() {
+    public static void configFileNotFoundError() {
         System.out.println();
         System.err.println("'FileNotFound' Error!!! -- Please verify that you have the 'configuration.properties' file in your project.");
     }
 
-    public static void nullPointerException() {
+    public static void nullPointerExceptionError() {
         System.out.println();
         System.err.println("'NullPointerException' Error!!! -- Please verify that the 'configuration.properties' file has been added to your project.");
     }
 
     public static void PrintUnknownError() {
+        System.out.println();
         System.err.println("Unknown error detected");
     }
 
+    public static void sleepError() {
+        System.out.println();
+        System.err.println("Error with Thread.sleep() function call. Please check code for unreachable statements or loops.");
+    }
 
     public String statusError(int requestToken) {
         switch (requestToken) {
