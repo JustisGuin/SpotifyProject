@@ -101,7 +101,7 @@ public class JSON_Formatter {
 
     public static String formatAlbumName(JSONObject albumObject){
     String albumName = albumObject.getString("name");
-    return ("Album Name:"+albumName);
+    return ("Album Name: "+albumName);
 
     }
 

@@ -1,6 +1,7 @@
 package edu.bs.cs;
 
 import edu.bsu.cs.model.JSON_Formatter;
+import net.minidev.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.junit.jupiter.api.Test;
@@ -57,6 +58,16 @@ public class FormatterTest {
 
     }
     @Test
+    public void testAlbumName(){
+        JSONObject albumObject = new JSONObject();
+        albumObject.put("name", "Sample Album");
+        String expected = "Album Name: Sample Album";
+        String actual = JSON_Formatter.formatAlbumName(albumObject);
+        assertEquals(expected, actual);
+    }
+
+
+    @Test
     public void testFormatGenres(){
         JSONObject jsonObject = readJSONObjectFromFile("src/test/resources/testArtistSample.json");
         jsonObject.put("Genre", "Polo G");
@@ -68,11 +79,23 @@ public class FormatterTest {
 
     }
     @Test
-    public void testFormatTracks(){
-        JSONObject jsonObject = readJSONObjectFromFile("src/test/resources/getTrackSample2.json");
-        jsonObject.put("items", "Happy Birthday To You - Classic Version");
-        String formattedTrackInfo = JSON_Formatter.formatTrackInfo(jsonObject, 0);
-        assertEquals("Track Name: ", formattedTrackInfo);
+    public void testFormatTracks() {
+            JSONObject trackObject = new JSONObject();
+            trackObject.put("name", "Sample Track");
+            JSONArray artistsArray = new JSONArray();
+            JSONObject artistObject = new JSONObject();
+            artistObject.put("name", "Sample Artist");
+            artistsArray.add(artistObject);
+            trackObject.put("artists", artistsArray);
+
+            int index = 1;
+
+            String expected = "1:\nTrack name: Sample Track\nArtist Name: Sample Artist";
+
+            String actual = JSON_Formatter.formatTrackInfo(trackObject, index);
+
+            assertEquals(expected, actual);
+
 
     }
 }
