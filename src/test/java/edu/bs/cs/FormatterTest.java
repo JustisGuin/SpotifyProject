@@ -1,7 +1,6 @@
 package edu.bs.cs;
 
-import edu.bsu.cs.JSON_Formatter;
-import org.json.JSONArray;
+import edu.bsu.cs.model.JSON_Formatter;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.junit.jupiter.api.Test;
@@ -9,7 +8,6 @@ import org.junit.jupiter.api.Test;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.InputStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

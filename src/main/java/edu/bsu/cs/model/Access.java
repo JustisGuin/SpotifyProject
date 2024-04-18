@@ -1,7 +1,8 @@
-package edu.bsu.cs;
+package edu.bsu.cs.model;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;

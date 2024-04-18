@@ -1,4 +1,4 @@
-package edu.bsu.cs;
+package edu.bsu.cs.model;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

@@ -1,4 +1,4 @@
-package edu.bsu.cs;
+package edu.bsu.cs.model;
 
 import java.io.IOException;
 import java.net.URI;
@@ -60,4 +60,6 @@ public class API_Requests {
         }
         return null;
     }
+
+
 }

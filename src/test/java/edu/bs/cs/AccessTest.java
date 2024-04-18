@@ -1,12 +1,9 @@
 package edu.bs.cs;
 
 
-import edu.bsu.cs.Access;
+import edu.bsu.cs.model.Access;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 
 import java.io.IOException;
 

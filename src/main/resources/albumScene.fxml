@@ -56,7 +56,7 @@
       </VBox>
       <Pane prefHeight="749.0" prefWidth="865.0">
          <children>
-            <Pane fx:id="searchBar" layoutX="6.0" layoutY="14.0" prefHeight="79.0" prefWidth="864.0">
+            <Pane fx:id="searchBar" layoutX="6.0" layoutY="14.0" prefHeight="79.0" prefWidth="864.0" styleClass="rightSideAlbumLabel" stylesheets="@styles/style.css">
                <children>
                   <TextField layoutX="55.0" layoutY="16.0" prefHeight="48.0" prefWidth="377.0" promptText="What do you want to listen to?" styleClass="searchBar" stylesheets="@styles/style.css" />
                   <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="14.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
