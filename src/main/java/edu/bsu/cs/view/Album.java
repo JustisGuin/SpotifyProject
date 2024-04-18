@@ -4,6 +4,7 @@ package edu.bsu.cs.view;
 import edu.bsu.cs.model.API_Requests;
 import edu.bsu.cs.model.Access;
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -11,6 +12,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 
@@ -43,7 +46,7 @@ public class Album extends Application {
             stage.setScene(scene);
             stage.show();
             homeBTN.setOnAction(this::configureHomeButton);
-            getAlbums();
+            initialize();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -72,6 +75,17 @@ public class Album extends Application {
             e.printStackTrace();
         }
     }
+    public void initialize() {
+        albumSearchField.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent event) {
+                if (event.getCode() == KeyCode.ENTER) {
+                    getAlbums();
+                }
+            }
+        });
+    }
+
 
 
 
