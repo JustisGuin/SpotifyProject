@@ -17,7 +17,7 @@ public class Controller {
         spotifyInput();
     }
 
-    private void sleeper(int milliseconds){
+    public static void sleeper(int milliseconds){
         try {
             Thread.sleep(milliseconds);
         } catch (InterruptedException e) {

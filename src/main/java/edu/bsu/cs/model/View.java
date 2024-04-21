@@ -15,13 +15,22 @@ public class View {
         } else {
             System.out.println("Tracks:");
             for (String track : formattedData) {
+                Controller.sleeper(1000);
                 System.out.println(track);
             }
         }
     }
 
-    public static void displayAlbum(String responseBody) {
-        String formattedData = JSON_Formatter.formatAlbum(responseBody);
-        System.out.println(formattedData);
+    public static void displayAlbum(String responseBody){
+        List<StringBuilder> formattedAlbums = JSON_Formatter.formatAlbum(responseBody);
+        if (formattedAlbums.isEmpty()) {
+            System.out.println("No results found!");
+        } else {
+            System.out.println("Albums:");
+            for (StringBuilder album : formattedAlbums) {
+                Controller.sleeper(1000);
+                System.out.println(album);
+            }
+        }
     }
 }
