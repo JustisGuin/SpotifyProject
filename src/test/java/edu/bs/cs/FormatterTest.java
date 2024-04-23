@@ -50,20 +50,32 @@ public class FormatterTest {
     }
     @Test
     public void testAlbumID(){
-        JSONObject jsonObject = readJSONObjectFromFile("src/test/resources/getAlbumSample2.json");
-        jsonObject.put("id", "18NOKLkZETa4sWwLMIm0UZ");
-        String formattedID = JSON_Formatter.formatAlbumID(jsonObject);
-        assertEquals("Album ID: 18NOKLkZETa4sWwLMIm0UZ", formattedID);
+        JSONObject albumObject = new JSONObject();
+        albumObject.put("id", "ABC12345");
+        String formattedID = JSON_Formatter.formatAlbumID(albumObject);
+        assertEquals("\nAlbum ID: ABC12345", formattedID);
 
 
     }
     @Test
     public void testAlbumName(){
         JSONObject albumObject = new JSONObject();
-        albumObject.put("name", "Sample Album");
-        String expected = "Album Name: Sample Album";
-        String actual = JSON_Formatter.formatAlbumName(albumObject);
-        assertEquals(expected, actual);
+        albumObject.put("name", "Test Album");
+        String formattedName = JSON_Formatter.formatAlbumName(albumObject);
+        assertEquals("\nAlbum Name: Test Album", formattedName);
+    }
+    @Test
+    public void testAlbumArtistName(){
+        JSONObject albumObject = new JSONObject();
+        JSONArray artistsArray = new JSONArray();
+        JSONObject artistObject = new JSONObject();
+        artistObject.put("name", "Artist Name Test");
+        artistsArray.add(artistObject);
+        albumObject.put("artists", artistsArray);
+
+        String formattedName = JSON_Formatter.formatAlbumArtistName(albumObject);
+
+        assertEquals("\nArtist Name:Artist Name Test", formattedName);
     }
 
 
@@ -97,5 +109,12 @@ public class FormatterTest {
             assertEquals(expected, actual);
 
 
+    }
+    @Test
+    public void testFormatAlbumTracksName(){
+        JSONObject albumTracksObject = new JSONObject();
+        albumTracksObject.put("name", "Track Name Test");
+        String formattedName = JSON_Formatter.formatAlbumTracksName(albumTracksObject);
+        assertEquals("Track name: Track Name Test", formattedName);
     }
 }
