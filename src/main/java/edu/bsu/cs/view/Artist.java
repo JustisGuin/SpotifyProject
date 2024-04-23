@@ -2,7 +2,6 @@ package edu.bsu.cs.view;
 
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -10,16 +9,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 
-
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 
 import java.util.Objects;
 
-import static java.util.Objects.requireNonNull;
-
-public class Album extends Application {
+public class Artist extends Application {
     public static final int[] WINDOW_SIZE = {800, 600};
 
     public static void main(String[] args) {
@@ -28,35 +23,29 @@ public class Album extends Application {
 
 
 
-
+    @FXML
+    private Button homeBTN = new Button("");
     @FXML
     private final TextArea outputField = new TextArea();
     @FXML
-   // private final TextField albumSearchField= new TextField();
-    public Button getArtistBTN;
-    public Button homeBTN;
+    private final TextField albumSearchField= new TextField();
+
 
 
     @Override
     public void start(Stage stage) {
         try {
             outputField.setMinHeight(400);
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("albumScene.fxml")));
+            FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("artistScene.fxml"));
+            Parent root = loader.load();
             Scene scene = new Scene(root, WINDOW_SIZE[0], WINDOW_SIZE[1]);
             stage.setScene(scene);
             stage.show();
             homeBTN.setOnAction(this::configureHomeButton);
-            getArtistBTN.setOnAction(this::configureArtistButton);
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
-
-
-
-
 
 
     @FXML
@@ -70,17 +59,13 @@ public class Album extends Application {
             e.printStackTrace();
         }
     }
-    @FXML
-    public void configureArtistButton(javafx.event.ActionEvent event) {
-        try {
-            Parent root = FXMLLoader.load(requireNonNull(getClass().getClassLoader().getResource("artistScene.fxml")));
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root, WINDOW_SIZE[0], WINDOW_SIZE[1]));
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+
+
+
+
+
+
+
 
 
 
