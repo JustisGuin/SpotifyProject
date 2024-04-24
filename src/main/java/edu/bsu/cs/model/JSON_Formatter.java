@@ -81,7 +81,7 @@ public class JSON_Formatter {
             JSONArray itemsArray = albumsObject.getJSONArray("items");
             for (int i = 0; i < Math.min(5, itemsArray.length()); i++) {
                 JSONObject albumObject = itemsArray.getJSONObject(i);
-                formattedAlbums.add(formatAlbumInfo(albumObject, i + 1));
+                formattedAlbums.add(formatAlbumInfo(albumObject));
             }
             if (itemsArray.isEmpty()) {
                 formattedAlbums.add(new StringBuilder("No results found!"));
@@ -90,7 +90,7 @@ public class JSON_Formatter {
         return formattedAlbums;
     }
 
-    private static StringBuilder formatAlbumInfo(JSONObject albumObject, int index) {
+    private static StringBuilder formatAlbumInfo(JSONObject albumObject) {
         StringBuilder albumStringBuilder = new StringBuilder();
         albumStringBuilder.append(formatAlbumName(albumObject));
         albumStringBuilder.append(formatAlbumArtistName(albumObject));
