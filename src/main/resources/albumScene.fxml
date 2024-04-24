@@ -35,7 +35,7 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Button fx:id="albumBTN" layoutX="10.0" layoutY="114.0" mnemonicParsing="false"  prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Album" textFill="WHITE">
+                  <Button fx:id="albumBTN" layoutX="10.0" layoutY="114.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Album" textFill="WHITE">
                      <font>
                         <Font name="SansSerif Bold" size="20.0" />
                      </font>
@@ -56,19 +56,20 @@
       </VBox>
       <Pane prefHeight="749.0" prefWidth="865.0">
          <children>
-            <Pane fx:id="searchBar" layoutX="6.0" layoutY="14.0" prefHeight="79.0" prefWidth="864.0" styleClass="rightSideAlbumLabel" stylesheets="@styles/style.css">
+            <Pane layoutX="6.0" layoutY="14.0" prefHeight="79.0" prefWidth="864.0" styleClass="rightSideAlbumLabel" stylesheets="@styles/style.css">
                <children>
-                  <TextField layoutX="55.0" layoutY="16.0" prefHeight="41.0" prefWidth="393.0" promptText="What album would you like to search?" styleClass="searchBar" stylesheets="@styles/style.css" />
+                  <TextField fx:id="albumSearchBar" layoutX="55.0" layoutY="16.0" prefHeight="41.0" prefWidth="393.0" promptText="What album would you like to search?" styleClass="searchBar" stylesheets="@styles/style.css" />
                   <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="14.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
 
                      </image>
                   </ImageView>
+                  <Button fx:id="albumSearchBTN" layoutX="473.0" layoutY="18.0" mnemonicParsing="false" onAction="#configureAlbumSearchBar" text="Search" />
                </children>
             </Pane>
             <Pane layoutX="5.0" layoutY="93.0" prefHeight="650.0" prefWidth="851.0">
                <children>
-                  <TextField layoutX="14.0" layoutY="14.0" prefHeight="215.0" prefWidth="555.0" />
+                  <TextField fx:id="albumOutPutField" layoutX="14.0" layoutY="14.0" prefHeight="215.0" prefWidth="555.0" />
                </children></Pane>
          </children>
       </Pane>

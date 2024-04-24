@@ -10,7 +10,12 @@ This project will be split into 3 iterations, tagged and released as `0.0.1/2/3.
 
 #### To Run:
 
+Command Line Interface: Go into src/main/java/edu.bsu.cs/main and click the run button to run the command line interface iteration. 
+
+GUI Iteration: To run the GUI iteration, make sure Gradle is properly installed and click the Gradle elephant, then proceed to SpotifyProject/Tasks/application and click run.
+
 You will need to add a file called `"configuration.properties"` to the /SpotifyProject/*** path on IntelliJ idea - this can be done by right-clicking on the "SpotifyProject" folder dropdown on the left-hand side of your screen when viewing IntelliJ. 
+
 
 If you are an instructor, the contents of this file should have been sent to you in the comments of the Final Project Iteration 2 submission on Canvas. If you are not an instructor, please contact a group member for the file's contents.
 
