@@ -86,4 +86,9 @@ public class ErrorCatcher {
             }
         }
     }
+
+    public static void imageNotFoundError() {
+        System.out.println();
+        System.err.println("No image found!");
+    }
 }

@@ -116,23 +116,6 @@ public class JSON_Formatter {
         return ("\nArtist Name:" + albumName);
     }
 
-    public static String formatAlbumTracks(String responseBody){
-        StringBuilder formattedOutput = new StringBuilder();
-        JSONObject jsonObject = new JSONObject(responseBody);
-        JSONObject albumTracksObject = jsonObject.getJSONObject("items");
-        if (albumTracksObject.has("artists")) {
-            JSONArray itemsArray = albumTracksObject.getJSONArray("artists");
-            for (int i = 0; i < itemsArray.length(); i++) {
-                JSONObject albumTracksObject2 = itemsArray.getJSONObject(i);
-                formattedOutput.append(formatAlbumTracksName(albumTracksObject2)).append("\n");
-            }
-            if (itemsArray.isEmpty()) {
-                formattedOutput.append("No results found!\n");
-            }
-        }
-        return formattedOutput.toString();
-    }
-
     public static String formatAlbumTracksName(JSONObject albumTracksObject2){
         return "Track name: " + albumTracksObject2.getString("name");
 
@@ -143,18 +126,13 @@ public class JSON_Formatter {
 
     public static String grabAlbumArt(String responseBody){
         try {
-                // Parse the JSON response body
                 JSONObject jsonObject = new JSONObject(responseBody);
-
-                // Get the "items" array
                 JSONArray itemsArray = jsonObject.getJSONObject("albums").getJSONArray("items");
 
-                // Iterate through each item to find the PNG URL with the specified dimensions
                 for (int i = 0; i < itemsArray.length(); i++) {
                     JSONObject item = itemsArray.getJSONObject(i);
                     JSONArray imagesArray = item.getJSONArray("images");
 
-                    // Iterate through each image to find the one with height and width of 300x300
                     for (int j = 0; j < imagesArray.length(); j++) {
                         JSONObject image = imagesArray.getJSONObject(j);
                         if (image.getInt("height") == 300 && image.getInt("width") == 300) {
@@ -162,10 +140,10 @@ public class JSON_Formatter {
                         }
                     }
                 }
-                return null; // Return null if PNG URL with specified dimensions is not found
+                return null;
             } catch (Exception e) {
-                e.printStackTrace();
-                return null; // Return null if there's an exception or JSON parsing error
+                ErrorCatcher.imageNotFoundError();
+                return "https://posh.metisindia.com/wp-content/themes/consultix/images/no-image-found-360x260.png";
             }
         }
 }
