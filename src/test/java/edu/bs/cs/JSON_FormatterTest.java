@@ -12,7 +12,7 @@ import java.io.FileNotFoundException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FormatterTest {
+public class JSON_FormatterTest {
 
     public static JSONObject readJSONObjectFromFile(String filename) {
         try {
