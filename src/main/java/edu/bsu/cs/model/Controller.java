@@ -112,6 +112,7 @@ public class Controller {
         try {
             String responseBody = apiRequests.searchForAlbum(Access.getAccessToken(), getUserInput("Enter name of Album\n"));
             View.displayAlbum(responseBody);
+            System.out.println(JSON_Formatter.grabAlbumArt(responseBody));
         } catch (NumberFormatException e) {
             ErrorCatcher.configPropertiesError();
         }

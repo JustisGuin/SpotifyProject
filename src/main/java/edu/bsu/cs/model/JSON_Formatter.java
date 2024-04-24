@@ -1,5 +1,4 @@
 package edu.bsu.cs.model;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 import java.util.ArrayList;
@@ -81,7 +80,7 @@ public class JSON_Formatter {
             JSONArray itemsArray = albumsObject.getJSONArray("items");
             for (int i = 0; i < Math.min(5, itemsArray.length()); i++) {
                 JSONObject albumObject = itemsArray.getJSONObject(i);
-                formattedAlbums.add(formatAlbumInfo(albumObject, i + 1));
+                formattedAlbums.add(formatAlbumInfo(albumObject));
             }
             if (itemsArray.isEmpty()) {
                 formattedAlbums.add(new StringBuilder("No results found!"));
@@ -90,7 +89,7 @@ public class JSON_Formatter {
         return formattedAlbums;
     }
 
-    private static StringBuilder formatAlbumInfo(JSONObject albumObject, int index) {
+    private static StringBuilder formatAlbumInfo(JSONObject albumObject) {
         StringBuilder albumStringBuilder = new StringBuilder();
         albumStringBuilder.append(formatAlbumName(albumObject));
         albumStringBuilder.append(formatAlbumArtistName(albumObject));
@@ -103,11 +102,13 @@ public class JSON_Formatter {
         return "\nAlbum ID: " + albumObject.getString("id");
 
     }
+
     public static String formatAlbumName(JSONObject albumObject){
     String albumName = albumObject.getString("name");
     return ("\nAlbum Name: "+albumName);
 
     }
+
     public static String formatAlbumArtistName(JSONObject albumObject) {
         org.json.JSONArray trackArtistsArray = albumObject.getJSONArray("artists");
         JSONObject trackArtist = trackArtistsArray.getJSONObject(0);
@@ -140,7 +141,32 @@ public class JSON_Formatter {
 
     }
 
+    public static String grabAlbumArt(String responseBody){
+        try {
+                // Parse the JSON response body
+                JSONObject jsonObject = new JSONObject(responseBody);
 
+                // Get the "items" array
+                JSONArray itemsArray = jsonObject.getJSONObject("albums").getJSONArray("items");
 
+                // Iterate through each item to find the PNG URL with the specified dimensions
+                for (int i = 0; i < itemsArray.length(); i++) {
+                    JSONObject item = itemsArray.getJSONObject(i);
+                    JSONArray imagesArray = item.getJSONArray("images");
+
+                    // Iterate through each image to find the one with height and width of 300x300
+                    for (int j = 0; j < imagesArray.length(); j++) {
+                        JSONObject image = imagesArray.getJSONObject(j);
+                        if (image.getInt("height") == 300 && image.getInt("width") == 300) {
+                            return image.getString("url");
+                        }
+                    }
+                }
+                return null; // Return null if PNG URL with specified dimensions is not found
+            } catch (Exception e) {
+                e.printStackTrace();
+                return null; // Return null if there's an exception or JSON parsing error
+            }
+        }
 }
 

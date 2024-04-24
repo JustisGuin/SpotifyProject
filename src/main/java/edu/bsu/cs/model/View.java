@@ -1,7 +1,5 @@
 package edu.bsu.cs.model;
 
-import javafx.scene.control.TextField;
-
 import java.util.List;
 
 public class View {
