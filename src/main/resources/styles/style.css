@@ -144,6 +144,14 @@
       -fx-graphic: url("../resources/imgs/Spotify_Icon_CMYK_Green.png");
 }
 
+.artistOutputField{
+        -fx-font-family: circular;
+        -fx-font-size: 12px;
+        -fx-font-weight: normal;
+        -fx-text-fill: #333333;
+        -fx-wrap-text: true;
+}
+
 
 
 }

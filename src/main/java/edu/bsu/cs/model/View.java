@@ -1,11 +1,15 @@
 package edu.bsu.cs.model;
 
+import javafx.scene.control.TextField;
+
 import java.util.List;
 
 public class View {
-    public static void displayArtist(String responseBody) {
+    public static void displayArtist(String responseBody, TextField outputField) {
         String formattedData = JSON_Formatter.formatArtist(responseBody);
-        System.out.println(formattedData);
+      //  System.out.println(formattedData);
+        outputField.appendText(formattedData);
+
     }
 
     public static void displayTrack(String responseBody) {

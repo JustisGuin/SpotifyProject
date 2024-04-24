@@ -87,7 +87,7 @@ public class Controller {
     private void userPickArtist() {
         try {
             String responseBody = apiRequests.searchForArtist(Access.getAccessToken(), getUserInput("Enter name of Artist\n"));
-            View.displayArtist(responseBody);
+           // View.displayArtist(responseBody);
         } catch (NumberFormatException e) {
             ErrorCatcher.configPropertiesError();
         }

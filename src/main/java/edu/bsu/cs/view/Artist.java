@@ -1,6 +1,9 @@
 package edu.bsu.cs.view;
 
 
+import edu.bsu.cs.model.API_Requests;
+import edu.bsu.cs.model.Access;
+import edu.bsu.cs.model.View;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +12,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 
@@ -17,31 +21,33 @@ import java.util.Objects;
 public class Artist extends Application {
     public static final int[] WINDOW_SIZE = {800, 600};
 
+
     public static void main(String[] args) {
         launch(args);
     }
 
 
-
+    @FXML
+    private Button artistSearchBTN;
+    @FXML
+    public TextField artistOutputField;
     @FXML
     private Button homeBTN = new Button("");
     @FXML
-    private final TextArea outputField = new TextArea();
-    @FXML
-    private final TextField albumSearchField= new TextField();
+    private TextField artistSearchBar = new TextField();
 
 
 
     @Override
     public void start(Stage stage) {
         try {
-            outputField.setMinHeight(400);
             FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("artistScene.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root, WINDOW_SIZE[0], WINDOW_SIZE[1]);
             stage.setScene(scene);
             stage.show();
             homeBTN.setOnAction(this::configureHomeButton);
+            configureArtistSearchButton();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -58,6 +64,22 @@ public class Artist extends Application {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    @FXML
+    public void configureArtistSearchBar() {
+        try {
+            API_Requests pullArtist = new API_Requests();
+            String responseBody = pullArtist.searchForArtist(Access.getAccessToken(), artistSearchBar.getText());
+            artistOutputField.clear();
+
+            View.displayArtist(responseBody, artistOutputField);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void configureArtistSearchButton() {
+        artistSearchBTN.setOnAction(event -> configureArtistSearchBar());
     }
 
 
