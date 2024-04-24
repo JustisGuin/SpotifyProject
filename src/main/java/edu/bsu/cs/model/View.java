@@ -5,10 +5,9 @@ import javafx.scene.control.TextField;
 import java.util.List;
 
 public class View {
-    public static void displayArtist(String responseBody, TextField outputField) {
+    public static void displayArtist(String responseBody) {
         String formattedData = JSON_Formatter.formatArtist(responseBody);
-      //  System.out.println(formattedData);
-        outputField.appendText(formattedData);
+        System.out.println(formattedData);
 
     }
 
