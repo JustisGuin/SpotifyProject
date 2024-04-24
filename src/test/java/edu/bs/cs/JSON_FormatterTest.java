@@ -28,6 +28,7 @@ public class JSON_FormatterTest {
     @Test
     public void testArtistName(){
         JSONObject jsonObject = readJSONObjectFromFile("src/test/resources/testArtistSample.json");
+        assert jsonObject != null;
         jsonObject.put("name", "Polo G");
         String formattedName = JSON_Formatter.formatName(jsonObject);
         assertEquals("Artist Name: Polo G", formattedName);
@@ -36,6 +37,7 @@ public class JSON_FormatterTest {
     @Test
     public void testArtistID(){
         JSONObject jsonObject = readJSONObjectFromFile("src/test/resources/testArtistSample.json");
+        assert jsonObject != null;
         jsonObject.put("id", "6AgTAQt8XS6jRWi4sX7w49");
         String formattedID = JSON_Formatter.formatID(jsonObject);
         assertEquals("Artist ID: 6AgTAQt8XS6jRWi4sX7w49", formattedID);
@@ -44,6 +46,7 @@ public class JSON_FormatterTest {
     @Test
     public void testArtistPopularity(){
         JSONObject jsonObject = readJSONObjectFromFile("src/test/resources/testArtistSample.json");
+        assert jsonObject != null;
         jsonObject.put("popularity", 81);
         String formattedPopularity = JSON_Formatter.formatPopularity(jsonObject);
         assertEquals("Artist popularity: 81", formattedPopularity);
@@ -82,11 +85,14 @@ public class JSON_FormatterTest {
     @Test
     public void testFormatGenres(){
         JSONObject jsonObject = readJSONObjectFromFile("src/test/resources/testArtistSample.json");
+        assert jsonObject != null;
         jsonObject.put("Genre", "Polo G");
         String formattedGenre = JSON_Formatter.formatGenres(jsonObject);
-        assertEquals("Artist genres:\n" +
-                "- chicago rap\n" +
-                "- rap\n", formattedGenre);
+        assertEquals("""
+                Artist genres:
+                - chicago rap
+                - rap
+                """, formattedGenre);
 
 
     }

@@ -1,16 +1,9 @@
 package edu.bs.cs;
 import java.io.IOException;
-import java.net.URLEncoder;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.nio.charset.StandardCharsets;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import edu.bsu.cs.model.API_Requests;
-import edu.bsu.cs.model.Access;
 import org.junit.jupiter.api.Test;
 
 public class API_RequestsTest {

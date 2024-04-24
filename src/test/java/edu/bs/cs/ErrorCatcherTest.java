@@ -1,7 +1,6 @@
 package edu.bs.cs;
 
 import edu.bsu.cs.model.ErrorCatcher;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
