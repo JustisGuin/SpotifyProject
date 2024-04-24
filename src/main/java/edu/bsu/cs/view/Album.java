@@ -1,8 +1,10 @@
 package edu.bsu.cs.view;
 
 
+import edu.bsu.cs.model.API_Requests;
+import edu.bsu.cs.model.Access;
+import edu.bsu.cs.model.JSON_Formatter;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -11,7 +13,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 
 
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 
@@ -21,6 +22,16 @@ import static java.util.Objects.requireNonNull;
 
 public class Album extends Application {
     public static final int[] WINDOW_SIZE = {800, 600};
+    @FXML
+    public Button albumSearchBTN;
+    @FXML
+    public Button artistBTN;
+    @FXML
+    public TextField albumOutPutField;
+    @FXML
+    public TextField albumSearchBar;
+    @FXML
+    public Button homeBTN;
 
     public static void main(String[] args) {
         launch(args);
@@ -29,35 +40,22 @@ public class Album extends Application {
 
 
 
-    @FXML
-    private final TextArea outputField = new TextArea();
-    @FXML
-   // private final TextField albumSearchField= new TextField();
-    public Button getArtistBTN;
-    public Button homeBTN;
-
-
     @Override
     public void start(Stage stage) {
         try {
-            outputField.setMinHeight(400);
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("albumScene.fxml")));
             Scene scene = new Scene(root, WINDOW_SIZE[0], WINDOW_SIZE[1]);
             stage.setScene(scene);
             stage.show();
             homeBTN.setOnAction(this::configureHomeButton);
-            getArtistBTN.setOnAction(this::configureArtistButton);
+            artistBTN.setOnAction(this::configureArtistButton);
+            configureAlbumSearchButton();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
 
     }
-
-
-
-
-
 
     @FXML
     private void configureHomeButton(javafx.event.ActionEvent event) {
@@ -81,6 +79,31 @@ public class Album extends Application {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    public void configureAlbumSearchBar(){
+        try {
+            API_Requests pullAlbum = new API_Requests();
+            String responseBody = pullAlbum.searchForAlbum(Access.getAccessToken(), albumSearchBar.getText());
+            albumOutPutField.clear();
+            String formattedData = JSON_Formatter.formatAlbum(responseBody).toString();
+            albumOutPutField.setText(formattedData);
+
+
+        }
+        catch (Exception e ){
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void configureAlbumSearchButton() {
+        albumSearchBTN.setOnAction(event -> configureAlbumSearchBar());
+    }
+
+
+
+
+
 
 
 
