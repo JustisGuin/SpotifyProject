@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="749.0" prefWidth="1077.0" styleClass="root" stylesheets="@styles/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs.view.Artist">
+<HBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="749.0" prefWidth="1077.0" styleClass="root" stylesheets="@styles/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs.view.Track">
     <children>
         <VBox prefHeight="749.0" prefWidth="215.0">
             <children>
@@ -35,12 +35,12 @@
                                 </ImageView>
                             </children>
                         </Pane>
-                        <Button fx:id="albumBTN" layoutX="10.0" layoutY="114.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Album" textFill="WHITE">
+                        <Button fx:id="albumBTN" layoutX="10.0" layoutY="114.0" mnemonicParsing="false" onAction="#configureAlbumButton" prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Album" textFill="WHITE">
                             <font>
                                 <Font name="SansSerif Bold" size="20.0" />
                             </font>
                         </Button>
-                        <Button fx:id="artistBTN" layoutX="10.0" layoutY="208.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Artist" textFill="WHITE">
+                        <Button fx:id="artistBTN" layoutX="10.0" layoutY="208.0" mnemonicParsing="false" onAction="#configureArtistButton" prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Artist" textFill="WHITE">
                             <font>
                                 <Font name="SansSerif Bold" size="20.0" />
                             </font>
@@ -58,7 +58,7 @@
             <children>
                 <Pane layoutX="6.0" layoutY="14.0" prefHeight="79.0" prefWidth="864.0" styleClass="rightSideAlbumLabel" stylesheets="@styles/style.css">
                     <children>
-                        <TextField fx:id="artistTrackBar" layoutX="55.0" layoutY="16.0" onAction="#configureTrackSearchBar" prefHeight="41.0" prefWidth="393.0" promptText="What track would you like to search?" styleClass="searchBar" stylesheets="@styles/style.css" />
+                        <TextField fx:id="trackSearchBar" layoutX="55.0" layoutY="16.0" onAction="#configureTrackSearchBar" prefHeight="41.0" prefWidth="393.0" promptText="What track would you like to search?" styleClass="searchBar" stylesheets="@styles/style.css" />
                         <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="14.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
                             <image>
 

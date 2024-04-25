@@ -49,7 +49,7 @@
                         <Font name="SansSerif Bold" size="20.0" />
                      </font>
                   </Button>
-                  <Button layoutX="25.0" layoutY="306.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Track" textFill="WHITE">
+                  <Button fx:id="trackBTN" layoutX="25.0" layoutY="306.0" mnemonicParsing="false" onAction="#handleTrackButtonAction" prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Track" textFill="WHITE">
                      <font>
                         <Font name="Corbel Bold" size="20.0" />
                      </font>

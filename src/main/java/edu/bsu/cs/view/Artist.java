@@ -19,8 +19,12 @@ import javafx.stage.Stage;
 
 import java.util.Objects;
 
+import static java.util.Objects.requireNonNull;
+
 public class Artist extends Application {
     public static final int[] WINDOW_SIZE = {800, 600};
+    public Button albumBTN;
+    public Button trackBTN;
 
 
     public static void main(String[] args) {
@@ -48,6 +52,8 @@ public class Artist extends Application {
             stage.setScene(scene);
             stage.show();
             homeBTN.setOnAction(this::configureHomeButton);
+            albumBTN.setOnAction(this::configureAlbumButton);
+            trackBTN.setOnAction(this::configureTrackButton);
             configureArtistSearchButton();
         } catch (Exception e) {
             e.printStackTrace();
@@ -66,6 +72,34 @@ public class Artist extends Application {
             e.printStackTrace();
         }
     }
+    @FXML
+    public void configureAlbumButton(javafx.event.ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(requireNonNull(getClass().getClassLoader().getResource("albumScene.fxml")));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root, WINDOW_SIZE[0], WINDOW_SIZE[1]));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void configureTrackButton(javafx.event.ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(requireNonNull(getClass().getClassLoader().getResource("trackScene.fxml")));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root, WINDOW_SIZE[0], WINDOW_SIZE[1]));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+
+
     @FXML
     public void configureArtistSearchBar() {
         try {

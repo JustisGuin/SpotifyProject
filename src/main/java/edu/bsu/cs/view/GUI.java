@@ -28,6 +28,7 @@ public class GUI extends Application {
     public Button getalbumBTN;
     public Button getArtistBTN;
     public ImageView spotifyImageView;
+    public Button trackBTN;
     public HBox root;
 
     public static void main(String[] args) {
@@ -61,6 +62,7 @@ public class GUI extends Application {
         VBox root = createRoot();
         getalbumBTN.setOnAction(this::handleAlbumButtonAction);
         getArtistBTN.setOnAction(this::handleArtistButtonAction);
+
         stage.setScene(new Scene(root));
         stage.sizeToScene();
         stage.show();
@@ -99,6 +101,18 @@ public class GUI extends Application {
     public void handleArtistButtonAction(ActionEvent event) {
         try {
             Parent root = FXMLLoader.load(requireNonNull(getClass().getClassLoader().getResource("artistScene.fxml")));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root, WINDOW_SIZE[0], WINDOW_SIZE[1]));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void handleTrackButtonAction(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(requireNonNull(getClass().getClassLoader().getResource("trackScene.fxml")));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root, WINDOW_SIZE[0], WINDOW_SIZE[1]));
             stage.show();

@@ -35,17 +35,17 @@
                                 </ImageView>
                             </children>
                         </Pane>
-                        <Button fx:id="albumBTN" layoutX="10.0" layoutY="114.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Album" textFill="WHITE">
+                        <Button fx:id="albumBTN" layoutX="10.0" layoutY="114.0" mnemonicParsing="false" onAction="#configureAlbumButton" prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Album" textFill="WHITE">
                             <font>
                                 <Font name="SansSerif Bold" size="20.0" />
                             </font>
                         </Button>
-                        <Button fx:id="artistBTN" layoutX="10.0" layoutY="208.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Artist" textFill="WHITE">
+                        <Button fx:id="artistBTN" layoutX="9.0" layoutY="197.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Artist" textFill="WHITE">
                             <font>
                                 <Font name="SansSerif Bold" size="20.0" />
                             </font>
                         </Button>
-                        <Button layoutX="10.0" layoutY="304.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Track" textFill="WHITE">
+                        <Button fx:id="trackBTN" layoutX="10.0" layoutY="284.0" mnemonicParsing="false" onAction="#configureTrackButton" prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Track" textFill="WHITE">
                             <font>
                                 <Font name="Corbel Bold" size="20.0" />
                             </font>
