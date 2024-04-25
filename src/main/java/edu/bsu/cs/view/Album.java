@@ -21,7 +21,7 @@ import java.util.Objects;
 import static java.util.Objects.requireNonNull;
 
 public class Album extends Application {
-    public static final int[] WINDOW_SIZE = {800, 600};
+    public static final int[] WINDOW_SIZE = {1090, 780};
     @FXML
     public Button albumSearchBTN;
     @FXML
@@ -32,12 +32,12 @@ public class Album extends Application {
     public TextField albumSearchBar;
     @FXML
     public Button homeBTN;
+    @FXML
+    public Button trackBTN;
 
     public static void main(String[] args) {
         launch(args);
     }
-
-
 
 
     @Override
@@ -49,6 +49,7 @@ public class Album extends Application {
             stage.show();
             homeBTN.setOnAction(this::configureHomeButton);
             artistBTN.setOnAction(this::configureArtistButton);
+            trackBTN.setOnAction(this::configureTrackButton);
             configureAlbumSearchButton();
         } catch (Exception e) {
             e.printStackTrace();
@@ -79,7 +80,17 @@ public class Album extends Application {
             e.printStackTrace();
         }
     }
-
+    @FXML
+    public void configureTrackButton(javafx.event.ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(requireNonNull(getClass().getClassLoader().getResource("trackScene.fxml")));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root, WINDOW_SIZE[0], WINDOW_SIZE[1]));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     @FXML
     public void configureAlbumSearchBar(){
         try {
@@ -88,6 +99,7 @@ public class Album extends Application {
             albumOutPutField.clear();
             String formattedData = JSON_Formatter.formatAlbum(responseBody).toString();
             albumOutPutField.setText(formattedData);
+
 
 
         }
@@ -99,6 +111,8 @@ public class Album extends Application {
     private void configureAlbumSearchButton() {
         albumSearchBTN.setOnAction(event -> configureAlbumSearchBar());
     }
+
+
 
 
 

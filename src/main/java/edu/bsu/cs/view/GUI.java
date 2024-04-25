@@ -11,20 +11,19 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 
 import java.io.IOException;
-import java.util.Objects;
+
 
 import static java.util.Objects.*;
 
 
 public class GUI extends Application {
-    public static final int[] WINDOW_SIZE = {1077, 749};
+    public static final int[] WINDOW_SIZE = {1090, 780};
     public Button getalbumBTN;
     public Button getArtistBTN;
     public ImageView spotifyImageView;

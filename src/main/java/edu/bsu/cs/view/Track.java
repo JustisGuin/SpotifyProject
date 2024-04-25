@@ -20,7 +20,7 @@ import static java.util.Objects.requireNonNull;
 
 
 public class Track extends Application {
-    public static final int[] WINDOW_SIZE = {800, 600};
+    public static final int[] WINDOW_SIZE = {1090, 780};
     public Button homeBTN;
     public Button albumBTN;
     public Button artistBTN;

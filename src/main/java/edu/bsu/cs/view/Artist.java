@@ -22,7 +22,7 @@ import java.util.Objects;
 import static java.util.Objects.requireNonNull;
 
 public class Artist extends Application {
-    public static final int[] WINDOW_SIZE = {800, 600};
+    public static final int[] WINDOW_SIZE = {1090, 780};
     public Button albumBTN;
     public Button trackBTN;
 

@@ -149,7 +149,26 @@
         -fx-font-size: 12px;
         -fx-font-weight: normal;
         -fx-text-fill: #333333;
+        -fx-wrap-text: false;
+        -fx-font-size: 20px;
+        -fx-text-alignment: center;
+}
+.albumOutputField{
+        -fx-font-family: circular;
+        -fx-font-size: 12px;
+        -fx-font-weight: normal;
+        -fx-text-fill: #333333;
+        -fx-font-size: 20px;
         -fx-wrap-text: true;
+
+
+
+        -fx-border-width: 2px 2px 2px 2px;
+        -fx-border-radius: 20px;
+        -fx-background-radius: 20px;
+        -fx-border-style: solid;
+        -fx-padding-right: 10px;
+        -fx-alignment: center;
 }
 
 
