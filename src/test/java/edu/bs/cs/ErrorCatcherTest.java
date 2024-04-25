@@ -55,7 +55,7 @@ public class ErrorCatcherTest {
     public void testPrintUnknownError(){
         ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
         System.setErr(new PrintStream(outputStreamCaptor));
-        ErrorCatcher.PrintUnknownError();
+        ErrorCatcher.printUnknownError();
         String errorMessage = outputStreamCaptor.toString().trim();
         assertEquals("Unknown error detected", errorMessage);
 

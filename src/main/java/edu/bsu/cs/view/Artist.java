@@ -4,7 +4,6 @@ package edu.bsu.cs.view;
 import edu.bsu.cs.model.API_Requests;
 import edu.bsu.cs.model.Access;
 import edu.bsu.cs.model.JSON_Formatter;
-import edu.bsu.cs.model.View;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +12,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 

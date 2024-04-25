@@ -1,5 +1,7 @@
 package edu.bsu.cs.model;
 
+import edu.bsu.cs.view.View;
+
 import java.util.Scanner;
 
 public class Controller {
@@ -92,7 +94,7 @@ public class Controller {
             ErrorCatcher.configPropertiesError();
         }
         catch (Exception e){
-            ErrorCatcher.PrintUnknownError();
+            ErrorCatcher.printUnknownError();
         }
     }
 
@@ -104,7 +106,7 @@ public class Controller {
             ErrorCatcher.configPropertiesError();
         }
         catch (Exception e){
-            ErrorCatcher.PrintUnknownError();
+            ErrorCatcher.printUnknownError();
         }
     }
 
@@ -117,7 +119,7 @@ public class Controller {
             ErrorCatcher.configPropertiesError();
         }
         catch (Exception e){
-            ErrorCatcher.PrintUnknownError();
+            ErrorCatcher.printUnknownError();
         }
     }
 }

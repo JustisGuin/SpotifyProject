@@ -4,11 +4,12 @@ import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import edu.bsu.cs.model.API_Requests;
+import edu.bsu.cs.model.Access;
 import org.junit.jupiter.api.Test;
 
 public class APIRequestsTest {
 
-    private static final String ACCESS_TOKEN = "BQBN4JZaH2gIGiM14CGyd-AA-T6RUObX_Cmag3Gq_gD7KguHb3sYpmZ3aT3W445HP4ifE3SGR4XKHoKOPQa0pwcjt9cmib8qZIAHy59dufOiEq6xOUg";
+    private static final String ACCESS_TOKEN = Access.getAccessToken();
 
     @Test
     public void testSearchForArtist() throws IOException, InterruptedException {
