@@ -32,7 +32,7 @@ public class Access {
             ErrorCatcher.nullPointerExceptionError();
         }
         catch (IOException e) {
-            System.err.println("Unknown error occurring in createClientInfo");
+            ErrorCatcher.printUnknownError();
         }
         String clientID = properties.getProperty("client_id");
         String clientSecret = properties.getProperty("client_secret");
@@ -58,9 +58,9 @@ public class Access {
         try {
             response = client.send(request, HttpResponse.BodyHandlers.ofString());
         } catch (IOException e) {
-            System.err.println("IOException – if an I/ O error occurs when sending or receiving, or the client has shut down");
+            ErrorCatcher.ioExceptionError();
         } catch (InterruptedException e) {
-            System.err.println("InterruptedException – if the operation is interrupted");
+            ErrorCatcher.interruptedExceptionError();
         }
 
         if (Objects.requireNonNull(response).statusCode() == 200) {

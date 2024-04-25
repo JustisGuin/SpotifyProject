@@ -17,7 +17,7 @@ public class ErrorCatcher {
         System.err.println("'NullPointerException' Error!!! -- Please verify that the 'configuration.properties' file has been added to your project.");
     }
 
-    public static void PrintUnknownError() {
+    public static void printUnknownError() {
         System.out.println();
         System.err.println("Unknown error detected");
     }
@@ -91,4 +91,16 @@ public class ErrorCatcher {
         System.out.println();
         System.err.println("No image found!");
     }
+
+    public static void ioExceptionError(){
+        System.out.println();
+        System.err.println("IOException – if an I/ O error occurs when sending or receiving, or the client has shut down");
+    }
+
+    public static void interruptedExceptionError(){
+        System.out.println();
+        System.err.println("InterruptedException – the operation was interrupted");
+    }
+
+
 }

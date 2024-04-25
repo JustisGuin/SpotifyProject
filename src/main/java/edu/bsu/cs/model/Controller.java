@@ -94,7 +94,7 @@ public class Controller {
             ErrorCatcher.configPropertiesError();
         }
         catch (Exception e){
-            ErrorCatcher.PrintUnknownError();
+            ErrorCatcher.printUnknownError();
         }
     }
 
@@ -106,7 +106,7 @@ public class Controller {
             ErrorCatcher.configPropertiesError();
         }
         catch (Exception e){
-            ErrorCatcher.PrintUnknownError();
+            ErrorCatcher.printUnknownError();
         }
     }
 
@@ -119,7 +119,7 @@ public class Controller {
             ErrorCatcher.configPropertiesError();
         }
         catch (Exception e){
-            ErrorCatcher.PrintUnknownError();
+            ErrorCatcher.printUnknownError();
         }
     }
 }
