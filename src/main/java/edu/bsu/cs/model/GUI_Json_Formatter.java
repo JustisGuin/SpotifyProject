@@ -8,7 +8,7 @@ import java.util.List;
 
 
 public class GUI_Json_Formatter {
-    public static List<StringBuilder> formatAlbum(String responseBody) {
+    public static List<StringBuilder> formatAlbumGUI(String responseBody) {
         List<StringBuilder> formattedAlbums = new ArrayList<>();
         JSONObject jsonObject = new JSONObject(responseBody);
         JSONObject albumsObject = jsonObject.getJSONObject("albums");
