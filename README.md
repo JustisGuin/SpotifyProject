@@ -3,9 +3,9 @@
 
 ---
 ### About:
-This project accesses Spotify’s API & the metadata it provides and displays a variety of information regarding artists, songs, the user's statistics, trends, and projections, and hopes to include playback controls and live data monitoring.
+This project accesses Spotify’s API & the metadata it provides. It displays various information regarding artists, songs, and their statistics, and hopes to include playback controls and live data monitoring.
 
-This project will be split into 3 iterations, tagged and released as `0.0.1/2/3.x` - It contains a CLI (command-line interface) version and a GUI (graphical user interface) version. Usage information is detailed below. 
+This project will be split into 3 iterations, tagged and released as `0.0.1/2/3.x` containing a CLI (command-line interface) version and a GUI (graphical user interface) version. Usage information is detailed below. 
 
 
 ---
