@@ -27,7 +27,7 @@ public class Album extends Application {
     @FXML
     public Button artistBTN;
     @FXML
-    public TextField albumOutPutField;
+    public TextArea albumOutPutField = new TextArea("");
     @FXML
     public TextField albumSearchBar;
     @FXML

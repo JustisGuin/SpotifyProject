@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -68,9 +69,9 @@
                     </children>
                 </Pane>
                 <Pane layoutX="5.0" layoutY="93.0" prefHeight="650.0" prefWidth="851.0">
-                    <children>
-                        <TextField fx:id="artistOutputField" alignment="TOP_LEFT" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="376.0" prefWidth="750.0" styleClass="artistOutputField" stylesheets="@styles/style.css" />
-                    </children></Pane>
+               <children>
+                  <TextArea fx:id="artistOutputField" layoutX="28.0" layoutY="22.0" prefHeight="416.0" prefWidth="780.0" />
+               </children></Pane>
             </children>
         </Pane>
     </children>

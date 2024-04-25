@@ -1,9 +1,6 @@
 package edu.bsu.cs.view;
 
-import edu.bsu.cs.model.API_Requests;
-import edu.bsu.cs.model.Access;
-import edu.bsu.cs.model.ErrorCatcher;
-import edu.bsu.cs.model.JSON_Formatter;
+import edu.bsu.cs.model.*;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,8 +8,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import java.util.List;
 import java.util.Objects;
 
 import static java.util.Objects.requireNonNull;
@@ -23,11 +23,11 @@ public class Track extends Application {
     public Button homeBTN;
     public Button albumBTN;
     public Button artistBTN;
+    public TextArea trackOutPutField;
 
     public static void main(String[] args) {launch(args);}
 
     public Button trackSearchBTN;
-    public TextField trackOutputField;
     public TextField trackSearchBar;
 
 
@@ -58,6 +58,7 @@ public class Track extends Application {
             ErrorCatcher.viewClassErrorCatch();
         }
     }
+
     @FXML
     public void configureAlbumButton(javafx.event.ActionEvent event) {
         try {
@@ -86,9 +87,9 @@ public class Track extends Application {
         try {
             API_Requests pullAlbum = new API_Requests();
             String responseBody = pullAlbum.searchForAlbum(Access.getAccessToken(), trackSearchBar.getText());
-            trackOutputField.clear();
-            String formattedData = JSON_Formatter.formatAlbum(responseBody).toString();
-            trackOutputField.setText(formattedData);
+            trackOutPutField.clear();
+            List<String> formattedData = GUI_Json_Formatter.formatTrackGUI(responseBody);
+            trackOutPutField.setText(String.valueOf(formattedData));
 
 
         }

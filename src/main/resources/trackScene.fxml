@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -64,12 +65,12 @@
 
                             </image>
                         </ImageView>
-                        <Button fx:id="trackSearchBTN" layoutX="464.0" layoutY="18.0" mnemonicParsing="false" onAction="#configureTrackSearchButton" text="Search" />
+                        <Button fx:id="trackSearchBTN" layoutX="464.0" layoutY="13.0" mnemonicParsing="false" onAction="#configureTrackSearchButton" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Search" />
                     </children>
                 </Pane>
                 <Pane layoutX="5.0" layoutY="93.0" prefHeight="650.0" prefWidth="851.0">
                     <children>
-                        <TextField fx:id="trackOutputField" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="215.0" prefWidth="555.0" styleClass="artistOutputField" stylesheets="@styles/style.css" />
+                        <TextArea fx:id="trackOutPutField" layoutX="14.0" layoutY="14.0" prefHeight="287.0" prefWidth="695.0" styleClass="outputFields" stylesheets="@styles/style.css" />
                     </children></Pane>
             </children>
         </Pane>
