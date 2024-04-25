@@ -13,6 +13,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 
@@ -34,7 +35,7 @@ public class Artist extends Application {
     @FXML
     private Button artistSearchBTN;
     @FXML
-    public TextField artistOutputField;
+    public TextArea artistOutputField = new TextArea("");
     @FXML
     private Button homeBTN = new Button("");
     @FXML
