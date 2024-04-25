@@ -102,5 +102,10 @@ public class ErrorCatcher {
         System.err.println("InterruptedException – the operation was interrupted");
     }
 
+    public static void viewClassErrorCatch(){
+        System.out.println();
+        System.err.println("View class error! This is commonly caused by incorrect code or updates that break correct code.");
+    }
+
 
 }
