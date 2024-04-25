@@ -1,5 +1,7 @@
 package edu.bsu.cs.model;
 
+import edu.bsu.cs.view.View;
+
 import java.util.Scanner;
 
 public class Controller {

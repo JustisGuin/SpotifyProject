@@ -1,4 +1,7 @@
-package edu.bsu.cs.model;
+package edu.bsu.cs.view;
+
+import edu.bsu.cs.model.Controller;
+import edu.bsu.cs.model.JSON_Formatter;
 
 import java.util.List;
 
