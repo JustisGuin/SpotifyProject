@@ -63,6 +63,30 @@ public class GUI_Json_Formatter {
         return "Artist popularity: " + artistObject.getInt("popularity");
     }
 
+    public static List<String> formatTrackGUI(String responseBody) {
+        List<String> formattedTracks = new ArrayList<>();
+        JSONObject jsonObject = new JSONObject(responseBody);
+        JSONObject tracksObject = jsonObject.getJSONObject("tracks");
+        if (tracksObject.has("items")) {
+            JSONArray itemsArray = tracksObject.getJSONArray("items");
+            for (int i = 0; i < Math.min(5, itemsArray.length()); i++) {
+                JSONObject trackObject = itemsArray.getJSONObject(i);
+                formattedTracks.add(formatTrackInfo(trackObject, i + 1));
+            }
+            if (itemsArray.isEmpty()) {
+                formattedTracks.add("No results found!");
+            }
+        }
+        return formattedTracks;
+    }
+
+    public static String formatTrackInfo(JSONObject trackObject, int index) {
+        String trackName = trackObject.getString("name");
+        JSONArray artistsArray = trackObject.getJSONArray("artists");
+        String artistName = artistsArray.getJSONObject(0).getString("name");
+        return index + ":\nTrack name: " + trackName + "\nArtist Name: " + artistName;
+    }
+
 
 
 
