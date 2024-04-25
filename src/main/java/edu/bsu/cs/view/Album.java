@@ -97,7 +97,7 @@ public class Album extends Application {
             API_Requests pullAlbum = new API_Requests();
             String responseBody = pullAlbum.searchForAlbum(Access.getAccessToken(), albumSearchBar.getText());
             albumOutPutField.clear();
-            String formattedData = GUI_Json_Formatter.formatAlbumGUI(responseBody);
+            String formattedData = GUI_Json_Formatter.formatAlbumGUI(responseBody).toString();
             albumOutPutField.setText(formattedData);
         }
         catch (Exception e ){
