@@ -1,6 +1,7 @@
 package edu.bsu.cs.view;
 
 
+import edu.bsu.cs.model.ErrorCatcher;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -92,7 +93,7 @@ public class GUI extends Application {
             stage.setScene(new Scene(root, WINDOW_SIZE[0], WINDOW_SIZE[1]));
             stage.show();
         } catch (Exception e) {
-            e.printStackTrace();
+            ErrorCatcher.viewClassErrorCatch();
         }
     }
 
@@ -104,7 +105,7 @@ public class GUI extends Application {
             stage.setScene(new Scene(root, WINDOW_SIZE[0], WINDOW_SIZE[1]));
             stage.show();
         } catch (Exception e) {
-            e.printStackTrace();
+            ErrorCatcher.viewClassErrorCatch();
         }
     }
 
@@ -116,7 +117,7 @@ public class GUI extends Application {
             stage.setScene(new Scene(root, WINDOW_SIZE[0], WINDOW_SIZE[1]));
             stage.show();
         } catch (Exception e) {
-            e.printStackTrace();
+            ErrorCatcher.viewClassErrorCatch();
         }
     }
 
