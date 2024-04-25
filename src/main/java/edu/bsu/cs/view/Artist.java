@@ -3,6 +3,7 @@ package edu.bsu.cs.view;
 
 import edu.bsu.cs.model.API_Requests;
 import edu.bsu.cs.model.Access;
+import edu.bsu.cs.model.GUI_Json_Formatter;
 import edu.bsu.cs.model.JSON_Formatter;
 import javafx.application.Application;
 import javafx.fxml.FXML;
@@ -104,7 +105,7 @@ public class Artist extends Application {
             API_Requests pullArtist = new API_Requests();
             String responseBody = pullArtist.searchForArtist(Access.getAccessToken(), artistSearchBar.getText());
             artistOutputField.clear();
-            String formattedData = JSON_Formatter.formatArtist(responseBody);
+            String formattedData = GUI_Json_Formatter.formatArtistGUI(responseBody);
             artistOutputField.setText(formattedData);
 
 

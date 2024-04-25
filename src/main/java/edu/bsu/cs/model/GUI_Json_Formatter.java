@@ -24,15 +24,16 @@ public class GUI_Json_Formatter {
         JSONObject jsonObject = new JSONObject(responseBody);
         JSONObject artistsObject = jsonObject.getJSONObject("artists");
         StringBuilder formattedOutput = new StringBuilder();
-        formattedOutput.append("\nShowing the top 3 responses of your query:\n\n");
+        System.out.println("\n");
+        formattedOutput.append("Showing the top 3 responses of your query:\n\n");
         if (artistsObject.has("items")) {
             JSONArray itemsArray = artistsObject.getJSONArray("items");
             for (int i = 0; i < Math.min(3, itemsArray.length()); i++) {
                 JSONObject artistObject = itemsArray.getJSONObject(i);
-                formattedOutput.append(formatName(artistObject)).append("\n");
-                formattedOutput.append(formatID(artistObject)).append("\n");
-                formattedOutput.append(formatGenres(artistObject)).append("\n");
-                formattedOutput.append(formatPopularity(artistObject)).append("\n\n");
+                formattedOutput.append(formatName(artistObject));
+                formattedOutput.append(formatID(artistObject));
+                formattedOutput.append(formatGenres(artistObject));
+                formattedOutput.append(formatPopularity(artistObject));
             }
             if (itemsArray.isEmpty()) {
                 formattedOutput.append("No results found!\n");
@@ -46,7 +47,7 @@ public class GUI_Json_Formatter {
     }
 
     public static String formatID(JSONObject artistObject) {
-        return "Artist ID: " + artistObject.getString("id");
+        return "Artist ID:\n " + artistObject.getString("id");
     }
 
     public static String formatGenres(JSONObject artistObject) {

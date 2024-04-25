@@ -69,7 +69,7 @@
                 </Pane>
                 <Pane layoutX="5.0" layoutY="93.0" prefHeight="650.0" prefWidth="851.0">
                     <children>
-                        <TextField fx:id="artistOutputField" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="215.0" prefWidth="555.0" styleClass="artistOutputField" stylesheets="@styles/style.css" />
+                        <TextField fx:id="artistOutputField" alignment="TOP_LEFT" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="376.0" prefWidth="750.0" styleClass="artistOutputField" stylesheets="@styles/style.css" />
                     </children></Pane>
             </children>
         </Pane>

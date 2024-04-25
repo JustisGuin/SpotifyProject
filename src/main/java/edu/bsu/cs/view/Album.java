@@ -3,6 +3,7 @@ package edu.bsu.cs.view;
 
 import edu.bsu.cs.model.API_Requests;
 import edu.bsu.cs.model.Access;
+import edu.bsu.cs.model.GUI_Json_Formatter;
 import edu.bsu.cs.model.JSON_Formatter;
 import javafx.application.Application;
 import javafx.fxml.FXML;
@@ -97,11 +98,8 @@ public class Album extends Application {
             API_Requests pullAlbum = new API_Requests();
             String responseBody = pullAlbum.searchForAlbum(Access.getAccessToken(), albumSearchBar.getText());
             albumOutPutField.clear();
-            String formattedData = JSON_Formatter.formatAlbum(responseBody).toString();
+            String formattedData = GUI_Json_Formatter.formatAlbumGUI(responseBody);
             albumOutPutField.setText(formattedData);
-
-
-
         }
         catch (Exception e ){
             e.printStackTrace();
