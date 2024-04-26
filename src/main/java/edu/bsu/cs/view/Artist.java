@@ -106,6 +106,7 @@ public class Artist extends Application {
             artistOutputField.clear();
             String formattedData = JSON_Formatter.formatArtist(responseBody);
             artistOutputField.setText(formattedData);
+            artistOutputField.setEditable(false);
 
 
         }catch (Exception e){

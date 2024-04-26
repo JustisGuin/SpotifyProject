@@ -91,6 +91,7 @@ public class Track extends Application {
             trackOutputField.clear();
             String formattedData = JSON_Formatter.formatTrack(responseBody).toString();
             trackOutputField.setText(formattedData);
+            trackOutputField.setEditable(false);
         }
         catch (Exception e ){
             e.printStackTrace();

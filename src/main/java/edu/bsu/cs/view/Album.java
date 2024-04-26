@@ -97,6 +97,7 @@ public class Album extends Application {
             albumOutPutField.clear();
             String formattedData = JSON_Formatter.formatAlbum(responseBody).toString();
             albumOutPutField.setText(formattedData);
+            albumOutPutField.setEditable(false);
 
 
         }
