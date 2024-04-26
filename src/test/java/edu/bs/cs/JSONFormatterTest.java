@@ -112,7 +112,13 @@ public class JSONFormatterTest {
             int index = 1;
 
 
-            String expected = "1:\nTrack name: " + "\n" + "Sample Track" + "\nArtist Name: " + "\n" + "Sample Artist" + "\n";
+            String expected = """
+                    1:
+                    Track name:\s
+                    Sample Track
+                    Artist Name:\s
+                    Sample Artist
+                    """;
 
 
 
