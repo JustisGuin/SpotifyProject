@@ -20,7 +20,7 @@ import java.util.Objects;
 import static java.util.Objects.requireNonNull;
 
 public class Artist extends Application {
-    public static final int[] WINDOW_SIZE = {800, 600};
+    public static final int[] WINDOW_SIZE = {1090, 750};
     public Button albumBTN;
     public Button trackBTN;
 
@@ -33,7 +33,7 @@ public class Artist extends Application {
     @FXML
     private Button artistSearchBTN;
     @FXML
-    public TextField artistOutputField;
+    public TextArea artistOutputField = new TextArea("");
     @FXML
     private Button homeBTN = new Button("");
     @FXML

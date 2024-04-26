@@ -21,13 +21,13 @@ import java.util.Objects;
 import static java.util.Objects.requireNonNull;
 
 public class Album extends Application {
-    public static final int[] WINDOW_SIZE = {800, 600};
+    public static final int[] WINDOW_SIZE = {1090, 750};
     @FXML
     public Button albumSearchBTN;
     @FXML
     public Button artistBTN;
     @FXML
-    public TextField albumOutPutField;
+    public TextArea albumOutPutField = new TextArea("");
     @FXML
     public TextField albumSearchBar;
     @FXML
@@ -36,9 +36,6 @@ public class Album extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-
-
-
 
     @Override
     public void start(Stage stage) {
@@ -49,6 +46,7 @@ public class Album extends Application {
             stage.show();
             homeBTN.setOnAction(this::configureHomeButton);
             artistBTN.setOnAction(this::configureArtistButton);
+
             configureAlbumSearchButton();
         } catch (Exception e) {
             e.printStackTrace();
@@ -61,6 +59,17 @@ public class Album extends Application {
     private void configureHomeButton(javafx.event.ActionEvent event) {
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("GUI.fxml")));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root, WINDOW_SIZE[0], WINDOW_SIZE[1]));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    public void configureTrackButton(javafx.event.ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(requireNonNull(getClass().getClassLoader().getResource("trackScene.fxml")));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root, WINDOW_SIZE[0], WINDOW_SIZE[1]));
             stage.show();
@@ -95,6 +104,7 @@ public class Album extends Application {
             e.printStackTrace();
         }
     }
+
     @FXML
     private void configureAlbumSearchButton() {
         albumSearchBTN.setOnAction(event -> configureAlbumSearchBar());

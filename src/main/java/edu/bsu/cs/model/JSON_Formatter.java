@@ -69,7 +69,7 @@ public class JSON_Formatter {
         String trackName = trackObject.getString("name");
         JSONArray artistsArray = trackObject.getJSONArray("artists");
         String artistName = artistsArray.getJSONObject(0).getString("name");
-        return index + ":\nTrack name: " + trackName + "\nArtist Name: " + artistName;
+        return index + ":\nTrack name: \n" + trackName + "\nArtist Name: \n" + artistName + "\n";
     }
 
     public static List<StringBuilder> formatAlbum(String responseBody) {

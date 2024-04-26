@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -45,7 +46,7 @@
                         <Font name="SansSerif Bold" size="20.0" />
                      </font>
                   </Button>
-                  <Button layoutX="10.0" layoutY="304.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Track" textFill="WHITE">
+                  <Button fx:id="trackBTN" layoutX="10.0" layoutY="304.0" mnemonicParsing="false" onAction="#configureTrackButton" prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Track" textFill="WHITE">
                      <font>
                         <Font name="Corbel Bold" size="20.0" />
                      </font>
@@ -56,20 +57,20 @@
       </VBox>
       <Pane prefHeight="749.0" prefWidth="865.0">
          <children>
-            <Pane layoutX="6.0" layoutY="14.0" prefHeight="79.0" prefWidth="864.0" styleClass="rightSideAlbumLabel" stylesheets="@styles/style.css">
+            <Pane layoutX="6.0" layoutY="14.0" prefHeight="79.0" prefWidth="858.0" styleClass="rightSideAlbumLabel" stylesheets="@styles/style.css">
                <children>
-                  <TextField fx:id="albumSearchBar" layoutX="55.0" layoutY="16.0" prefHeight="41.0" prefWidth="393.0" promptText="What album would you like to search?" styleClass="searchBar" stylesheets="@styles/style.css" />
+                  <TextField fx:id="albumSearchBar" layoutX="14.0" layoutY="16.0" prefHeight="41.0" prefWidth="393.0" promptText="What album would you like to search?" styleClass="searchBar" stylesheets="@styles/style.css" />
                   <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="14.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
 
                      </image>
                   </ImageView>
-                  <Button fx:id="albumSearchBTN" layoutX="473.0" layoutY="18.0" mnemonicParsing="false" onAction="#configureAlbumSearchBar" text="Search" />
+                  <Button fx:id="albumSearchBTN" layoutX="432.0" layoutY="13.0" mnemonicParsing="false" onAction="#configureAlbumSearchBar" styleClass="leftPaneBTNS" text="Search" />
                </children>
             </Pane>
             <Pane layoutX="5.0" layoutY="93.0" prefHeight="650.0" prefWidth="851.0">
                <children>
-                  <TextField fx:id="albumOutPutField" layoutX="14.0" layoutY="14.0" prefHeight="215.0" prefWidth="555.0" />
+                  <TextArea fx:id="albumOutPutField" layoutX="14.0" layoutY="14.0" prefHeight="320.0" prefWidth="700.0" styleClass="outputFields" />
                </children></Pane>
          </children>
       </Pane>

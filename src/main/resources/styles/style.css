@@ -144,12 +144,26 @@
       -fx-graphic: url("../resources/imgs/Spotify_Icon_CMYK_Green.png");
 }
 
-.artistOutputField{
+
+.outputFields{
         -fx-font-family: circular;
         -fx-font-size: 12px;
-        -fx-font-weight: normal;
-        -fx-text-fill: #333333;
-        -fx-wrap-text: true;
+        -fx-font-weight: bold;
+        -fx-text-fill: #F9F9F9;
+        -fx-font-size: 20px;
+        outputField-background: #333333;
+
+
+
+
+        -fx-border-width: 2px 2px 2px 2px;
+        -fx-border-radius: 20px;
+        -fx-background-radius: 20px;
+        -fx-border-style: solid;
+        -fx-padding-right: 35px;
+}
+.outputFields .content{
+    -fx-background-color: outputField-background;
 }
 
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -40,12 +41,12 @@
                                 <Font name="SansSerif Bold" size="20.0" />
                             </font>
                         </Button>
-                        <Button fx:id="artistBTN" layoutX="9.0" layoutY="197.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Artist" textFill="WHITE">
+                        <Button fx:id="artistBTN" layoutX="9.0" layoutY="206.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Artist" textFill="WHITE">
                             <font>
                                 <Font name="SansSerif Bold" size="20.0" />
                             </font>
                         </Button>
-                        <Button fx:id="trackBTN" layoutX="10.0" layoutY="284.0" mnemonicParsing="false" onAction="#configureTrackButton" prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Track" textFill="WHITE">
+                        <Button fx:id="trackBTN" layoutX="10.0" layoutY="303.0" mnemonicParsing="false" onAction="#configureTrackButton" prefHeight="36.0" prefWidth="196.0" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Track" textFill="WHITE">
                             <font>
                                 <Font name="Corbel Bold" size="20.0" />
                             </font>
@@ -58,18 +59,13 @@
             <children>
                 <Pane layoutX="6.0" layoutY="14.0" prefHeight="79.0" prefWidth="864.0" styleClass="rightSideAlbumLabel" stylesheets="@styles/style.css">
                     <children>
-                        <TextField fx:id="artistSearchBar" layoutX="55.0" layoutY="16.0" onAction="#configureArtistSearchBar" prefHeight="41.0" prefWidth="393.0" promptText="What artist would you like to search?" styleClass="searchBar" stylesheets="@styles/style.css" />
-                        <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="14.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-
-                            </image>
-                        </ImageView>
-                  <Button fx:id="artistSearchBTN" layoutX="464.0" layoutY="18.0" mnemonicParsing="false" onAction="#configureArtistSearchButton" text="Search" />
+                        <TextField fx:id="artistSearchBar" layoutX="14.0" layoutY="16.0" onAction="#configureArtistSearchBar" prefHeight="41.0" prefWidth="393.0" promptText="What artist would you like to search?" styleClass="searchBar" stylesheets="@styles/style.css" />
+                  <Button fx:id="artistSearchBTN" layoutX="432.0" layoutY="13.0" mnemonicParsing="false" onAction="#configureArtistSearchButton" styleClass="leftPaneBTNS" stylesheets="@styles/style.css" text="Search" />
                     </children>
                 </Pane>
                 <Pane layoutX="5.0" layoutY="93.0" prefHeight="650.0" prefWidth="851.0">
                     <children>
-                        <TextField fx:id="artistOutputField" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="215.0" prefWidth="555.0" styleClass="artistOutputField" stylesheets="@styles/style.css" />
+                  <TextArea fx:id="artistOutputField" layoutX="14.0" layoutY="14.0" prefHeight="320.0" prefWidth="700.0" styleClass="outputFields" />
                     </children></Pane>
             </children>
         </Pane>

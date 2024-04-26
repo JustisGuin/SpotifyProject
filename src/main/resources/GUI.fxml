@@ -54,7 +54,6 @@
                         <Font name="Corbel Bold" size="20.0" />
                      </font>
                   </Button>
-                  <TextField layoutX="27.0" layoutY="403.0" prefHeight="249.0" prefWidth="196.0" />
                </children>
             </AnchorPane>
          </children>

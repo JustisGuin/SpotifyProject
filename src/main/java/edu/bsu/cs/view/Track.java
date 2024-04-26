@@ -12,6 +12,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import static java.util.Objects.requireNonNull;
 
 
 public class Track extends Application {
-    public static final int[] WINDOW_SIZE = {800, 600};
+    public static final int[] WINDOW_SIZE = {1090, 750};
     public Button homeBTN;
     public Button albumBTN;
     public Button artistBTN;
@@ -28,7 +29,7 @@ public class Track extends Application {
     public static void main(String[] args) {launch(args);}
 
     public Button trackSearchBTN;
-    public TextField trackOutputField;
+    public TextArea trackOutputField;
     public TextField trackSearchBar;
 
 
@@ -85,13 +86,11 @@ public class Track extends Application {
     @FXML
     public void configureTrackSearchBar(){
         try {
-            API_Requests pullAlbum = new API_Requests();
-            String responseBody = pullAlbum.searchForAlbum(Access.getAccessToken(), trackSearchBar.getText());
+            API_Requests pullTrack = new API_Requests();
+            String responseBody = pullTrack.searchForTrack(Access.getAccessToken(), trackSearchBar.getText());
             trackOutputField.clear();
-            String formattedData = JSON_Formatter.formatAlbum(responseBody).toString();
+            String formattedData = JSON_Formatter.formatTrack(responseBody).toString();
             trackOutputField.setText(formattedData);
-
-
         }
         catch (Exception e ){
             e.printStackTrace();
