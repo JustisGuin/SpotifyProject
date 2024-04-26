@@ -3,6 +3,7 @@ package edu.bsu.cs.view;
 
 import edu.bsu.cs.model.API_Requests;
 import edu.bsu.cs.model.Access;
+import edu.bsu.cs.model.ErrorCatcher;
 import edu.bsu.cs.model.JSON_Formatter;
 import javafx.application.Application;
 import javafx.fxml.FXML;
@@ -49,7 +50,7 @@ public class Album extends Application {
 
             configureAlbumSearchButton();
         } catch (Exception e) {
-            e.printStackTrace();
+            ErrorCatcher.viewClassErrorCatch();
         }
 
 
@@ -63,7 +64,7 @@ public class Album extends Application {
             stage.setScene(new Scene(root, WINDOW_SIZE[0], WINDOW_SIZE[1]));
             stage.show();
         } catch (Exception e) {
-            e.printStackTrace();
+            ErrorCatcher.viewClassErrorCatch();
         }
     }
     @FXML
@@ -74,7 +75,7 @@ public class Album extends Application {
             stage.setScene(new Scene(root, WINDOW_SIZE[0], WINDOW_SIZE[1]));
             stage.show();
         } catch (Exception e) {
-            e.printStackTrace();
+            ErrorCatcher.viewClassErrorCatch();
         }
     }
     @FXML
@@ -85,7 +86,7 @@ public class Album extends Application {
             stage.setScene(new Scene(root, WINDOW_SIZE[0], WINDOW_SIZE[1]));
             stage.show();
         } catch (Exception e) {
-            e.printStackTrace();
+            ErrorCatcher.viewClassErrorCatch();
         }
     }
 
@@ -102,7 +103,7 @@ public class Album extends Application {
 
         }
         catch (Exception e ){
-            e.printStackTrace();
+            ErrorCatcher.viewClassErrorCatch();
         }
     }
 

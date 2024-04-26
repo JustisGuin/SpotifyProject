@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 public class APIRequestsTest {
 
-    private static final String ACCESS_TOKEN = Access.getAccessToken();
+    public static final String ACCESS_TOKEN = Access.getAccessToken();
 
     @Test
     public void testSearchForArtist() throws IOException, InterruptedException {

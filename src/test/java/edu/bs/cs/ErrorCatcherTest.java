@@ -69,6 +69,42 @@ public class ErrorCatcherTest {
         assertEquals("Error with Thread.sleep() function call. Please check code for unreachable statements or loops.", errorMessage);
 
     }
+    @Test
+    public void testImageNotFoundError(){
+        ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+        System.setErr(new PrintStream(outputStreamCaptor));
+        ErrorCatcher.imageNotFoundError();
+        String errorMessage = outputStreamCaptor.toString().trim();
+        assertEquals("No image found!", errorMessage);
+
+    }
+    @Test
+    public void testIoExceptionError(){
+        ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+        System.setErr(new PrintStream(outputStreamCaptor));
+        ErrorCatcher.ioExceptionError();
+        String errorMessage = outputStreamCaptor.toString().trim();
+        assertEquals("IOException – if an I/ O error occurs when sending or receiving, or the client has shut down", errorMessage);
+
+    }
+    @Test
+    public void testInterruptedExceptionError(){
+        ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+        System.setErr(new PrintStream(outputStreamCaptor));
+        ErrorCatcher.interruptedExceptionError();
+        String errorMessage = outputStreamCaptor.toString().trim();
+        assertEquals("InterruptedException – the operation was interrupted", errorMessage);
+
+    }
+    @Test
+    public void testViewClassErrorCatch(){
+        ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+        System.setErr(new PrintStream(outputStreamCaptor));
+        ErrorCatcher.viewClassErrorCatch();
+        String errorMessage = outputStreamCaptor.toString().trim();
+        assertEquals("View class error! This is commonly caused by incorrect code or updates that break correct code.", errorMessage);
+
+    }
 }
 
 
