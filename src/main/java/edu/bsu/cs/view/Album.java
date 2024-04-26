@@ -96,7 +96,9 @@ public class Album extends Application {
             String responseBody = pullAlbum.searchForAlbum(Access.getAccessToken(), albumSearchBar.getText());
             albumOutPutField.clear();
             String formattedData = JSON_Formatter.formatAlbum(responseBody).toString();
-            albumOutPutField.setText(formattedData);
+            int cutoff = formattedData.length() - 1;
+            String output = formattedData.substring(1,cutoff);
+            albumOutPutField.setText(output);
             albumOutPutField.setEditable(false);
 
 

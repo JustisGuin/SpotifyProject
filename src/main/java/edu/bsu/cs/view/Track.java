@@ -90,7 +90,9 @@ public class Track extends Application {
             String responseBody = pullTrack.searchForTrack(Access.getAccessToken(), trackSearchBar.getText());
             trackOutputField.clear();
             String formattedData = JSON_Formatter.formatTrack(responseBody).toString();
-            trackOutputField.setText(formattedData);
+            int cutoff = formattedData.length()-1;
+            String output = formattedData.substring(1,cutoff);
+            trackOutputField.setText(output);
             trackOutputField.setEditable(false);
         }
         catch (Exception e ){
